@@ -27,3 +27,22 @@ Leads são o combustível de qualquer negócio. Existem quatro formas fundamenta
 - Quando precisar diagnosticar se o problema é geração de leads ou conversão na call.
 - Para calibrar expectativas de conversão baseado na origem do lead (frio vs. quente).
 - Quando o closer precisa entender o contexto de como o prospect descobriu a empresa.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer pergunta como o prospect descobriu a empresa (origem do lead)
+- Avaliar se a abordagem é adaptada ao nível de aquecimento do lead
+- Checar se o closer referencia conteúdo/lead magnet que o prospect consumiu
+- Medir tempo de resposta entre interesse do lead e primeira call
+
+## Conexão com Outros Frameworks
+- **Predictable Revenue**: Complementa com estrutura de especialização (SDR/AE)
+- **Fanatical Prospecting**: Alinha volume de atividade com estratégia de canais
+- **StoryBrand**: O lead magnet funciona melhor quando segue a narrativa do herói
+- **Cialdini**: Reciprocidade do lead magnet prepara o terreno para a call
+
+## Métricas para Rastrear
+- Taxa de conversão por canal de origem do lead
+- Custo por lead qualificado por canal
+- Lead response time (tempo entre interesse e primeiro contato)
+- Percentual de leads que consumiram lead magnet antes da call
+- Taxa de no-show por origem do lead

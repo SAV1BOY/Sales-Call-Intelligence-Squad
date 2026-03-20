@@ -31,3 +31,15 @@
 **Exemplo**: "Então... o investimento... é... doze mil..." [voz baixa, rápida, olhando para baixo]
 **Por que falha**: Se o closer não acredita no valor do que vende, o lead não vai acreditar. Insegurança é contagiosa.
 **Correção**: Treinar a frase de preço em voz alta até soar natural e confiante. Gravando e ouvindo a própria voz.
+
+## Como Identificar Este Padrão
+- Escutar os primeiros 5 minutos para detectar padrões de abertura
+- Verificar talk ratio na etapa específica
+- Buscar patterns linguísticos descritos nos exemplos acima
+- Comparar com benchmark do squad para a etapa
+
+## Ação de Coaching Recomendada
+- Identificar qual padrão o closer repete com mais frequência
+- Focar roleplay no padrão oposto (se fraco, treinar forte; se forte, refinar)
+- Usar evidências de calls reais para demonstrar impacto do padrão
+- Medir evolução por score do bloco nas próximas 10 calls

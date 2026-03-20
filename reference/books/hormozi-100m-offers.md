@@ -27,3 +27,21 @@ O preço que você cobra é proporcional ao valor percebido da sua oferta. A cha
 - Na fase de apresentação de proposta, para garantir que o empilhamento de valor está correto.
 - Quando o prospect diz "está caro" — voltar à Value Equation e identificar qual variável está fraca.
 - Para treinar closers a parar de competir por preço e começar a competir por valor.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer apresenta a oferta usando empilhamento de valor (componente por componente)
+- Avaliar se cada componente é vinculado a uma dor específica do prospect
+- Checar se a garantia é apresentada antes do preço (reduz percepção de risco)
+- Medir se o closer justifica preço por valor entregue ou por features/horas
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: Perguntas de Implicação amplificam o denominador da Value Equation (mostram o custo de não agir)
+- **Challenger Sale**: Commercial Teaching pode ser usado para reframear o problema, tornando a oferta a única solução lógica
+- **Gap Selling**: O gap quantificado é a base para justificar o preço via Value Equation
+- **Cialdini**: Escassez e prova social empilham sobre a oferta para torná-la irresistível
+
+## Métricas para Rastrear
+- Percentual de calls onde o valor total é apresentado antes do preço
+- Frequência de objeção de preço (indicador de valor insuficiente)
+- Número médio de componentes empilhados na apresentação
+- Taxa de fechamento por variação de oferta (A/B testing de empilhamento)

@@ -31,3 +31,15 @@
 **Exemplo**: "Se o dinheiro não fosse um fator, você fecharia agora?" [usada em 100% das objeções de preço]
 **Por que falha**: Leads percebem respostas decoradas. A falta de personalização soa falsa e mecânica.
 **Correção**: Usar frameworks como guia, não scripts literais. Adaptar linguagem e exemplos ao lead.
+
+## Como Identificar Este Padrão
+- Escutar os primeiros 5 minutos para detectar padrões de abertura
+- Verificar talk ratio na etapa específica
+- Buscar patterns linguísticos descritos nos exemplos acima
+- Comparar com benchmark do squad para a etapa
+
+## Ação de Coaching Recomendada
+- Identificar qual padrão o closer repete com mais frequência
+- Focar roleplay no padrão oposto (se fraco, treinar forte; se forte, refinar)
+- Usar evidências de calls reais para demonstrar impacto do padrão
+- Medir evolução por score do bloco nas próximas 10 calls

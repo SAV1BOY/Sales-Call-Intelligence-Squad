@@ -31,3 +31,15 @@
 **Exemplo**: "Uma consultoria equivalente no mercado cobra entre R$30 mil e R$50 mil. O nosso investimento é R$15 mil porque a gente conseguiu escalar o método. Não é que custa menos — é que a gente é mais eficiente."
 **Por que funciona**: Comparação legítima posiciona o preço como acessível sem falar mal de concorrentes.
 **Framework**: Ancoragem por referência de mercado + Justificativa de eficiência
+
+## Como Identificar Este Padrão
+- Escutar os primeiros 5 minutos para detectar padrões de abertura
+- Verificar talk ratio na etapa específica
+- Buscar patterns linguísticos descritos nos exemplos acima
+- Comparar com benchmark do squad para a etapa
+
+## Ação de Coaching Recomendada
+- Identificar qual padrão o closer repete com mais frequência
+- Focar roleplay no padrão oposto (se fraco, treinar forte; se forte, refinar)
+- Usar evidências de calls reais para demonstrar impacto do padrão
+- Medir evolução por score do bloco nas próximas 10 calls

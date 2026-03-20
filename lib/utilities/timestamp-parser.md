@@ -37,3 +37,9 @@ Receber timestamps em diversos formatos de plataformas de gravação e convertê
 - Alimenta o **stage-segmentation-engine** (timestamps de transição)
 - Alimenta relatórios e scorecards (referências temporais)
 - Usado por todos os scripts de processamento como utilitário base
+
+## Exemplos de Conversão
+- "01:23:45" → 5025 segundos → [01:23:45]
+- "23:45" → 1425 segundos → [23:45]
+- "1425" → 1425 segundos → [23:45]
+- "aos 23 minutos e 45 segundos" → 1425 segundos → [23:45]

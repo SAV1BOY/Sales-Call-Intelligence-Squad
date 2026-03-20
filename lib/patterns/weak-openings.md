@@ -31,3 +31,15 @@
 **Exemplo**: "Oi, tudo bem? Deixa eu te falar do nosso programa. A gente tem 12 módulos, suporte vitalício, e está com uma condição especial essa semana..."
 **Por que falha**: Sem rapport e discovery, o pitch é genérico e irrelevante. O lead não tem razão para escutar.
 **Correção**: Investir pelo menos 2 minutos em rapport e 10-15 minutos em discovery antes de qualquer pitch.
+
+## Como Identificar Este Padrão
+- Escutar os primeiros 5 minutos para detectar padrões de abertura
+- Verificar talk ratio na etapa específica
+- Buscar patterns linguísticos descritos nos exemplos acima
+- Comparar com benchmark do squad para a etapa
+
+## Ação de Coaching Recomendada
+- Identificar qual padrão o closer repete com mais frequência
+- Focar roleplay no padrão oposto (se fraco, treinar forte; se forte, refinar)
+- Usar evidências de calls reais para demonstrar impacto do padrão
+- Medir evolução por score do bloco nas próximas 10 calls

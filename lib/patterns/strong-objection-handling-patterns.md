@@ -31,3 +31,15 @@
 **Exemplo**: "Então, com a garantia de 90 dias, essa preocupação com o risco fica resolvida pra você? [sim] Ótimo. Então o próximo passo é..."
 **Por que funciona**: Confirmar resolução fecha o loop. Avançar imediatamente evita que o lead crie nova objeção.
 **Framework**: Confirmação de resolução + Transição imediata
+
+## Como Identificar Este Padrão
+- Escutar os primeiros 5 minutos para detectar padrões de abertura
+- Verificar talk ratio na etapa específica
+- Buscar patterns linguísticos descritos nos exemplos acima
+- Comparar com benchmark do squad para a etapa
+
+## Ação de Coaching Recomendada
+- Identificar qual padrão o closer repete com mais frequência
+- Focar roleplay no padrão oposto (se fraco, treinar forte; se forte, refinar)
+- Usar evidências de calls reais para demonstrar impacto do padrão
+- Medir evolução por score do bloco nas próximas 10 calls

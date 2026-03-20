@@ -31,3 +31,15 @@
 **Exemplo**: "Sério?! Legal! Então... como a gente faz agora? Deixa eu ver aqui..."
 **Por que falha**: Insegurança do closer pós-fechamento gera dúvida no lead. "Se ele não esperava eu fechar, será que é bom mesmo?"
 **Correção**: Ter os próximos passos prontos antes da call. Após o sim, guiar com confiança total.
+
+## Como Identificar Este Padrão
+- Escutar os primeiros 5 minutos para detectar padrões de abertura
+- Verificar talk ratio na etapa específica
+- Buscar patterns linguísticos descritos nos exemplos acima
+- Comparar com benchmark do squad para a etapa
+
+## Ação de Coaching Recomendada
+- Identificar qual padrão o closer repete com mais frequência
+- Focar roleplay no padrão oposto (se fraco, treinar forte; se forte, refinar)
+- Usar evidências de calls reais para demonstrar impacto do padrão
+- Medir evolução por score do bloco nas próximas 10 calls
