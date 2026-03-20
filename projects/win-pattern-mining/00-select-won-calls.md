@@ -34,5 +34,10 @@ Criar uma amostra de alta qualidade de calls ganhas que permita identificar o qu
 - [ ] Transcrições validadas
 - [ ] Classificação de dificuldade feita
 
+## Notas de Execução
+
+- Evitar selecionar apenas calls fáceis — incluir calls desafiadoras para encontrar padrões que funcionam sob pressão
+- Calls com turnaround (parecia perdida e virou) são especialmente valiosas para análise
+
 ## Próxima Fase
 → Fase 1 — Detecção de Frameworks

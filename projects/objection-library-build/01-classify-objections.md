@@ -37,3 +37,4 @@ Organizar a massa de objeções brutas em uma taxonomia clara que permita identi
 
 ## Próxima Fase
 → Fase 2 — Análise de Causa Raiz
+

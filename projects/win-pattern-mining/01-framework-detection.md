@@ -37,3 +37,4 @@ Criar um mapa completo de frameworks usados em calls ganhas, incluindo frequênc
 
 ## Próxima Fase
 → Fase 2 — Extração de Padrões
+

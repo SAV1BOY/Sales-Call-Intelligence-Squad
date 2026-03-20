@@ -37,3 +37,4 @@ Entender a causa raiz de cada tipo de objeção para criar tanto respostas reati
 
 ## Próxima Fase
 → Fase 3 — Construção de Respostas
+
