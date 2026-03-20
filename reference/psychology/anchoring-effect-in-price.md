@@ -37,3 +37,7 @@ Quando apresentamos um número alto antes do preço real, o cérebro usa esse pr
 Closer: "Se você fosse montar essa estrutura sozinho, teria que contratar um gestor de tráfego (R$5 mil/mês), um copywriter (R$4 mil/mês), e um consultor estratégico (R$3 mil/mês). Isso dá R$12 mil por mês. Em 6 meses, R$72 mil. O programa completo custa R$15 mil. Uma vez. É 5x menos que montar sozinho."
 
 Lead: "Realmente, comparando assim faz muito sentido."
+
+## Armadilhas
+- Se o lead ancora primeiro com um número baixo, reancoragem é obrigatória antes de revelar o preço.
+- Ancoragem absurda (valores irreais) gera descrédito. A âncora precisa ser justificável.

@@ -37,3 +37,8 @@ Quando estamos incertos sobre uma decisão, buscamos validação no comportament
 Closer: "A Maria, que é dentista como você, estava faturando R$30 mil por mês. Em 4 meses com a gente, bateu R$80 mil. Quer ver o depoimento dela?"
 Lead: "Nossa, sério? Sim, mostra!"
 (Prova social funciona porque o perfil é idêntico ao do lead)
+
+## Armadilhas
+- Prova social genérica ("temos muitos clientes") é fraca. Sempre use números e perfis específicos.
+- Prova social falsa (depoimentos inventados) destrói confiança se descoberta.
+- Case de perfil muito diferente do lead pode gerar o efeito oposto: "isso não funciona pra mim".
