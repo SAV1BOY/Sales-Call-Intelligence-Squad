@@ -1,0 +1,46 @@
+# Registro de Objeções
+# Catalogação de objeções identificadas nas calls de vendas
+# Última atualização: Pendente
+
+metadata:
+  name: "objections-registry"
+  description: "Registro de objeções encontradas nas calls, classificadas por tipo, causa real, frequência e melhor resposta."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: id
+      type: string
+      description: "Identificador único da objeção (ex: OBJ-001)"
+      required: true
+    - name: type
+      type: string
+      description: "Tipo da objeção (money, time, spouse, trust)"
+      required: true
+    - name: real_cause
+      type: string
+      description: "Causa real por trás da objeção identificada na auditoria"
+      required: false
+    - name: frequency
+      type: number
+      description: "Número de vezes que a objeção foi registrada"
+      required: true
+    - name: best_response
+      type: string
+      description: "Melhor resposta ou abordagem para contornar a objeção"
+      required: false
+    - name: framework
+      type: string
+      description: "Framework recomendado para tratamento da objeção"
+      required: false
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - id: "OBJ-001"
+#   type: "money"
+#   real_cause: "Lead não percebeu valor suficiente na oferta"
+#   frequency: 15
+#   best_response: "Revisitar dor e custo da inação antes de apresentar preço"
+#   framework: "Isolamento de objeção + ancoragem de valor"

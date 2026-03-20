@@ -1,0 +1,51 @@
+# Registro de Closers
+# Cadastro e acompanhamento de todos os closers do time de vendas
+# Última atualização: Pendente
+
+metadata:
+  name: "closers-registry"
+  description: "Cadastro de closers com dados de performance, nível e status de certificação."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: id
+      type: string
+      description: "Identificador único do closer (ex: CLO-001)"
+      required: true
+    - name: name
+      type: string
+      description: "Nome completo do closer"
+      required: true
+    - name: start_date
+      type: date
+      description: "Data de início do closer no time"
+      required: true
+    - name: calls_audited
+      type: number
+      description: "Número total de calls auditadas"
+      required: true
+    - name: avg_score
+      type: number
+      description: "Score médio nas auditorias (0-100)"
+      required: false
+    - name: level
+      type: string
+      description: "Nível atual do closer (júnior, pleno, sênior, especialista)"
+      required: true
+    - name: certification_status
+      type: string
+      description: "Status de certificação (em treinamento, certificado, expirado)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - id: "CLO-001"
+#   name: "João Silva"
+#   start_date: "2025-01-15"
+#   calls_audited: 30
+#   avg_score: 78
+#   level: "pleno"
+#   certification_status: "certificado"

@@ -1,0 +1,46 @@
+# Registro de Handoff (SDR → Closer)
+# Qualidade da passagem de bastão entre SDR e closer
+# Última atualização: Pendente
+
+metadata:
+  name: "handoff-registry"
+  description: "Registro da qualidade do handoff entre SDR e closer, incluindo gaps de informação e impacto na call."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: call_id
+      type: string
+      description: "ID da call auditada (referência ao calls-registry)"
+      required: true
+    - name: sdr
+      type: string
+      description: "Nome ou ID do SDR responsável pelo agendamento"
+      required: true
+    - name: closer
+      type: string
+      description: "Nome ou ID do closer que recebeu a call"
+      required: true
+    - name: info_quality
+      type: string
+      description: "Qualidade das informações passadas (excelente, boa, regular, ruim)"
+      required: true
+    - name: gaps
+      type: array
+      description: "Gaps de informação identificados no handoff"
+      required: false
+    - name: impact
+      type: string
+      description: "Impacto dos gaps no resultado da call (nenhum, leve, moderado, severo)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - call_id: "CALL-001"
+#   sdr: "Ana Costa"
+#   closer: "João Silva"
+#   info_quality: "regular"
+#   gaps: ["faltou informação de orçamento", "não qualificou decisor"]
+#   impact: "moderado"

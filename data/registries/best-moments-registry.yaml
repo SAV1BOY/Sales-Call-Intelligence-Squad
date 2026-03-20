@@ -1,0 +1,46 @@
+# Registro de Melhores Momentos
+# Momentos de destaque identificados nas calls auditadas
+# Última atualização: Pendente
+
+metadata:
+  name: "best-moments-registry"
+  description: "Catálogo dos melhores momentos das calls, com fase, descrição, impacto no score e framework utilizado."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: moment_id
+      type: string
+      description: "Identificador único do momento (ex: MOM-001)"
+      required: true
+    - name: call_id
+      type: string
+      description: "ID da call onde o momento ocorreu (referência ao calls-registry)"
+      required: true
+    - name: phase
+      type: string
+      description: "Fase da call onde o momento ocorreu (rapport, discovery, pitch, close)"
+      required: true
+    - name: description
+      type: string
+      description: "Descrição detalhada do que aconteceu no momento"
+      required: true
+    - name: score_impact
+      type: number
+      description: "Impacto estimado no score da call (pontos positivos)"
+      required: false
+    - name: framework
+      type: string
+      description: "Framework utilizado no momento, se aplicável"
+      required: false
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - moment_id: "MOM-001"
+#   call_id: "CALL-003"
+#   phase: "discovery"
+#   description: "Closer fez pergunta de implicação que levou lead a verbalizar urgência"
+#   score_impact: 8
+#   framework: "SPIN Selling"

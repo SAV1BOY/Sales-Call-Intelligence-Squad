@@ -1,0 +1,41 @@
+# Registro de Risco de Deal
+# Avaliação de risco para cada deal/call auditada
+# Última atualização: Pendente
+
+metadata:
+  name: "deal-risk-registry"
+  description: "Registro de níveis de risco identificados em cada call, fatores de risco, mitigações sugeridas e resultado final."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: call_id
+      type: string
+      description: "ID da call avaliada (referência ao calls-registry)"
+      required: true
+    - name: risk_level
+      type: string
+      description: "Nível de risco do deal (baixo, médio, alto, crítico)"
+      required: true
+    - name: factors
+      type: array
+      description: "Fatores de risco identificados na call"
+      required: true
+    - name: mitigation
+      type: string
+      description: "Ações de mitigação sugeridas ou tomadas"
+      required: false
+    - name: outcome
+      type: string
+      description: "Resultado final do deal (fechou, perdeu, pendente)"
+      required: false
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - call_id: "CALL-001"
+#   risk_level: "médio"
+#   factors: ["lead mencionou cônjuge", "pediu para pensar"]
+#   mitigation: "Agendar follow-up com cônjuge presente"
+#   outcome: "pendente"

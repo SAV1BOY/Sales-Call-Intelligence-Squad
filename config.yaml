@@ -1,0 +1,362 @@
+# ============================================================
+# SALES CALL INTELLIGENCE SQUAD — config.yaml
+# Cérebro de roteamento: tarefas → agentes, frameworks,
+# checklists, templates, registries
+# ============================================================
+
+squad:
+  name: sales-call-intelligence
+  version: "2.0.0"
+  description: "Auditoria de calls high ticket, coaching, score, win/loss mining e melhoria contínua"
+  chief_agent: sales-chief
+
+principles:
+  - phase_first                      # Cada framework entra na fase correta
+  - evidence_over_opinion            # Toda crítica com trecho, minuto e evidência
+  - score_before_advice              # Primeiro pontua, depois aconselha
+  - rewrite_the_moment               # Sempre reescreve a fala ideal
+  - objection_is_a_symptom           # Objeção é efeito, não causa
+  - post_call_learning_mandatory     # Toda call ensina algo ao sistema
+  - closer_performance_is_systemic   # Problema pode estar no lead, oferta, pitch, SDR ou pricing
+
+# ============================================================
+# ROUTING — Tarefas → Agentes + Frameworks + Checklists
+# ============================================================
+
+routing:
+
+  # ---- INGESTÃO ----
+  intake-call-recording:
+    agents: [transcript-analyst, call-auditor]
+    frameworks: [sales-call-stage-taxonomy]
+    checklists: [transcript-normalization-quality]
+    templates: [briefs/call-audit-brief]
+    registry: [data/registries/calls-registry]
+
+  normalize-and-segment:
+    agents: [transcript-analyst]
+    frameworks: [minute-by-minute-analysis-framework, sales-call-stage-taxonomy]
+    checklists: [transcript-normalization-quality, minute-by-minute-analysis-quality]
+    templates: [reports/minute-by-minute-audit-report]
+    registry: [data/transcripts/cleaned, data/transcripts/segmented]
+
+  # ---- AUDITORIA COMPLETA ----
+  full-call-audit:
+    agents: [call-auditor, framework-detector, scorecard-analyst, objection-specialist, pricing-anchoring-analyst, talk-ratio-analyst]
+    frameworks: [minute-by-minute-analysis-framework, call-scoring-model, evelyn-system-digital-framework]
+    checklists: [call-audit-quality, minute-by-minute-analysis-quality, framework-detection-quality, call-scorecard-quality, root-cause-analysis-quality]
+    templates: [reports/full-call-audit-report, scorecards/call-scorecard-template]
+    registry: [data/registries/scorecards-registry, data/registries/framework-detection-registry]
+
+  framework-detection:
+    agents: [framework-detector, alex-hormozi, jeremy-miner, jordan-belfort, cole-gordon, neil-rackham, matthew-dixon]
+    frameworks: [spin-selling, nepq, straight-line-persuasion, closer-four-part-framework, value-equation, challenger-sale]
+    checklists: [framework-detection-quality, spin/spin-sequence-check, miner/miner-consequence-questions-check, belfort/belfort-straight-line-check, cole-gordon/cole-frame-check]
+    templates: [reports/framework-detection-report]
+    registry: [data/registries/framework-detection-registry]
+
+  # ---- POR FASE DA CALL ----
+  analyze-rapport-and-frame:
+    agents: [call-auditor, cole-gordon, dan-lok]
+    frameworks: [first-pact-three-intentions, doctor-frame, cole-gordon/cole-frame-setting-system]
+    checklists: [rapport/warm-up-quality, rapport/first-pact-quality, cole-gordon/cole-frame-check, dan-lok/dan-doctor-frame-check]
+    templates: [reports/full-call-audit-report]
+    registry: [data/registries/scorecards-registry]
+
+  analyze-discovery:
+    agents: [call-auditor, neil-rackham, jeremy-miner, cole-gordon]
+    frameworks: [spin-selling, nepq, consequence-questioning, miner/miner-nepq-deep-dive, cole-gordon/cole-deep-diagnosis-method]
+    checklists: [discovery/spin-situation-quality, discovery/spin-problem-quality, discovery/spin-implication-quality, discovery/spin-need-payoff-quality, discovery/nepq-consequence-questions-quality, discovery/qualification-depth-quality, discovery/diagnosis-depth-quality]
+    templates: [reports/full-call-audit-report]
+    registry: [data/registries/scorecards-registry, data/registries/deal-risk-registry]
+
+  analyze-pitch:
+    agents: [call-auditor, cole-gordon, alex-hormozi, sabri-suby]
+    frameworks: [second-pact-sim-ou-nao, diagnosis-to-offer-mapping, value-equation, value-stacking, hormozi/hormozi-grand-slam-offer, sabri-suby/suby-godfather-offer-build]
+    checklists: [pitch/second-pact-quality, pitch/company-presentation-quality, pitch/method-presentation-quality, pitch/product-presentation-quality, pitch/pitch-uses-lead-language-quality, pitch/social-proof-quality]
+    templates: [reports/full-call-audit-report]
+    registry: [data/registries/scorecards-registry]
+
+  analyze-pricing:
+    agents: [pricing-anchoring-analyst, alex-hormozi, sabri-suby]
+    frameworks: [price-anchoring, value-equation, risk-reversal, value-stacking, hormozi/hormozi-price-to-value-gap, sabri-suby/suby-risk-reversal-system]
+    checklists: [pricing/value-stack-quality, pricing/price-anchoring-quality, pricing/risk-reversal-quality, pricing/concession-control-quality, pricing-analysis-quality]
+    templates: [reports/pricing-analysis-report]
+    registry: [data/registries/pricing-concessions-registry]
+
+  analyze-objections:
+    agents: [objection-specialist, jordan-belfort, bradley-lea, eli-wilde]
+    frameworks: [objection-isolation, objection-looping, belief-shift, belfort/belfort-looping-system, eli-wilde/wilde-belief-shift-protocol, bradley-lea/lea-preventive-objection-system]
+    checklists: [objections/objection-isolation-quality, objections/money-objection-quality, objections/looping-quality, objections/belief-shift-quality, objections/preventive-objection-handling-quality, bradley/bradley-universal-objections-check]
+    templates: [reports/objection-analysis-report, rewrites/objection-rewrite-template]
+    registry: [data/registries/objections-registry, data/registries/deal-risk-registry]
+
+  analyze-closing:
+    agents: [call-auditor, jordan-belfort, cole-gordon]
+    frameworks: [straight-line-persuasion, no-maybe-closing-system, certainty-triad, belfort/belfort-straight-line-deep-dive]
+    checklists: [closing/decision-commitment-quality, closing/assumptive-close-quality, closing/next-step-lock-quality, closing/no-maybe-zone-quality]
+    templates: [reports/full-call-audit-report]
+    registry: [data/registries/scorecards-registry]
+
+  analyze-talk-ratio:
+    agents: [talk-ratio-analyst, call-auditor]
+    frameworks: [talk-ratio-analysis-framework]
+    checklists: [talk-ratio-analysis-quality]
+    templates: [reports/full-call-audit-report]
+    registry: [data/registries/scorecards-registry]
+
+  analyze-sdr-handoff:
+    agents: [sdr-handoff-analyst, call-auditor]
+    frameworks: [sales-call-stage-taxonomy]
+    checklists: [handoff-quality]
+    templates: [reports/sdr-handoff-audit-report]
+    registry: [data/registries/handoff-registry]
+
+  # ---- COACHING ----
+  rewrite-critical-moments:
+    agents: [coaching-rewriter, closer-trainer, objection-specialist]
+    frameworks: [rewrite-the-moment-framework, diagnosis-to-offer-mapping]
+    checklists: [rewrite-quality, coaching-plan-quality]
+    templates: [rewrites/objection-rewrite-template, rewrites/pitch-rewrite-template, rewrites/closing-rewrite-template, rewrites/discovery-rewrite-template]
+    registry: [data/rewrites, data/registries/lessons-learned-registry]
+
+  build-coaching-pack:
+    agents: [closer-trainer, scorecard-analyst, sales-chief]
+    frameworks: [call-scoring-model, post-call-learning-loop]
+    checklists: [manager-review-quality, coaching-plan-quality]
+    templates: [reports/manager-coaching-report, scorecards/closer-performance-scorecard]
+    registry: [data/registries/lessons-learned-registry]
+
+  certify-closer:
+    agents: [closer-trainer, qa-guardian, sales-chief]
+    frameworks: [call-scoring-model]
+    checklists: [rep-certification-quality]
+    templates: [scorecards/certification-scorecard, reports/closer-certification-report]
+    registry: [data/registries/closers-registry]
+
+  # ---- INTELLIGENCE ----
+  extract-win-patterns:
+    agents: [win-loss-miner, revenue-intelligence-analyst, framework-detector]
+    frameworks: [win-loss-pattern-mining, call-scoring-model]
+    checklists: [win-loss-analysis-quality, best-moments-library-quality]
+    templates: [reports/win-loss-analysis-report]
+    registry: [data/registries/win-patterns-registry]
+
+  extract-loss-patterns:
+    agents: [win-loss-miner, deal-risk-doctor, sdr-handoff-analyst, offer-fit-analyst]
+    frameworks: [deal-risk-diagnosis, win-loss-pattern-mining, promise-vs-proof-framework]
+    checklists: [win-loss-analysis-quality, handoff-quality, promise-sanity-check-quality]
+    templates: [reports/win-loss-analysis-report]
+    registry: [data/registries/loss-patterns-registry, data/registries/deal-risk-registry]
+
+  analyze-offer-fit:
+    agents: [offer-fit-analyst, revenue-intelligence-analyst]
+    frameworks: [diagnosis-to-offer-mapping, value-equation]
+    checklists: [qualification-analysis-quality, promise-sanity-check-quality]
+    templates: [reports/executive-sales-intelligence-report]
+    registry: [data/registries/deal-risk-registry]
+
+  # ---- REVIEW ----
+  weekly-sales-quality-review:
+    agents: [sales-chief, scorecard-analyst, closer-trainer]
+    frameworks: [post-call-learning-loop, call-scoring-model]
+    checklists: [manager-review-quality]
+    templates: [reports/executive-sales-intelligence-report]
+    registry: [data/registries/lessons-learned-registry]
+
+  monthly-closer-certification:
+    agents: [sales-chief, closer-trainer, qa-guardian]
+    frameworks: [call-scoring-model]
+    checklists: [rep-certification-quality]
+    templates: [scorecards/closer-performance-scorecard, reports/closer-certification-report]
+    registry: [data/registries/closers-registry]
+
+  # ---- OPERATIONS ----
+  cross-squad-intelligence-sync:
+    agents: [sales-chief, revenue-intelligence-analyst]
+    frameworks: []
+    checklists: [cross-squad/cross-squad-copy-handoff-quality, cross-squad/cross-squad-traffic-handoff-quality, cross-squad/cross-squad-offer-handoff-quality, cross-squad/cross-squad-ops-handoff-quality]
+    templates: [operational/cross-squad-handoff-template]
+    registry: [data/registries/lessons-learned-registry]
+
+  update-objections-library:
+    agents: [objection-specialist, win-loss-miner]
+    frameworks: [high-ticket-objection-taxonomy]
+    checklists: [objections-library-update-quality]
+    templates: []
+    registry: [data/registries/objections-registry]
+
+  calibrate-scoring:
+    agents: [qa-guardian, scorecard-analyst, sales-chief]
+    frameworks: [call-scoring-model]
+    checklists: [qa/qa-score-calibration-check]
+    templates: [scorecards/call-scorecard-template]
+    registry: [data/registries/scorecards-registry]
+
+# ============================================================
+# CROSS-SQUAD INTEGRATION (bidirecional)
+# ============================================================
+
+cross_squad:
+  copy_squad:
+    handoff_to_copy:
+      - "objeções reais do mercado → copy/data/research"
+      - "frases do lead sobre dor → copy/swipe"
+      - "palavras que ativam interesse → copy/phrases"
+    handoff_from_copy:
+      - "novas variações de pitch → data/research"
+      - "respostas de objeção mais fortes → data/objections"
+    shared_assets: [objection-library, pitch-language-bank, value-proposition-bank]
+
+  traffic_squad:
+    handoff_to_traffic:
+      - "qualidade do lead por origem → traffic/data/metrics"
+      - "promessas que geram lead ruim → traffic/reference"
+      - "ângulos desalinhados → traffic/data/research"
+    handoff_from_traffic:
+      - "canal/origem/campanha → data/research"
+      - "CPL/CPA vs close rate → data/metrics"
+    shared_assets: [lead-source-quality, campaign-message-fit]
+
+  brand_squad:
+    handoff_to_brand:
+      - "percepção de marca na call → brand/data/research"
+      - "confiança/desconfiança → brand/reference"
+    handoff_from_brand:
+      - "posicionamento atualizado → data/research"
+      - "provas sociais → reference/sales"
+    shared_assets: [brand-perception, authority-assets]
+
+  storytelling_squad:
+    handoff_to_storytelling:
+      - "cases de sucesso → storytelling/reference"
+      - "frases de conexão → storytelling/swipe"
+    handoff_from_storytelling:
+      - "narrativas de case → reference/case-studies"
+    shared_assets: [case-narratives, proof-points]
+
+  c_level_squad:
+    handoff_to_c_level:
+      - "objeções de pricing → c-level/data/memos"
+      - "mismatch oferta × mercado → c-level/tasks"
+    handoff_from_c_level:
+      - "mudanças de pricing → data/registries/pricing-concessions-registry"
+      - "novos stacks/garantias → reference/sales"
+    shared_assets: [pricing-registry, offer-fit-analysis]
+
+  data_squad:
+    handoff_to_data:
+      - "scorecards → data/tasks"
+      - "close rates → data/registries"
+    handoff_from_data:
+      - "cohort analysis → data/research"
+      - "closer benchmarking → data/metrics"
+    shared_assets: [closer-performance-dashboard, score-vs-close-rate]
+
+  movement_squad:
+    handoff_to_movement:
+      - "linguagem do lead → movement/data/research"
+    handoff_from_movement:
+      - "cultural insights → reference/psychology"
+    shared_assets: [market-language, cultural-signals]
+
+  advisory_board:
+    handoff_to_advisory:
+      - "pricing strategy questions → advisory/tasks"
+      - "offer fit analysis → advisory/data"
+    handoff_from_advisory:
+      - "strategic guidance → data/registries/lessons-learned-registry"
+    shared_assets: [strategic-pricing-decisions]
+
+# ============================================================
+# QUALITY GATES
+# ============================================================
+
+quality_gates:
+  mandatory:
+    - call-audit-quality              # Toda auditoria com evidência
+    - call-scorecard-quality          # Score calculado e justificado
+    - root-cause-analysis-quality     # Causa raiz identificada
+    - rewrite-quality                 # Momentos críticos reescritos
+  per_domain:
+    rapport: [rapport/first-pact-quality, rapport/first-impression-authority-quality]
+    discovery: [discovery/spin-implication-quality, discovery/diagnosis-depth-quality]
+    pitch: [pitch/second-pact-quality, pitch/pitch-uses-lead-language-quality]
+    pricing: [pricing/price-anchoring-quality, pricing/value-stack-quality]
+    objections: [objections/objection-isolation-quality, objections/preventive-objection-handling-quality]
+    closing: [closing/decision-commitment-quality, closing/next-step-lock-quality]
+    coaching: [coaching-plan-quality, manager-review-quality]
+    intelligence: [win-loss-analysis-quality, best-moments-library-quality]
+    qa: [qa/qa-methodology-consistency-check, qa/qa-score-calibration-check]
+
+# ============================================================
+# KPIs
+# ============================================================
+
+kpis:
+  call_quality:
+    - average_call_score                # Score médio das calls
+    - score_improvement_rate            # Melhoria do score ao longo do tempo
+    - framework_usage_rate              # % de calls com frameworks detectados
+    - talk_ratio_average                # Talk ratio médio (ideal: 30/70)
+    - discovery_depth_score             # Profundidade média de discovery
+  revenue_impact:
+    - close_rate_by_closer              # Taxa de fechamento por closer
+    - close_rate_by_offer               # Taxa por oferta
+    - close_rate_by_lead_source         # Taxa por origem
+    - revenue_per_call                  # Receita por call
+    - price_concession_rate             # Taxa de concessão de preço
+  coaching:
+    - coaching_impact_score             # Impacto do coaching no score
+    - rewrite_adoption_rate             # % de rewrites implementados pelo closer
+    - certification_pass_rate           # Taxa de aprovação na certificação
+    - time_to_competence                # Tempo para closer atingir score mínimo
+  operational:
+    - audit_cycle_time                  # Tempo de call → auditoria completa
+    - objection_library_currency        # Biblioteca de objeções atualizada
+    - win_pattern_registry_currency     # Registro de padrões atualizado
+    - cross_squad_delivery_rate         # Taxa de entrega de insights
+
+# ============================================================
+# SCORECARD MESTRE
+# ============================================================
+
+scorecard:
+  blocks:
+    rapport_abertura: 10
+    primeiro_pacto_frame: 10
+    diagnostico_spin_profundidade: 20
+    ampliacao_dor_implicacao: 10
+    segundo_pacto: 5
+    empresa_metodo_produto: 15
+    pitch_amarrado_fala_lead: 10
+    ancoragem_preco: 10
+    objecoes: 15
+    fechamento_proximos_passos: 10
+  total: 100
+  output_obrigatorio:
+    - score_total
+    - score_por_bloco
+    - tecnicas_detectadas
+    - minuto_a_minuto
+    - tres_maiores_acertos
+    - tres_maiores_falhas
+    - tres_falas_reescritas
+    - causa_raiz
+    - acao_proxima_call
+
+# ============================================================
+# DEFAULTS
+# ============================================================
+
+defaults:
+  review_agent: sales-chief
+  min_checklists: 2
+  registry_on_completion: true
+  output_format: markdown
+  score_before_advice: true
+  rewrite_mandatory: true
+  evidence_with_timestamp: true
+  cross_squad_sync: weekly
+  certification_cadence: monthly
+  qa_calibration_cadence: quarterly

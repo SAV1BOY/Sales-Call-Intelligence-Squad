@@ -1,0 +1,41 @@
+# Registro de Detecção de Frameworks
+# Rastreamento de frameworks utilizados e ausentes em cada call auditada
+# Última atualização: Pendente
+
+metadata:
+  name: "framework-detection-registry"
+  description: "Registro de quais frameworks foram detectados e quais estavam ausentes em cada call, com evidências e fase da call."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: call_id
+      type: string
+      description: "ID da call auditada (referência ao calls-registry)"
+      required: true
+    - name: frameworks_detected
+      type: array
+      description: "Lista de frameworks identificados na call"
+      required: true
+    - name: frameworks_missing
+      type: array
+      description: "Lista de frameworks que deveriam ter sido usados mas não foram"
+      required: true
+    - name: evidence
+      type: string
+      description: "Evidência textual ou timestamp que comprova a detecção ou ausência"
+      required: false
+    - name: phase
+      type: string
+      description: "Fase da call onde o framework foi detectado ou deveria ter sido usado (rapport, discovery, pitch, close)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - call_id: "CALL-001"
+#   frameworks_detected: ["SPIN Selling", "Ancoragem de preço"]
+#   frameworks_missing: ["Isolamento de objeção"]
+#   evidence: "Aos 12:30 closer usou pergunta de implicação do SPIN"
+#   phase: "discovery"

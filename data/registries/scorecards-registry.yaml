@@ -1,0 +1,46 @@
+# Registro de Scorecards
+# Scorecards completos das auditorias de calls
+# Última atualização: Pendente
+
+metadata:
+  name: "scorecards-registry"
+  description: "Registro dos scorecards de auditoria com score total, scores por bloco (10 blocos), closer e auditor."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: call_id
+      type: string
+      description: "ID da call auditada (referência ao calls-registry)"
+      required: true
+    - name: total_score
+      type: number
+      description: "Score total da auditoria (0-100)"
+      required: true
+    - name: per_block_scores
+      type: array
+      description: "Scores individuais dos 10 blocos de avaliação"
+      required: true
+    - name: closer_id
+      type: string
+      description: "ID do closer avaliado (referência ao closers-registry)"
+      required: true
+    - name: date
+      type: date
+      description: "Data da auditoria"
+      required: true
+    - name: auditor
+      type: string
+      description: "Identificação do auditor (sistema ou pessoa)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - call_id: "CALL-001"
+#   total_score: 82
+#   per_block_scores: [9, 8, 7, 8, 9, 8, 7, 9, 8, 9]
+#   closer_id: "CLO-001"
+#   date: "2026-03-20"
+#   auditor: "sistema-ia"

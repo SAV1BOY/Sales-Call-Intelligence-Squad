@@ -1,0 +1,41 @@
+# Registro de Padrões de Perda
+# Padrões recorrentes identificados em calls que não resultaram em fechamento
+# Última atualização: Pendente
+
+metadata:
+  name: "loss-patterns-registry"
+  description: "Catálogo de padrões recorrentes em calls perdidas, com causa raiz, frequência e exemplos."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: pattern_id
+      type: string
+      description: "Identificador único do padrão (ex: LOSS-001)"
+      required: true
+    - name: description
+      type: string
+      description: "Descrição detalhada do padrão de perda identificado"
+      required: true
+    - name: frequency
+      type: number
+      description: "Número de vezes que o padrão foi observado"
+      required: true
+    - name: root_cause
+      type: string
+      description: "Causa raiz identificada para o padrão de perda"
+      required: true
+    - name: example_calls
+      type: array
+      description: "IDs de calls que exemplificam este padrão"
+      required: false
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - pattern_id: "LOSS-001"
+#   description: "Closer apresentou preço antes de explorar dor suficiente do lead"
+#   frequency: 8
+#   root_cause: "Falta de discovery aprofundado"
+#   example_calls: ["CALL-002", "CALL-009"]

@@ -1,0 +1,26 @@
+# Dashboard de Performance por Closer
+# Visão consolidada da performance individual de cada closer
+
+metadata:
+  name: "closer-performance-dashboard"
+  description: "Performance consolidada por closer incluindo score médio, taxa de fechamento e volume de calls por semana."
+  frequency: "weekly"
+  source: "calls-registry, scorecards-registry, closers-registry"
+
+dimensions:
+  - closer
+  - período (semanal/mensal)
+  - oferta
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "score >= 90, close rate >= 40%, calls/week >= 15"
+  good: "score >= 75, close rate >= 30%, calls/week >= 10"
+  needs_improvement: "score >= 60, close rate >= 20%, calls/week >= 7"
+  critical: "score < 60, close rate < 20%, calls/week < 7"
+
+calculation:
+  formula: "Score médio = soma dos scores / total de calls auditadas; Close rate = calls fechadas / total de calls; Calls/week = total de calls / semanas ativas"
+  inputs: "scores das auditorias, outcomes das calls, datas das calls"

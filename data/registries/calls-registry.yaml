@@ -1,0 +1,66 @@
+# Registro de Calls
+# Registro central de todas as calls de vendas auditadas
+# Última atualização: Pendente
+
+metadata:
+  name: "calls-registry"
+  description: "Registro central de todas as calls de vendas, incluindo dados do closer, lead, oferta, resultado e score da auditoria."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: id
+      type: string
+      description: "Identificador único da call (ex: CALL-001)"
+      required: true
+    - name: date
+      type: date
+      description: "Data em que a call foi realizada"
+      required: true
+    - name: closer
+      type: string
+      description: "Nome ou ID do closer que conduziu a call"
+      required: true
+    - name: lead
+      type: string
+      description: "Nome ou identificação do lead"
+      required: true
+    - name: offer
+      type: string
+      description: "Oferta ou produto apresentado na call"
+      required: true
+    - name: source
+      type: string
+      description: "Origem do lead (tráfego pago, orgânico, indicação, etc.)"
+      required: false
+    - name: duration
+      type: number
+      description: "Duração da call em minutos"
+      required: true
+    - name: outcome
+      type: string
+      description: "Resultado da call (fechou, não fechou, follow-up, no-show)"
+      required: true
+    - name: score
+      type: number
+      description: "Score total da auditoria (0-100)"
+      required: false
+    - name: audited
+      type: string
+      description: "Status da auditoria (sim, não, pendente)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - id: "CALL-001"
+#   date: "2026-03-20"
+#   closer: "João Silva"
+#   lead: "Maria Oliveira"
+#   offer: "Mentoria Premium"
+#   source: "tráfego pago"
+#   duration: 45
+#   outcome: "fechou"
+#   score: 85
+#   audited: "sim"

@@ -1,0 +1,41 @@
+# Registro de Concessões de Preço
+# Rastreamento de descontos e concessões oferecidos durante as calls
+# Última atualização: Pendente
+
+metadata:
+  name: "pricing-concessions-registry"
+  description: "Registro de concessões de preço feitas durante as calls, incluindo preço original, final, tipo de concessão e justificativa."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: call_id
+      type: string
+      description: "ID da call auditada (referência ao calls-registry)"
+      required: true
+    - name: original_price
+      type: number
+      description: "Preço original da oferta apresentado"
+      required: true
+    - name: final_price
+      type: number
+      description: "Preço final após concessão"
+      required: true
+    - name: concession_type
+      type: string
+      description: "Tipo de concessão (desconto, parcelamento, bônus, prazo estendido)"
+      required: true
+    - name: justified
+      type: string
+      description: "Se a concessão foi justificada estrategicamente (sim, não, parcialmente)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - call_id: "CALL-001"
+#   original_price: 5000
+#   final_price: 4200
+#   concession_type: "desconto"
+#   justified: "sim"

@@ -1,0 +1,41 @@
+# Registro de Padrões de Vitória
+# Padrões recorrentes identificados em calls que resultaram em fechamento
+# Última atualização: Pendente
+
+metadata:
+  name: "win-patterns-registry"
+  description: "Catálogo de padrões recorrentes encontrados em calls bem-sucedidas, com frequência, frameworks correlacionados e exemplos."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: pattern_id
+      type: string
+      description: "Identificador único do padrão (ex: WIN-001)"
+      required: true
+    - name: description
+      type: string
+      description: "Descrição detalhada do padrão de vitória identificado"
+      required: true
+    - name: frequency
+      type: number
+      description: "Número de vezes que o padrão foi observado"
+      required: true
+    - name: frameworks_correlated
+      type: array
+      description: "Frameworks que aparecem correlacionados com este padrão"
+      required: false
+    - name: example_calls
+      type: array
+      description: "IDs de calls que exemplificam este padrão"
+      required: false
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - pattern_id: "WIN-001"
+#   description: "Closer explorou dor emocional antes de apresentar solução, gerando urgência natural"
+#   frequency: 12
+#   frameworks_correlated: ["SPIN Selling", "Storytelling de caso"]
+#   example_calls: ["CALL-003", "CALL-007", "CALL-015"]

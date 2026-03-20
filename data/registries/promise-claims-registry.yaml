@@ -1,0 +1,36 @@
+# Registro de Promessas e Claims
+# Monitoramento de promessas feitas e provas oferecidas durante as calls
+# Última atualização: Pendente
+
+metadata:
+  name: "promise-claims-registry"
+  description: "Registro de promessas feitas pelos closers durante as calls, provas sociais oferecidas e nível de risco associado."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: call_id
+      type: string
+      description: "ID da call auditada (referência ao calls-registry)"
+      required: true
+    - name: promises_made
+      type: array
+      description: "Lista de promessas feitas pelo closer durante a call"
+      required: true
+    - name: proof_offered
+      type: array
+      description: "Provas sociais, cases ou evidências oferecidas para sustentar as promessas"
+      required: false
+    - name: risk_level
+      type: string
+      description: "Nível de risco das promessas (baixo, médio, alto - baseado em sustentação)"
+      required: true
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - call_id: "CALL-001"
+#   promises_made: ["resultado em 90 dias", "suporte ilimitado"]
+#   proof_offered: ["case do cliente X com resultado em 60 dias"]
+#   risk_level: "médio"

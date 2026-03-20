@@ -1,0 +1,27 @@
+# Métricas de Conversão por Etapa
+# Taxas de conversão entre as etapas da call: rapport, discovery, pitch e close
+
+metadata:
+  name: "call-stage-conversion-metrics"
+  description: "Métricas de conversão entre as etapas da call de vendas, identificando onde ocorrem as maiores perdas no funil."
+  frequency: "weekly"
+  source: "calls-registry, framework-detection-registry, scorecards-registry"
+
+dimensions:
+  - etapa (rapport, discovery, pitch, close)
+  - closer
+  - oferta
+  - período
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "rapport→discovery >= 95%, discovery→pitch >= 85%, pitch→close >= 50%"
+  good: "rapport→discovery >= 90%, discovery→pitch >= 75%, pitch→close >= 35%"
+  needs_improvement: "rapport→discovery >= 80%, discovery→pitch >= 60%, pitch→close >= 20%"
+  critical: "rapport→discovery < 80%, discovery→pitch < 60%, pitch→close < 20%"
+
+calculation:
+  formula: "Taxa de conversão por etapa = leads que avançaram para próxima etapa / total de leads na etapa atual * 100"
+  inputs: "registros de fases das calls, outcomes, identificação de etapa alcançada"

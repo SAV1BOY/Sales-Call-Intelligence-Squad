@@ -1,0 +1,27 @@
+# Métricas de Frequência de Objeções
+# Frequência de objeções por tipo e período temporal
+
+metadata:
+  name: "objection-frequency-metrics"
+  description: "Frequência de objeções categorizadas por tipo (dinheiro, tempo, cônjuge, confiança) e distribuídas por período."
+  frequency: "weekly"
+  source: "objections-registry, calls-registry"
+
+dimensions:
+  - tipo de objeção (money, time, spouse, trust)
+  - período (semanal/mensal)
+  - closer
+  - oferta
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "taxa de resolução de objeções >= 80%"
+  good: "taxa de resolução de objeções >= 60%"
+  needs_improvement: "taxa de resolução de objeções >= 40%"
+  critical: "taxa de resolução de objeções < 40%"
+
+calculation:
+  formula: "Frequência = contagem de objeções por tipo / total de calls no período; Taxa de resolução = objeções contornadas com sucesso / total de objeções"
+  inputs: "registros de objeções, tipo, resultado do contorno, período"

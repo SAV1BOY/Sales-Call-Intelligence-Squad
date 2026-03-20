@@ -1,0 +1,41 @@
+# Registro de Lições Aprendidas
+# Lições extraídas das auditorias de calls
+# Última atualização: Pendente
+
+metadata:
+  name: "lessons-learned-registry"
+  description: "Registro de lições aprendidas em cada auditoria, categorizadas e com ações tomadas."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: lesson_id
+      type: string
+      description: "Identificador único da lição (ex: LES-001)"
+      required: true
+    - name: call_id
+      type: string
+      description: "ID da call de origem (referência ao calls-registry)"
+      required: true
+    - name: description
+      type: string
+      description: "Descrição detalhada da lição aprendida"
+      required: true
+    - name: category
+      type: string
+      description: "Categoria da lição (técnica, comportamental, processual, estratégica)"
+      required: true
+    - name: action_taken
+      type: string
+      description: "Ação tomada ou recomendada com base na lição"
+      required: false
+
+entries: []
+# Entries will be added as calls are audited
+# Example entry format:
+# - lesson_id: "LES-001"
+#   call_id: "CALL-005"
+#   description: "Descoberta de que leads de indicação precisam menos rapport e mais discovery direto"
+#   category: "estratégica"
+#   action_taken: "Ajustar script de abertura para leads de indicação"

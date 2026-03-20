@@ -1,0 +1,36 @@
+# Glossário
+# Definições de termos utilizados no sistema de auditoria de calls
+# Última atualização: Pendente
+
+metadata:
+  name: "glossary"
+  description: "Glossário de termos técnicos e jargões utilizados na auditoria de calls de vendas."
+  updated: "YYYY-MM-DD"
+  version: "1.0.0"
+
+schema:
+  fields:
+    - name: term
+      type: string
+      description: "Termo ou expressão a ser definido"
+      required: true
+    - name: definition
+      type: string
+      description: "Definição clara e objetiva do termo"
+      required: true
+    - name: context
+      type: string
+      description: "Contexto de uso do termo no processo de vendas"
+      required: false
+    - name: related_terms
+      type: array
+      description: "Termos relacionados para referência cruzada"
+      required: false
+
+entries: []
+# Entries will be added as terms are identified
+# Example entry format:
+# - term: "Framework"
+#   definition: "Estrutura metodológica utilizada pelo closer para conduzir uma etapa da call"
+#   context: "Usado na auditoria para avaliar se o closer seguiu metodologias comprovadas"
+#   related_terms: ["SPIN Selling", "Scorecard", "Bloco de avaliação"]
