@@ -34,5 +34,11 @@ Consolidar os diagnósticos individuais em padrões de perda e avaliar a viabili
 - [ ] Top 10 priorizados
 - [ ] Insights preventivos documentados
 
+## Notas de Execução
+
+- Deals perdidos há mais de 60 dias têm probabilidade de recuperação significativamente menor
+- Se a causa raiz foi o closer (não a oferta), considerar trocar o closer na tentativa de recuperação
+- Deals onde o prospect comprou de concorrente são classificados como "não recuperável" automaticamente
+
 ## Próxima Fase
 → Fase 3 — Estratégia de Recuperação
