@@ -60,15 +60,15 @@ O scorecard é a espinha dorsal de toda auditoria. Cada call é pontuada em 10 b
 
 | # | Bloco | Pontos | O que avalia |
 |---|-------|--------|-------------|
-| 1 | Rapport / Abertura | 10 | Quebra de gelo, postura, conexão, energia |
-| 2 | Primeiro Pacto / Frame | 10 | 3 intenções, agenda, frame de liderança |
-| 3 | Diagnóstico SPIN / Profundidade | 20 | Situação, problema, implicação, need-payoff, NEPQ |
-| 4 | Ampliação da Dor / Implicação | 10 | Consequências, urgência, custo da inação |
+| 1 | Rapport / Abertura | 8 | Quebra de gelo, postura, conexão, energia |
+| 2 | Primeiro Pacto / Frame | 8 | 3 intenções, agenda, frame de liderança |
+| 3 | Diagnóstico SPIN / Profundidade | 18 | Situação, problema, implicação, need-payoff, NEPQ |
+| 4 | Ampliação da Dor / Implicação | 8 | Consequências, urgência, custo da inação |
 | 5 | Segundo Pacto | 5 | "Sim ou não no final", comprometimento antes do pitch |
-| 6 | Empresa / Método / Produto | 15 | Compra da empresa, compra do método, compra do produto |
-| 7 | Pitch Amarrado à Fala do Lead | 10 | Pitch usa palavras exatas do lead no diagnóstico |
+| 6 | Empresa / Método / Produto | 12 | Compra da empresa, compra do método, compra do produto |
+| 7 | Pitch Amarrado à Fala do Lead | 9 | Pitch usa palavras exatas do lead no diagnóstico |
 | 8 | Ancoragem / Preço | 10 | Value stack, ancoragem, risk reversal, condição |
-| 9 | Objeções | 15 | Isolamento, looping, belief shift, prevenção |
+| 9 | Objeções | 12 | Isolamento, looping, belief shift, prevenção |
 | 10 | Fechamento / Próximos Passos | 10 | Decisão clara, assumptive close, next step lock |
 | | **TOTAL** | **100** | |
 

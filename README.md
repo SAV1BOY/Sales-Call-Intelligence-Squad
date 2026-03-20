@@ -62,41 +62,41 @@ Root cause → Rewrite de momentos críticos → Coaching → Registry → Melho
 
 | Bloco | Pts |
 |-------|-----|
-| Rapport / Abertura | 10 |
-| Primeiro Pacto / Frame | 10 |
-| Diagnóstico SPIN / Profundidade | 20 |
-| Ampliação da Dor | 10 |
+| Rapport / Abertura | 8 |
+| Primeiro Pacto / Frame | 8 |
+| Diagnóstico SPIN / Profundidade | 18 |
+| Ampliação da Dor | 8 |
 | Segundo Pacto | 5 |
-| Empresa / Método / Produto | 15 |
-| Pitch Amarrado à Fala do Lead | 10 |
+| Empresa / Método / Produto | 12 |
+| Pitch Amarrado à Fala do Lead | 9 |
 | Ancoragem / Preço | 10 |
-| Objeções | 15 |
+| Objeções | 12 |
 | Fechamento / Próximos Passos | 10 |
 | **TOTAL** | **100** |
 
-## Estrutura de Diretórios
+## Estrutura de Diretórios — 651 arquivos
 
 ```
-├── agents/          # 27 agentes
-├── archive/         # Calls icônicas, evolução, falhas
-├── authority/       # Resumos de especialistas, cases, workshops
-├── checklists/      # ~130+ quality gates
-├── data/            # Registries, métricas, transcrições, scorecards
-├── docs/            # Documentação
-├── frameworks/      # ~85+ frameworks
-├── lib/             # Componentes, padrões, utilitários, taxonomias
-├── phrases/         # Bibliotecas de frases por fase
-├── projects/        # 8 tipos de projeto com fases numeradas
-├── reference/       # Livros, vendas, psicologia, negociação
-├── scripts/         # Automação
-├── swipe/           # Best/worst calls, rewrites, scorecards
-├── swipe-sources/   # Fontes curadas
-├── tasks/           # Tarefas executáveis
-├── templates/       # Entregáveis padronizados
-├── voice/           # Tom, linguagem, calibração
-├── workflows/       # 20 playbooks numerados
+├── agents/          # 27 agentes (11 especialistas + 16 funcionais)
+├── archive/         # 16 — calls icônicas, evolução, falhas
+├── authority/       # 18 — resumos de especialistas, cases, workshops
+├── checklists/      # 131 quality gates (macro, por fase, por expert, operacionais)
+├── data/            # 31 — registries (YAML), métricas, research
+├── docs/            # 18 — documentação completa
+├── frameworks/      # 84 frameworks (universais, proprietários, intelectuais)
+├── lib/             # 33 — componentes, padrões, utilitários, taxonomias
+├── phrases/         # 18 — bibliotecas de frases por fase
+├── projects/        # 44 — 8 tipos de projeto com fases numeradas
+├── reference/       # 80 — livros, vendas, psicologia, negociação, objeções, pricing
+├── scripts/         # 14 — automação
+├── swipe/           # 16 — best/worst calls, rewrites, scorecards
+├── swipe-sources/   # 8 — fontes curadas
+├── tasks/           # 38 — tarefas executáveis
+├── templates/       # 32 — entregáveis padronizados
+├── voice/           # 21 — tom, linguagem, calibração
+├── workflows/       # 21 playbooks numerados
 ├── ARCHITECTURE.md  # Princípios e decisões arquiteturais
-├── config.yaml      # Cérebro de roteamento
+├── config.yaml      # Cérebro de roteamento (25+ tasks)
 └── swipe.config     # Configuração de swipe files
 ```
 

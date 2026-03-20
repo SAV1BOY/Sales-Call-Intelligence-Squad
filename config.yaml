@@ -323,15 +323,15 @@ kpis:
 
 scorecard:
   blocks:
-    rapport_abertura: 10
-    primeiro_pacto_frame: 10
-    diagnostico_spin_profundidade: 20
-    ampliacao_dor_implicacao: 10
+    rapport_abertura: 8
+    primeiro_pacto_frame: 8
+    diagnostico_spin_profundidade: 18
+    ampliacao_dor_implicacao: 8
     segundo_pacto: 5
-    empresa_metodo_produto: 15
-    pitch_amarrado_fala_lead: 10
+    empresa_metodo_produto: 12
+    pitch_amarrado_fala_lead: 9
     ancoragem_preco: 10
-    objecoes: 15
+    objecoes: 12
     fechamento_proximos_passos: 10
   total: 100
   output_obrigatorio:
