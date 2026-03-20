@@ -27,3 +27,22 @@ A venda acontece quando o prospect muda uma crença limitante para uma crença c
 - Quando objeções são emocionais e não lógicas — técnicas racionais não funcionam.
 - Para melhorar rapport em calls onde a conexão não está acontecendo.
 - Quando o closer precisa de técnicas sutis de influência além de scripts tradicionais.
+
+## Aplicação Prática em Auditoria de Call
+- Identificar crenças limitantes expressas pelo prospect durante a call
+- Verificar se o closer aplica reframe com evidência (caso, dado, história)
+- Avaliar uso de padrões linguísticos: palavras que ativam vs. desativam resistência
+- Medir qualidade do espelhamento: ritmo, tom, vocabulário alinhados ao prospect
+
+## Conexão com Outros Frameworks
+- **Voss**: Espelhamento e rotulação são ferramentas de PNL aplicadas à negociação
+- **Cialdini**: Mudança de crença é a mecânica por trás da persuasão — os 7 princípios facilitam
+- **Kahneman**: Crenças operam no Sistema 1 — mudá-las exige acesso emocional, não lógico
+- **Klaff**: Frame control é essencialmente reframe de crenças sobre poder e status na conversa
+
+## Métricas para Rastrear
+- Número de crenças limitantes identificadas e tratadas por call
+- Eficácia do reframe medida pela resposta do prospect (aceitou, resistiu, ignorou)
+- Qualidade do espelhamento avaliada por observador externo (escala 1-10)
+- Palavras de resistência vs. palavras de abertura usadas pelo closer
+- Taxa de fechamento em calls com belief shift identificável vs. sem

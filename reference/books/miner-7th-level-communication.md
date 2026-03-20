@@ -27,3 +27,22 @@ Vendas tradicionais baseadas em pressão ativam o mecanismo de defesa do comprad
 - Quando a tonalidade da call está monótona e sem variação emocional.
 - Para treinar anti-selling em closers que vêm de abordagens tradicionais.
 - Quando o prospect está respondendo com monossílabos — sinal de perguntas fracas.
+
+## Aplicação Prática em Auditoria de Call
+- Contar quantas perguntas abertas vs. fechadas o closer faz na discovery
+- Avaliar se o closer usa variação tonal intencional em pelo menos 3 tons diferentes
+- Verificar se o closer pratica anti-selling (não empurra, guia via perguntas)
+- Medir se o prospect articula suas próprias razões para comprar (sinal de NEPQ eficaz)
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: NEPQ é evolução natural do SPIN — adiciona camada emocional e tonal
+- **Voss (Never Split)**: Espelhamento e rotulação complementam perguntas NEPQ
+- **Sandler**: Pain Funnel e NEPQ compartilham objetivo de escavar dor profunda
+- **Cialdini**: Desapego ativa escassez reversa — o closer parece o prêmio
+
+## Métricas para Rastrear
+- Proporção de perguntas abertas vs. fechadas por call
+- Número de mudanças tonais detectadas por fase da call
+- Frequência de momentos onde o prospect se convence sozinho
+- Tempo médio de silêncio do closer após perguntas-chave
+- Taxa de fechamento comparando calls com vs. sem variação tonal intencional

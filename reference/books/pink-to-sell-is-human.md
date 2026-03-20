@@ -27,3 +27,22 @@ Todo ser humano vende — seja um produto, uma ideia ou a si mesmo. O antigo ABC
 - Quando a call tem muita informação mas pouca clareza para o prospect.
 - Para desenvolver storytelling eficaz dentro da call.
 - Quando a equipe precisa entender o papel moderno do vendedor.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar Attunement: o closer adapta comunicação ao estilo do prospect?
+- Verificar Buoyancy: calls após rejeição mantêm energia ou caem de qualidade?
+- Medir Clarity: a oferta é simplificada e organizada ou confusa e longa?
+- Checar se o closer identifica problemas que o prospect não percebia (problem finding)
+
+## Conexão com Outros Frameworks
+- **Challenger Sale**: Problem Finding alinha com Commercial Teaching — mostrar o que o prospect não vê
+- **StoryBrand**: Clareza do Pixar Pitch traduz a narrativa do herói em formato de vendas
+- **Tracy**: Buoyancy conecta com autoconceito — resiliência vem de self-concept saudável
+- **Cialdini**: Attunement facilita todos os 7 princípios — empatia é a base da persuasão
+
+## Métricas para Rastrear
+- Score de adaptação do closer ao estilo do prospect (escala 1-10)
+- Performance em calls após rejeição vs. calls após sucesso
+- Tempo médio de apresentação (indicador de clareza — mais curto = mais claro)
+- Frequência de insights novos trazidos ao prospect (problem finding)
+- Uso de storytelling estruturado na call (Pixar Pitch ou equivalente)

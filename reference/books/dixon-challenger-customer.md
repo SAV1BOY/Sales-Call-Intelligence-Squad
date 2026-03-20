@@ -27,3 +27,21 @@ Em vendas B2B complexas, o maior obstáculo não é convencer o comprador — é
 - Em vendas com comitê de decisão e ciclo longo.
 - Quando o closer tem bom relacionamento com contato mas deal não avança.
 - Para criar estratégia de múltiplos touchpoints com diferentes stakeholders.
+
+## Aplicação Prática em Auditoria de Call
+- Identificar se o interlocutor na call é Mobilizer ou Talker (usando critérios do livro)
+- Verificar se o closer pergunta sobre processo de decisão interna
+- Avaliar se o closer equipa o contato com argumentos para vender internamente
+- Medir taxa de deals que morrem após call positiva (sinal de Talker, não Mobilizer)
+
+## Conexão com Outros Frameworks
+- **Challenger Sale**: Extensão direta — primeiro livro ensina a vender, segundo ensina a mobilizar
+- **Predictable Revenue**: Estrutura de SDR pode incluir identificação de Mobilizer na qualificação
+- **Cialdini**: Unity (pertencimento) ajuda o Mobilizer a se posicionar internamente
+- **StoryBrand**: O Mobilizer se torna o herói interno — precisa de ferramentas do guia
+
+## Métricas para Rastrear
+- Percentual de deals com Mobilizer identificado vs. não identificado
+- Taxa de avanço pós-call por perfil do interlocutor (Mobilizer vs. Talker)
+- Tempo médio de ciclo quando Mobilizer é engajado vs. quando não é
+- Número de stakeholders mapeados por deal

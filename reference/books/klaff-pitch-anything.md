@@ -27,3 +27,22 @@ O pitch não é sobre informação — é sobre frames. Quem controla o frame co
 - Quando o prospect está distraído ou desengajado durante a call.
 - Para reposicionar o closer de "vendedor" para "par estratégico".
 - Quando a dinâmica de poder está desequilibrada na call.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar quem controla o frame na call — closer ou prospect
+- Verificar se o closer mantém status de par (nem submisso nem arrogante)
+- Medir se a apresentação usa tension loops (tensão → resolução)
+- Checar se o closer opera com Prize Frame (ele é o prêmio, não o prospect)
+
+## Conexão com Outros Frameworks
+- **Belfort**: Frame control e Straight Line compartilham a ideia de manter direção
+- **Challenger Sale**: Take Control é a versão B2B do frame control de Klaff
+- **Dan Lok**: Doctor Frame é um tipo específico de frame control — autoridade médica
+- **Hormozi**: Grand Slam Offer é o conteúdo; frame control é o container
+
+## Métricas para Rastrear
+- Momentos de perda e retomada de frame na call (contagem)
+- Status percebido do closer avaliado por observador (escala 1-10)
+- Número de tension loops na apresentação
+- Indicadores de neediness detectados (linguagem, tom, velocidade)
+- Correlação entre frame control forte e taxa de fechamento

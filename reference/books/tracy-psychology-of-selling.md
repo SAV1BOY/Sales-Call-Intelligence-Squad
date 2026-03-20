@@ -27,3 +27,22 @@ O fator mais importante em vendas é o autoconceito do vendedor. Closers que se 
 - Quando a equipe tem medo de fechar ou evita o momento do close.
 - Para implementar rotina de ensaio mental pré-call.
 - Quando closers de alto ticket precisam elevar seu autoconceito para o nível do preço.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar confiança do closer na solução medida por tonalidade e linguagem
+- Verificar se o closer demonstra medo de rejeição (evita close, aceita objeções fracas)
+- Medir entusiasmo genuíno — é contagiante ou forçado?
+- Checar se o closer faz ensaio mental antes das calls (rotina de preparação)
+
+## Conexão com Outros Frameworks
+- **Belfort**: Certeza do closer (Belfort) é expressão do autoconceito (Tracy)
+- **Blount**: Resiliência fanática exige autoconceito forte que absorve rejeição
+- **Pink**: Buoyancy (resiliência) é a versão moderna do trabalho de mindset de Tracy
+- **Eli Wilde**: Crenças limitantes do closer sobre si mesmo afetam performance tanto quanto crenças do prospect
+
+## Métricas para Rastrear
+- Score de confiança do closer avaliada por tonalidade (escala 1-10)
+- Frequência de pedidos de venda explícitos por call (indicador de coragem)
+- Performance em calls após rejeição vs. após sucesso (indicador de resiliência)
+- Autoavaliação do closer vs. avaliação externa (gap = autoconceito desalinhado)
+- Existência de rotina de preparação mental pré-call (sim/não)

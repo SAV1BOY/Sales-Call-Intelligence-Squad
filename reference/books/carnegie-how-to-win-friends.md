@@ -28,3 +28,22 @@ O sucesso em qualquer interação humana — incluindo vendas — depende de hab
 - Quando a call é transacional demais e falta conexão humana genuína.
 - Para closers novos que precisam dos fundamentos de relação interpessoal.
 - Quando o prospect se sente "vendido" em vez de "atendido" — falta rapport real.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer demonstra interesse genuíno pelo prospect como pessoa
+- Avaliar uso do nome do prospect: frequência e naturalidade (3-5 vezes ideal)
+- Medir qualidade da escuta ativa: o closer parafraseia e valida o que ouve?
+- Checar se o closer evita discussão quando prospect discorda — usa concordância primeiro
+
+## Conexão com Outros Frameworks
+- **Voss**: Escuta ativa de Carnegie é a base da empatia tática de Voss
+- **NEPQ (Miner)**: Interesse genuíno é pré-requisito para perguntas NEPQ funcionarem
+- **Eli Wilde**: Rapport via espelhamento é aplicação técnica dos princípios de Carnegie
+- **Cialdini**: Afinidade (Liking) é o princípio de Cialdini mais conectado a Carnegie
+
+## Métricas para Rastrear
+- Uso do nome do prospect por call (contagem)
+- Ocorrências de paráfrase ou validação ("o que você está dizendo é...")
+- Momentos de interesse genuíno demonstrado (perguntas além do script)
+- Ocorrências de argumentação vs. concordância-primeiro
+- Score de rapport avaliado por observador (escala 1-10)

@@ -27,3 +27,22 @@ O pipeline é tudo. Closers que prospectam fanaticamente nunca ficam sem deals p
 - Quando a equipe está evitando prospecção e focando apenas em leads quentes.
 - Para implementar rotina de blocos de prospecção protegidos.
 - Quando novos closers precisam construir pipeline do zero rapidamente.
+
+## Aplicação Prática em Auditoria de Call
+- Medir volume de atividade diária do closer (calls, e-mails, touches)
+- Verificar se o closer tem blocos de prospecção protegidos no calendário
+- Avaliar resiliência em cold calls: o closer persiste após RBO ou desiste?
+- Checar se o closer usa triple touch (telefone + e-mail + social)
+
+## Conexão com Outros Frameworks
+- **Predictable Revenue**: Volume de atividade alimenta o sistema previsível de Ross
+- **Roberge**: Métricas de atividade são input para o modelo data-driven de Roberge
+- **Hormozi ($100M Leads)**: Core Four define os canais; Blount define a disciplina em cada canal
+- **Tracy**: A disciplina fanática de Blount exige o autoconceito forte de Tracy
+
+## Métricas para Rastrear
+- Calls de prospecção por dia por closer
+- Percentual de tempo em atividade de prospecção vs. admin
+- Taxa de contato por canal (telefone, e-mail, social)
+- Conversão por tentativa (1a, 2a, 3a tentativa)
+- Tempo entre perda de deal e retomada de atividade normal (resiliência)

@@ -27,3 +27,21 @@ Toda venda acontece em linha reta: do momento da abertura até o fechamento. Des
 - Quando o closer precisa melhorar os primeiros 30 segundos da call.
 - Para treinar técnicas de looping quando objeções surgem repetidamente.
 - Quando a equipe precisa de um framework simples e memorável para seguir.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar se o closer identifica e trabalha as Três Certezas separadamente
+- Verificar se a técnica de looping é usada quando objeções surgem
+- Medir a qualidade dos primeiros 30 segundos (energia, competência, entusiasmo)
+- Checar se o closer usa deflection + reframe nas objeções em vez de argumentação direta
+
+## Conexão com Outros Frameworks
+- **NEPQ (Miner)**: Complementa Straight Line com perguntas que guiam o prospect em vez de pressionar
+- **Klaff (Pitch Anything)**: Frame control é conceito compartilhado — quem controla o frame lidera
+- **Cialdini**: As Três Certezas mapeiam para autoridade, prova social e afinidade
+- **Cole Gordon**: 4-Part Framework estrutura a linha reta em blocos práticos
+
+## Métricas para Rastrear
+- Score de certeza implícita nos três pilares (produto, vendedor, empresa)
+- Número de loops realizados por call quando objeções surgem
+- Qualidade medida dos primeiros 30 segundos (tom, energia, clareza)
+- Taxa de fechamento correlacionada com número de loops aplicados

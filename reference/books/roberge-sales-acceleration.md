@@ -27,3 +27,22 @@ Vendas podem e devem ser tratadas como engenharia: hipótese, experimento, dados
 - Para estruturar programa de treinamento por comportamento específico.
 - Quando a equipe precisa de benchmark de performance para cada métrica.
 - Para diagnosticar gargalos no funil usando dados em vez de suposições.
+
+## Aplicação Prática em Auditoria de Call
+- Usar scorecard de 5 dimensões para avaliação padronizada de closers
+- Implementar coaching data-driven baseado em métricas, não em opinião
+- Testar variações de script em cohorts e medir resultado por variação
+- Definir critérios mensuráveis de contratação e avaliar previsibilidade de sucesso
+
+## Conexão com Outros Frameworks
+- **Predictable Revenue**: Ross define o sistema; Roberge adiciona métricas e otimização
+- **Cole Gordon**: Scorecard de 5 dimensões pode ser expandido para as 10 dimensões de Gordon
+- **Blount**: Métricas de atividade de Blount complementam métricas de qualidade de Roberge
+- **Kahneman**: Data-driven selling remove vieses cognitivos da gestão de vendas
+
+## Métricas para Rastrear
+- Score por dimensão com tendência temporal
+- Correlação entre score e taxa de fechamento (validar que o score prediz resultado)
+- Taxa de melhora por tipo de intervenção de coaching
+- ROI de treinamento medido em pontos de score e pontos de conversão
+- Previsibilidade de resultado baseada em métricas de entrada

@@ -28,3 +28,22 @@ Negociação não é um exercício racional — é um processo emocional. As té
 - Quando objeções estão gerando confronto em vez de conversa construtiva.
 - Para melhorar técnicas de discovery usando espelhamento e rotulação.
 - Quando o closer precisa lidar com objeções emocionais, não racionais.
+
+## Aplicação Prática em Auditoria de Call
+- Contar ocorrências de espelhamento na call e avaliar naturalidade
+- Verificar se o closer usa rotulação ("parece que...") para nomear emoções do prospect
+- Avaliar se perguntas calibradas ("como" e "o que") são usadas em vez de perguntas fechadas
+- Medir se auditoria de acusações é feita antes de apresentar preço
+
+## Conexão com Outros Frameworks
+- **NEPQ (Miner)**: NEPQ e Voss compartilham a filosofia de perguntas que guiam o prospect
+- **Sandler**: Pain Funnel e espelhamento/rotulação operam na mesma camada emocional
+- **Eli Wilde**: PNL e técnicas de Voss são ferramentas complementares de influência sutil
+- **Cialdini**: Empatia tática ativa os princípios de afinidade e unidade de Cialdini
+
+## Métricas para Rastrear
+- Frequência de espelhamento por call (ideal: 3-5 vezes)
+- Frequência de rotulação por call (ideal: 2-4 vezes)
+- Proporção de perguntas calibradas vs. perguntas fechadas
+- Ocorrência de "that's right" ou equivalente do prospect (sinal de empatia máxima)
+- Uso de auditoria de acusações pré-close (sim/não)

@@ -27,3 +27,21 @@ Dos cinco perfis de vendedores (Relationship Builder, Hard Worker, Lone Wolf, Re
 - Quando a call precisa de mais autoridade e posicionamento de especialista.
 - Em vendas B2B complexas com múltiplos stakeholders.
 - Quando o closer evita confronto e perde controle da conversa.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar se o closer abre com insight comercial (não com perguntas genéricas)
+- Verificar se a mensagem é adaptada ao perfil do decisor (Tailoring)
+- Medir nível de assertividade: passivo, assertivo ou agressivo
+- Checar se o closer cria tensão construtiva ou evita confronto
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: Challenger substitui perguntas de Situação por insights diretos — mais eficiente
+- **Klaff**: Frame control alinha com Take Control — quem lidera a conversa ganha
+- **Hormozi**: Grand Slam Offer é mais poderosa quando introduzida via Commercial Teaching
+- **Voss**: Tactical empathy equilibra a assertividade do Challenger com empatia genuína
+
+## Métricas para Rastrear
+- Percentual de calls abertas com insight vs. perguntas genéricas
+- Nível de personalização da mensagem por tipo de decisor
+- Score de assertividade medido em escala (1-10)
+- Taxa de fechamento comparando abordagem Challenger vs. Relationship Builder

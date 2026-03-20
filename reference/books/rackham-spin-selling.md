@@ -27,3 +27,22 @@ Vendas complexas e de alto valor exigem uma abordagem fundamentalmente diferente
 - Quando o closer apresenta solução cedo demais, antes de desenvolver necessidade.
 - Para vendas complexas com múltiplos decisores e ciclo longo.
 - Quando a call tem muita informação coletada mas pouca urgência criada.
+
+## Aplicação Prática em Auditoria de Call
+- Classificar cada pergunta do closer como S, P, I ou N
+- Medir a proporção: calls com mais I e N fecham mais que calls com mais S
+- Verificar se o closer pula de S direto para apresentação (erro comum)
+- Avaliar se cada call termina com avanço claro ou apenas continuação vaga
+
+## Conexão com Outros Frameworks
+- **NEPQ (Miner)**: NEPQ é evolução moderna do SPIN com camada emocional e tonal
+- **Gap Selling (Keenan)**: Perguntas I e N quantificam o gap entre estado atual e futuro
+- **Sandler**: Pain Funnel opera no mesmo princípio de escavar dor progressivamente
+- **Challenger Sale**: Commercial Teaching pode substituir perguntas S (chega mais rápido ao P)
+
+## Métricas para Rastrear
+- Proporção de perguntas S:P:I:N por call
+- Tempo dedicado a cada tipo de pergunta
+- Correlação entre número de perguntas I e taxa de fechamento
+- Percentual de calls que terminam com avanço vs. continuação
+- Profundidade média de discovery medida pela escala SPIN

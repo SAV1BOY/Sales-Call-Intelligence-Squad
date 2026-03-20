@@ -28,3 +28,22 @@ Pequenas mudanças na forma como as opções são apresentadas (nudges) têm imp
 - Para treinar técnicas sutis de influência que preservam autonomia do prospect.
 - Quando a transição para o close precisa ser mais natural e menos abrupta.
 - Para implementar defaults e nudges no script de vendas.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer usa default effect (posiciona recomendação como padrão)
+- Avaliar se a decisão é simplificada (sim/não vs. múltiplas opções complexas)
+- Medir uso de prova social como nudge ("a maioria escolhe...")
+- Checar se o opt-out framing é usado no close ("vamos começar?" vs. "você quer?")
+
+## Conexão com Outros Frameworks
+- **Ariely**: Nudges são aplicações práticas dos vieses documentados por Ariely
+- **Kahneman**: Nudges funcionam porque o Sistema 1 segue o caminho de menor resistência
+- **Cialdini**: Prova social e escassez são os nudges mais usados em vendas
+- **Cole Gordon**: Trial close é um nudge — testa receptividade antes da decisão real
+
+## Métricas para Rastrear
+- Uso de default framing no close (sim/não)
+- Número de opções apresentadas ao prospect (ideal: 2-3, máximo: 4)
+- Uso de prova social numérica ("90% dos nossos clientes...") na apresentação
+- Tipo de pergunta no close: opt-in ("quer começar?") vs. opt-out ("vamos começar?")
+- Correlação entre simplificação da decisão e taxa de fechamento

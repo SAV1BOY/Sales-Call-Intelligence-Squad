@@ -27,3 +27,22 @@ As marcas que crescem são as que posicionam o cliente como herói da história,
 - Quando a apresentação é confusa ou longa demais — falta de clareza mata.
 - Para criar one-liners e aberturas que capturam atenção imediatamente.
 - Quando a call não cria urgência — falta o elemento de fracasso/consequência.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer posiciona o prospect como herói (não a empresa)
+- Avaliar se o plano é apresentado em 3 passos simples
+- Medir se failure painting é usado para criar urgência (consequência de não agir)
+- Checar se toda comunicação na call é centrada no prospect, não na empresa
+
+## Conexão com Outros Frameworks
+- **Pink (To Sell is Human)**: Pixar Pitch é versão simplificada do SB7 para calls rápidas
+- **Hormozi**: Grand Slam Offer é o "plano" que o guia dá ao herói
+- **Gap Selling**: O gap é a distância entre o herói no início e no final da jornada
+- **Cialdini**: Autoridade + empatia = o guia perfeito (empatia + competência)
+
+## Métricas para Rastrear
+- Proporção de frases centradas no prospect vs. centradas na empresa
+- Uso de plano em 3 passos na apresentação (sim/não)
+- Frequência de failure painting antes do close
+- Clareza da mensagem avaliada pelo prospect ("entendi perfeitamente" vs. "me explica de novo")
+- Correlação entre narrativa de herói e engajamento do prospect na call

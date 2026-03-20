@@ -34,5 +34,11 @@ Produzir a call segmentada com início e fim de cada etapa claramente demarcados
 - [ ] Durações calculadas
 - [ ] Transições classificadas
 
+## Notas de Execução
+
+- Se a call for muito curta (menos de 15 minutos), algumas etapas podem estar ausentes naturalmente
+- Calls de follow-up frequentemente iniciam sem rapport — registrar como "não aplicável", não como "ausente"
+- Em casos de sobreposição, registrar o segmento principal e anotar a sobreposição como observação
+
 ## Próxima Fase
 → Fase 3 — Detecção de Frameworks

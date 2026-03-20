@@ -27,3 +27,22 @@ Vendas não precisam ser complicadas. Os fundamentos — lista de prospects, arm
 - Quando closers estão ocupados mas não produtivos — problema de priorização.
 - Para treinar novos closers com framework simples e eficaz.
 - Quando o pitch é longo, confuso ou genérico demais.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar se o closer tem uma Sales Story clara e praticada (2 minutos, 3 partes)
+- Verificar se a call é proativa (pesquisada, personalizada) ou reativa (genérica)
+- Medir se o pitch é reduzido a 3 pontos-chave ou se é extenso e diluído
+- Checar se o calendário do closer reflete prioridades de vendas (blocos protegidos)
+
+## Conexão com Outros Frameworks
+- **StoryBrand**: Sales Story e Brand Story compartilham estrutura narrativa
+- **Fanatical Prospecting**: Disciplina de Weinberg complementa volume de Blount
+- **Cole Gordon**: 4-Part Framework adiciona estrutura à simplicidade de Weinberg
+- **Challenger Sale**: Sales Story pode incluir Commercial Teaching para diferenciar
+
+## Métricas para Rastrear
+- Clareza da Sales Story avaliada por observador (escala 1-10)
+- Tempo de pitch medido (ideal: 90-120 segundos)
+- Número de pontos-chave na apresentação (ideal: 3, máximo: 5)
+- Percentual de tempo em atividades de receita vs. atividades administrativas
+- Taxa de personalização da abordagem por prospect (pesquisa prévia feita?)

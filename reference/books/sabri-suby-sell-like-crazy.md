@@ -27,3 +27,21 @@ A maioria das empresas falha porque não tem um sistema previsível de aquisiç�
 - Quando o closer precisa de uma estrutura clara de apresentação de oferta.
 - Para diagnosticar se o funil pré-call está aquecendo leads suficientemente.
 - Quando a equipe precisa de abordagem mais agressiva para pipeline competitivo.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se a oferta na call segue a estrutura da Godfather Offer (valor extremo + risco zero)
+- Avaliar qualificação BANT nos primeiros 10 minutos da call
+- Medir se o closer diferencia a oferta radicalmente de concorrentes
+- Checar se o closer referencia HVCO consumido pelo prospect para construir credibilidade
+
+## Conexão com Outros Frameworks
+- **Hormozi ($100M Offers)**: Godfather Offer e Grand Slam Offer são conceitos complementares
+- **Predictable Revenue**: Dream 100 alinha com target account list para prospecção focada
+- **Gap Selling**: Qualificação BANT é versão simplificada do mapeamento de gap
+- **Cialdini**: Escassez e reciprocidade são pilares tanto do funil de Suby quanto de Cialdini
+
+## Métricas para Rastrear
+- Taxa de conversão por tipo de HVCO consumido antes da call
+- Percentual de calls com qualificação BANT completa nos primeiros 10 minutos
+- Diferenciação mencionada pelo closer vs. diferenciação percebida pelo prospect
+- Taxa de no-show por etapa do funil pré-call

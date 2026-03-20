@@ -27,3 +27,22 @@ Vender não é convencer — é qualificar e desqualificar rapidamente. O Sistem
 - Quando "preciso pensar" é a objeção mais frequente — falta up-front contract.
 - Para implementar disciplina de desqualificação rápida.
 - Quando o closer revela a solução cedo demais e perde poder na negociação.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se Up-Front Contract é estabelecido nos primeiros 3 minutos
+- Avaliar se o Pain Funnel é seguido até a camada emocional (não só factual)
+- Medir talk ratio: o closer está no terço correto? (falar 1/3, ouvir 2/3)
+- Checar se o closer usa Reversing quando prospect faz perguntas prematuras sobre preço
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: Pain Funnel é versão expandida das perguntas P e I do SPIN
+- **Cole Gordon**: Pre-Frame do 4-Part Framework é equivalente ao Up-Front Contract
+- **Voss**: Espelhamento e rotulação complementam o Pain Funnel para escavar mais fundo
+- **Dan Lok**: Doctor Frame e Sandler compartilham o princípio de diagnosticar antes de prescrever
+
+## Métricas para Rastrear
+- Percentual de calls com Up-Front Contract estabelecido
+- Profundidade do Pain Funnel (camada mais profunda atingida)
+- Talk ratio medido (meta: closer ≤ 35%)
+- Uso de Negative Reverse Selling e taxa de resposta positiva
+- Taxa de "preciso pensar" em calls com vs. sem Up-Front Contract

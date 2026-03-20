@@ -28,3 +28,21 @@ Toda objeção em vendas se resume a quatro raízes: falta de confiança, falta 
 - Quando "preciso pensar" aparece em mais de 30% das calls — sinal de problema sistêmico.
 - Para treinar scripts específicos por tipo de objeção.
 - Quando o closer desiste rápido demais após a primeira objeção.
+
+## Aplicação Prática em Auditoria de Call
+- Classificar cada objeção da call em uma das 4 raízes (confiança, necessidade, urgência, dinheiro)
+- Verificar se o closer isola a objeção antes de tratar ("fora isso, tem algo mais?")
+- Avaliar se o closer desiste no primeiro "não" ou persiste adequadamente (regra dos 3)
+- Medir certeza do closer na solução — voz, tom, linguagem corporal
+
+## Conexão com Outros Frameworks
+- **Voss**: Empatia tática é a melhor ferramenta para diagnosticar a raiz real da objeção
+- **Belfort**: Três Certezas mapeiam para as 4 objeções — falta de certeza = objeção
+- **SPIN Selling**: Perguntas de Implicação previnem objeções de urgência e necessidade
+- **Dan Lok**: Doctor Frame posiciona o closer como autoridade, prevenindo objeção de confiança
+
+## Métricas para Rastrear
+- Distribuição das 4 objeções por closer e por período
+- Taxa de superação por tipo de objeção
+- Correlação entre profundidade de discovery e frequência de objeções
+- Percentual de calls onde o closer isola a objeção corretamente

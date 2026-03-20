@@ -27,3 +27,21 @@ Vender high ticket exige um posicionamento fundamentalmente diferente de vendas 
 - Quando o prospect está controlando a conversa em vez do closer.
 - Em calls de high ticket onde o preço exige justificativa forte de valor.
 - Quando a equipe precisa mudar de "vender para" para "diagnosticar e prescrever".
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer estabelece Doctor Frame nos primeiros 3 minutos
+- Avaliar se 60%+ do tempo é dedicado a diagnóstico (discovery), não a prescrição (pitch)
+- Medir se o closer usa escala de dor 1-10 ou equivalente
+- Checar se o investimento é sempre vinculado ao retorno esperado (Investment Frame)
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: Doctor Frame é o contexto perfeito para aplicar perguntas SPIN
+- **Cole Gordon**: Pre-frame de abertura estabelece Doctor Frame naturalmente
+- **Hormozi**: Value Equation complementa o Investment Frame com justificativa matemática
+- **Voss**: Empatia tática do FBI é o equivalente da empatia do médico no diagnóstico
+
+## Métricas para Rastrear
+- Proporção de tempo diagnóstico vs. prescrição por call
+- Score de autoridade percebida (avaliação qualitativa da posição do closer)
+- Uso de Investment Frame vs. Cost Frame na apresentação de preço
+- Correlação entre Doctor Frame estabelecido e taxa de fechamento

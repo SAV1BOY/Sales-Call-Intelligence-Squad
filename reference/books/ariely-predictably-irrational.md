@@ -28,3 +28,22 @@ Humanos são irracionais, mas previsivelmente irracionais. Os mesmos vieses se r
 - Para treinar técnicas de precificação psicológica na call.
 - Quando a oferta precisa de bônus e elementos gratuitos para aumentar conversão.
 - Para entender por que prospects tomam decisões de compra aparentemente irracionais.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se a oferta usa efeito decoy (3 opções com intermediária como alvo)
+- Avaliar se ancoragem de preço é feita antes da revelação do investimento
+- Medir uso do poder do gratuito (bônus sem custo na oferta)
+- Checar se o closer cria contexto de comparação favorável antes do preço
+
+## Conexão com Outros Frameworks
+- **Kahneman**: Vieses catalogados por Ariely são operações do Sistema 1 de Kahneman
+- **Hormozi**: Grand Slam Offer usa efeito decoy, ancoragem e gratuito simultaneamente
+- **Nudge (Thaler)**: Arquitetura de escolha é aplicação prática dos vieses de Ariely
+- **Pre-Suasion (Cialdini)**: Expectativa moldando experiência é uma forma de priming
+
+## Métricas para Rastrear
+- Percentual de calls com 3 opções de preço apresentadas
+- Sequência de apresentação de preço (ancoragem correta? valor antes do investimento?)
+- Número de bônus gratuitos mencionados na oferta
+- Uso de comparação com custos cotidianos do prospect (diluição)
+- Taxa de fechamento por variação de apresentação de preço (A/B testing)

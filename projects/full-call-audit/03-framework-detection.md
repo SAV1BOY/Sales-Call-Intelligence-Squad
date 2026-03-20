@@ -34,5 +34,11 @@ Mapear todas as técnicas de vendas usadas na call com classificação de aplica
 - [ ] Classificação de aplicação registrada
 - [ ] Frameworks ausentes documentados
 
+## Notas de Execução
+
+- A detecção deve ser baseada em evidência textual, nunca em suposição
+- Um closer pode usar um framework inconscientemente — detectar e registrar mesmo assim
+- Frameworks parciais são comuns e devem ser documentados com o que faltou para ser completo
+
 ## Próxima Fase
 → Fase 4 — Scoring

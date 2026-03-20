@@ -27,3 +27,21 @@ Escalar vendas de high ticket para 8 dígitos exige frameworks replicáveis, nã
 - Quando as calls são longas demais ou curtas demais — falta de estrutura.
 - Para padronizar qualidade entre closers de diferentes níveis.
 - Quando o closer não sabe como transicionar entre fases da call.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se as 4 partes do framework são executadas com transições claras
+- Avaliar qualidade do pre-frame na abertura (agenda definida, permissão obtida)
+- Medir se a apresentação espelha a discovery (cada dor = um componente da solução)
+- Checar se trial close é feito antes de revelar preço
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: Discovery do 4-Part Framework usa SPIN adaptado como base
+- **Hormozi**: Empilhamento de valor na apresentação segue princípios do Grand Slam Offer
+- **Sandler**: Up-Front Contract e Pre-Frame são o mesmo conceito em frameworks diferentes
+- **Belfort**: Straight Line e 4-Part Framework compartilham a ideia de progressão estruturada
+
+## Métricas para Rastrear
+- Percentual de calls com as 4 partes claramente executadas
+- Tempo alocado por parte vs. benchmark (abertura 10%, discovery 40%, apresentação 30%, close 20%)
+- Taxa de trial close positivo antes de revelação de preço
+- Correlação entre apresentação espelhada na discovery e taxa de fechamento

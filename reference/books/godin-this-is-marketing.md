@@ -28,3 +28,22 @@ Marketing não é sobre manipulação ou volume — é sobre servir. O marketing
 - Quando a qualificação está fraca e prospects não-fit estão consumindo tempo.
 - Para entender motivações de status e pertencimento na decisão de compra.
 - Quando a equipe precisa entender que marketing e vendas são extensão um do outro.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer qualifica rigorosamente (rejeita prospects não-fit?)
+- Avaliar se a mensagem foca no que a solução faz pelo prospect, não no que ela é
+- Medir uso de identidade tribal ("empreendedores como nós..." ou equivalente)
+- Checar se o closer comunica que a call é um ato de serviço, não de extração
+
+## Conexão com Outros Frameworks
+- **Cialdini**: Unity (pertencimento tribal) é o 7o princípio — Godin teoriza a tribo
+- **StoryBrand**: "O cliente é o herói" alinha com "marketing é sobre servir"
+- **Challenger Sale**: Menor audiência viável alinha com foco em contas estratégicas
+- **Hormozi**: Starving Crowd de Hormozi é a audiência viável de Godin com dor ativa
+
+## Métricas para Rastrear
+- Percentual de prospects desqualificados pelo closer (indicador de seletividade)
+- Proporção de linguagem centrada no prospect vs. centrada na empresa
+- Uso de referências tribais e de identidade na call
+- Score de "serviço" da call avaliado pelo prospect (se pesquisa pós-call existir)
+- Correlação entre seletividade na qualificação e taxa de fechamento

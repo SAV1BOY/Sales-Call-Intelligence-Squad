@@ -27,3 +27,22 @@ Receita previsível vem de um sistema previsível de geração de leads. A Sales
 - Quando closers estão prospectando e perdendo tempo em atividades não-closing.
 - Para definir processo de passagem SDR→AE e garantir qualidade da informação.
 - Quando a empresa precisa escalar vendas de forma sistemática e previsível.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar qualidade da passagem SDR→AE (4 pontos completos?)
+- Avaliar se o closer conhece a origem do lead e adapta abordagem
+- Medir métricas de pipeline por closer (calls/dia, taxa por etapa)
+- Checar se cada call termina com avanço claro no funil
+
+## Conexão com Outros Frameworks
+- **Fanatical Prospecting**: Complementa com disciplina de atividade no dia a dia
+- **Roberge (Sales Acceleration)**: Adiciona camada de dados e métricas ao sistema de Ross
+- **Hormozi ($100M Leads)**: Core Four de geração de leads complementa o modelo outbound
+- **Gap Selling**: Qualificação do SDR pode incluir identificação preliminar do gap
+
+## Métricas para Rastrear
+- Volume de leads qualificados por semana
+- Taxa de conversão por etapa do funil (lead → call → proposta → close)
+- Lead response time (tempo entre interesse e primeiro contato)
+- Qualidade da passagem SDR→AE (checklist de 4 pontos)
+- Revenue per lead por canal de origem

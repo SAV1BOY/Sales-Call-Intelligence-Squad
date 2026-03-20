@@ -27,3 +27,22 @@ Clientes não compram produtos — compram mudança. Compram o gap entre onde es
 - Quando o prospect não vê urgência — o gap não está claro ou não é grande o suficiente.
 - Para calls de qualificação onde precisamos decidir se o prospect é fit.
 - Quando o preço é objeção — provavelmente o gap percebido é menor que o investimento.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer mapeia estado atual com detalhes quantificáveis
+- Avaliar se o estado futuro desejado é articulado pelo prospect
+- Medir se o gap é calculado em números concretos (R$, %, tempo)
+- Checar se a causa raiz do gap é explorada (por que o gap existe?)
+
+## Conexão com Outros Frameworks
+- **SPIN Selling**: Perguntas I e N são as ferramentas que quantificam e amplificam o gap
+- **Hormozi**: Value Equation justifica que a solução fecha o gap de forma eficiente
+- **Cole Gordon**: Discovery em Camadas é uma implementação prática do mapeamento de gap
+- **Challenger Sale**: Commercial Teaching pode revelar gaps que o prospect não sabia que tinha
+
+## Métricas para Rastrear
+- Percentual de calls com gap quantificado em R$ ou %
+- Profundidade de exploração de causa raiz (perguntas "por que" feitas)
+- Proporção entre gap identificado e preço da solução (gap deve ser > 3x o preço)
+- Correlação entre gap quantificado e taxa de fechamento
+- Percentual de calls com estado futuro claramente articulado pelo prospect

@@ -27,3 +27,21 @@ O momento de maior influência não é durante a apresentação — é antes del
 - Quando a call tem boa oferta mas o prospect não parece receptivo.
 - Para treinar timing de transição entre discovery e apresentação.
 - Quando o closer precisa criar urgência sem usar táticas de pressão.
+
+## Aplicação Prática em Auditoria de Call
+- Avaliar se as perguntas de discovery funcionam como priming para a solução
+- Verificar se a primeira pergunta da call é pre-suasiva (direciona atenção para a dor)
+- Medir timing de transição: a oferta é apresentada no momento de máxima receptividade?
+- Checar se o closer usa associação estratégica (vincula solução a valores do prospect)
+
+## Conexão com Outros Frameworks
+- **Kahneman**: Priming é operação do Sistema 1 — influência antes da consciência racional
+- **NEPQ (Miner)**: Perguntas de Consequência são pre-suasão pura — preparam para a oferta
+- **Klaff**: Frame control é uma forma de pre-suasão — quem define o frame define a percepção
+- **Ariely**: Ancoragem de preço é uma aplicação direta de pre-suasão
+
+## Métricas para Rastrear
+- Tipo de primeira pergunta da call (pre-suasiva vs. neutra vs. genérica)
+- Timing de transição para apresentação em relação ao pico emocional do prospect
+- Número de associações estratégicas feitas entre solução e valores expressos pelo prospect
+- Taxa de fechamento correlacionada com qualidade da pre-suasão na discovery

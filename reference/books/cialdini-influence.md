@@ -29,3 +29,21 @@ A persuasão opera através de sete princípios universais que funcionam porque 
 - Para treinar closers nos fundamentos psicológicos da persuasão.
 - Quando objeções surgem por falta de prova social ou autoridade.
 - Para construir sequências de influência mais eficazes no script.
+
+## Aplicação Prática em Auditoria de Call
+- Criar checklist dos 7 princípios e verificar quais foram ativados em cada call
+- Avaliar qualidade da prova social usada (específica e relevante vs. genérica)
+- Medir se escassez mencionada é real ou fabricada (escassez falsa destrói confiança)
+- Verificar uso de micro-compromissos ao longo da call (compromisso e consistência)
+
+## Conexão com Outros Frameworks
+- **Hormozi**: Grand Slam Offer ativa reciprocidade, escassez e prova social simultaneamente
+- **Voss**: Empatia tática constrói afinidade (Liking) e unidade (Unity) naturalmente
+- **Kahneman**: Princípios de Cialdini operam via Sistema 1 — atalhos automáticos de decisão
+- **Nudge (Thaler)**: Nudges são aplicações práticas dos princípios de influência
+
+## Métricas para Rastrear
+- Checklist de 7 princípios ativados por call (meta: mínimo 5 de 7)
+- Qualidade e relevância da prova social usada (escala 1-10)
+- Número de micro-compromissos obtidos ao longo da call
+- Correlação entre princípios ativados e taxa de fechamento

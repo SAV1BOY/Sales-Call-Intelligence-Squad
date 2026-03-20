@@ -28,3 +28,22 @@ O cérebro humano opera com dois sistemas: Sistema 1 (rápido, intuitivo, emocio
 - Para treinar técnicas de ancoragem na apresentação de preço.
 - Quando precisar usar aversão à perda de forma ética para criar urgência.
 - Para entender vieses cognitivos que afetam a decisão de compra.
+
+## Aplicação Prática em Auditoria de Call
+- Verificar se o closer ativa emoção (Sistema 1) antes de lógica (Sistema 2)
+- Avaliar uso de ancoragem na apresentação de preço (primeiro número = âncora)
+- Medir se aversão à perda é usada na discovery (frame de perda vs. frame de ganho)
+- Checar se o efeito halo é construído nos primeiros 60 segundos
+
+## Conexão com Outros Frameworks
+- **Cialdini**: Os 7 princípios operam via Sistema 1 — atalhos automáticos de decisão
+- **Ariely**: Irracionalidade previsível é o repertório de vieses do Sistema 1 catalogado
+- **Nudge (Thaler)**: Nudges são projetados para funcionar no Sistema 1
+- **Pre-Suasion (Cialdini)**: Priming opera exclusivamente no Sistema 1
+
+## Métricas para Rastrear
+- Sequência emoção→lógica na call (emoção primeiro? ou lógica primeiro?)
+- Qualidade da ancoragem de preço (valor total apresentado antes do investimento?)
+- Uso de loss framing vs. gain framing na discovery
+- Qualidade dos primeiros 60 segundos (indicador de efeito halo)
+- Correlação entre sequência emoção→lógica e taxa de fechamento
