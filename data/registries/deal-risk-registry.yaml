@@ -1,3 +1,36 @@
+# Schema Definition
+_schema:
+  description: "Registro de níveis de risco identificados em cada deal/call, com fatores de risco e ações de mitigação"
+  fields:
+    call_id:
+      type: string
+      required: true
+      description: "ID da call avaliada (referência ao calls-registry)"
+    risk_level:
+      type: string
+      required: true
+      description: "Nível de risco do deal (baixo, médio, alto, crítico)"
+    factors:
+      type: list
+      required: true
+      description: "Fatores de risco identificados na call"
+    mitigation:
+      type: string
+      required: false
+      description: "Ações de mitigação sugeridas ou tomadas"
+    outcome:
+      type: string
+      required: false
+      description: "Resultado final do deal (fechou, perdeu, pendente)"
+  updated_by: "analyze-discovery, analyze-objections, extract-loss-patterns, analyze-offer-fit"
+  update_frequency: "per-call"
+  owner: "deal-risk-doctor"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/loss-patterns-registry.yaml"
+    - "data/registries/objections-registry.yaml"
+
+# ---
 # Registro de Risco de Deal
 # Avaliação de risco para cada deal/call auditada
 # Última atualização: Pendente

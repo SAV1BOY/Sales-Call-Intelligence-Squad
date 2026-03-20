@@ -1,3 +1,40 @@
+# Schema Definition
+_schema:
+  description: "Biblioteca de objeções catalogadas nas calls de vendas, com tipo, causa raiz, frequência e melhor resposta"
+  fields:
+    id:
+      type: string
+      required: true
+      description: "Identificador único da objeção (ex: OBJ-001)"
+    type:
+      type: string
+      required: true
+      description: "Tipo da objeção (money, timing, authority, trust, competitor, inertia)"
+    real_cause:
+      type: string
+      required: false
+      description: "Causa real por trás da objeção identificada na auditoria"
+    frequency:
+      type: number
+      required: true
+      description: "Número de vezes que a objeção foi registrada"
+    best_response:
+      type: string
+      required: false
+      description: "Melhor resposta ou abordagem para contornar a objeção"
+    framework:
+      type: string
+      required: false
+      description: "Framework recomendado para tratamento da objeção"
+  updated_by: "analyze-objections, update-objections-library"
+  update_frequency: "per-call"
+  owner: "objection-specialist"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/deal-risk-registry.yaml"
+    - "data/registries/loss-patterns-registry.yaml"
+
+# ---
 # Registro de Objeções
 # Catalogação de objeções identificadas nas calls de vendas
 # Última atualização: Pendente

@@ -1,3 +1,36 @@
+# Schema Definition
+_schema:
+  description: "Registro de concessões de preço feitas durante as calls, com preço original, final, tipo de concessão e justificativa"
+  fields:
+    call_id:
+      type: string
+      required: true
+      description: "ID da call auditada (referência ao calls-registry)"
+    original_price:
+      type: number
+      required: true
+      description: "Preço original da oferta apresentado"
+    final_price:
+      type: number
+      required: true
+      description: "Preço final após concessão"
+    concession_type:
+      type: string
+      required: true
+      description: "Tipo de concessão (desconto, parcelamento, bônus, prazo estendido)"
+    justified:
+      type: string
+      required: true
+      description: "Se a concessão foi justificada estrategicamente (sim, não, parcialmente)"
+  updated_by: "analyze-pricing"
+  update_frequency: "per-call"
+  owner: "pricing-anchoring-analyst"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/deal-risk-registry.yaml"
+    - "data/registries/scorecards-registry.yaml"
+
+# ---
 # Registro de Concessões de Preço
 # Rastreamento de descontos e concessões oferecidos durante as calls
 # Última atualização: Pendente

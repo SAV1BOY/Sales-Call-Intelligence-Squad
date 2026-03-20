@@ -127,3 +127,25 @@ Garantir que após o fechamento da venda, todas as informações relevantes da c
 ## Próximo Workflow
 
 → Nenhum workflow sequencial. Este é um workflow terminal por deal. Feedback de promessas desalinhadas alimenta → 05-coaching-rewrite-loop.md
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Todas as categorias preenchidas | Perfil, dor, resultado esperado, promessas (explícitas e implícitas) documentados com citações | Voltar a Etapa 1 para reextrair categorias faltantes da transcrição |
+| Etapa 2 → Etapa 3 | promise-completeness-checklist | Todas as promessas verificadas contra realidade; alertas criados para desalinhamentos | Voltar a Etapa 2 para verificar promessas não classificadas |
+| Etapa 3 → Etapa 4 | handoff-quality | Todas as seções preenchidas; alertas de risco incluídos; formato consumível por Ops | Voltar a Etapa 3 para completar seções ou reformatar |
+| Etapa 4 → Etapa 5 | Ops confirmou recebimento | Ops recebeu pacote e não tem dúvidas pendentes | Voltar a Etapa 4 para esclarecer dúvidas do Ops |
+| Etapa 5 → Conclusão | Handoff registrado | Registry atualizado; follow-up de 7 dias agendado | Voltar a Etapa 5 para completar registro |
+
+## Decision Points
+- Após Etapa 2: se promessas desalinhadas são identificadas → criar alerta de risco para Ops E ticket de feedback para o closer (workflow 05); se todas as promessas são alinhadas → seguir fluxo normal
+- Após Etapa 2: se promessa desalinhada é grave (impossível de cumprir) → notificar sales-chief imediatamente para gerenciar expectativa com cliente antes do onboarding
+- Após Etapa 4: se Ops identifica informação contraditória no pacote → retornar à Etapa 1 para rever transcrição; se pacote está claro → confirmar e prosseguir
+
+## Escalation Triggers
+- Se closer fez promessa que o produto não pode cumprir (risco alto de churn) → pausar, escalar para sales-chief para intervenção imediata com cliente e closer
+- Se handoff não é realizado dentro de 24h do fechamento → pausar, escalar para sales-chief para garantir que onboarding não comece sem pacote
+- Se padrão de promessas desalinhadas se repete com mesmo closer por 3+ deals → pausar, escalar para sales-chief para coaching corretivo urgente (workflow 05)

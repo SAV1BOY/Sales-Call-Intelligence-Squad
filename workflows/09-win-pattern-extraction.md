@@ -117,3 +117,25 @@ Analisar calls que resultaram em fechamento para identificar padrões replicáve
 ## Próximo Workflow
 
 → 11-weekly-sales-quality-review.md (padrões alimentam review semanal)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Calls selecionadas e contextualizadas | Contexto completo registrado para cada call (closer, lead, produto, ticket, resultado); outliers identificados | Voltar a Etapa 1 (completar metadados ou reclassificar priorização) |
+| Etapa 2 → Etapa 3 | Catálogo de padrões com evidências | Cada padrão tem evidência textual com timestamp; replicabilidade avaliada (contexto-dependente vs. universal) | Voltar a Etapa 2 (adicionar evidências textuais faltantes ou revisar padrões sem fundamentação) |
+| Etapa 3 → Etapa 4 | Cross-reference com banco histórico | Padrões cruzados com histórico; scores de confiança atualizados; padrões novos vs. recorrentes separados | Voltar a Etapa 3 (completar cruzamento com banco histórico) |
+| Etapa 4 → Etapa 5 | Playbook de replicação validado | Top 5 padrões com fichas completas (quando usar, como executar, exemplo real, armadilhas); validação do sales-chief | Voltar a Etapa 4 (refinar fichas incompletas ou revalidar com sales-chief) |
+| Etapa 5 → Conclusão | Registry atualizado e playbook publicado | Padrões registrados com evidências e scores; playbook disponível para consulta do time | Voltar a Etapa 5 (corrigir registries ou republicar playbook) |
+
+## Decision Points
+- Após Etapa 1: se call é outlier (fechamento inesperado ou ticket muito acima da média) → priorizar para análise profunda na Etapa 2 com foco em identificar o diferencial; se call é "normal" → análise padrão buscando confirmação de padrões já conhecidos
+- Após Etapa 3: se padrão aparece em 3+ calls ganhas com closers diferentes → promover a best practice validada; se padrão aparece apenas com 1 closer → manter como candidato e monitorar recorrência
+- Após Etapa 4: se sales-chief identifica que um padrão de vitória contradiz um framework oficial → revisar framework antes de publicar no playbook
+
+## Escalation Triggers
+- Se a mineração não encontra padrões replicáveis em batch de 5+ calls ganhas → escalar para sales-chief para investigar se os fechamentos dependem de fatores externos não replicáveis
+- Se um padrão de vitória identificado envolve técnica que viola políticas de compliance ou ética → escalar para sales-chief para avaliação antes de incluir no playbook
+- Se há divergência entre win-loss-miner e sales-chief sobre a replicabilidade de um padrão → escalar para qa-guardian para análise com dados quantitativos adicionais

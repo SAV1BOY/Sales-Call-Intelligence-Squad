@@ -1,3 +1,40 @@
+# Schema Definition
+_schema:
+  description: "Catálogo dos melhores momentos das calls auditadas, com fase, impacto no score e framework utilizado"
+  fields:
+    moment_id:
+      type: string
+      required: true
+      description: "Identificador único do momento (ex: MOM-001)"
+    call_id:
+      type: string
+      required: true
+      description: "ID da call onde o momento ocorreu (referência ao calls-registry)"
+    phase:
+      type: string
+      required: true
+      description: "Fase da call onde o momento ocorreu (rapport, discovery, pitch, close)"
+    description:
+      type: string
+      required: true
+      description: "Descrição detalhada do que aconteceu no momento"
+    score_impact:
+      type: number
+      required: false
+      description: "Impacto estimado no score da call (pontos positivos)"
+    framework:
+      type: string
+      required: false
+      description: "Framework utilizado no momento, se aplicável"
+  updated_by: "extract-win-patterns"
+  update_frequency: "monthly"
+  owner: "win-loss-miner"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/win-patterns-registry.yaml"
+    - "data/registries/scorecards-registry.yaml"
+
+# ---
 # Registro de Melhores Momentos
 # Momentos de destaque identificados nas calls auditadas
 # Última atualização: Pendente

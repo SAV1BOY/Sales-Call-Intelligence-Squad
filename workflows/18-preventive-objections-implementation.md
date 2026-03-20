@@ -131,3 +131,25 @@ Usar os padrões de objeção mais frequentes (workflow 07) para criar blocos de
 ## Próximo Workflow
 
 → 07-objection-root-cause-analysis.md (próxima rodada de análise após implementação para medir evolução)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Objeções genuinamente preveníveis | Top 3-5 objeções selecionadas com frequência × impacto; estratégia preventiva por tipo definida | Voltar a Etapa 1 para refiltrar objeções que não são preveníveis |
+| Etapa 2 → Etapa 3 | Blocos seguem framework LEA | Label, Explain e Address completos; posicionamento correto na fase da call | Voltar a Etapa 2 para redesenhar blocos que não seguem o framework |
+| Etapa 3 → Etapa 4 | pitch-naturalness-checklist | Fluxo natural no contexto do pitch; tom consultivo; não cria objeção nova | Voltar a Etapa 2 para reescrever blocos que soam artificiais |
+| Etapa 4 → Etapa 5 | Closer executa com naturalidade | Closer demonstra domínio no role-play; timing e tom adequados | Voltar a Etapa 4 para mais sessões de role-play |
+| Etapa 5 → Conclusão | preventive-objection-quality | Medição objetiva de taxa de prevenção; iteração baseada em dados | Voltar a Etapa 2 para redesenhar blocos ineficazes |
+
+## Decision Points
+- Após Etapa 1: se objeção mais frequente é de preço → focar prevenção na fase de diagnóstico (amplificar custo de não agir); se é de confiança → focar prevenção antes da apresentação (prova social)
+- Após Etapa 3: se bloco preventivo testa positivo em contexto mas cria objeção nova em teste isolado → ajustar ou descartar o bloco; se passa ambos os testes → prosseguir para treinamento
+- Após Etapa 5: se taxa de prevenção é superior a 50% → manter bloco e expandir; se inferior a 20% → iterar ou substituir bloco por abordagem diferente
+
+## Escalation Triggers
+- Se bloco preventivo está piorando conversão ao invés de melhorar (efeito reverso) → pausar implementação imediatamente, escalar para objection-specialist para diagnóstico
+- Se closer resiste a adotar blocos preventivos após treinamento → pausar, escalar para closer-trainer para sessão individualizada de alinhamento
+- Se objeção que estava sendo prevenida muda de forma (lead verbaliza de maneira diferente) → pausar, escalar para objection-specialist para atualizar o bloco

@@ -120,3 +120,25 @@ Produzir um relatório detalhado que examina cada minuto da call, avaliando a pe
 ## Próximo Workflow
 
 → 03-framework-detection-loop.md (detecção de frameworks utilizados e não-utilizados)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Canvas de auditoria preparado | Canvas cobre 100% da duração da call; critérios de avaliação definidos por minuto | Voltar a Etapa 1 (recarregar transcrição ou ajustar blocos) |
+| Etapa 2 → Etapa 3 | Análise sequencial completa | 100% dos blocos analisados; notas (1-5) justificadas com evidência textual | Voltar a Etapa 2 (preencher blocos faltantes ou revisar notas sem justificativa) |
+| Etapa 3 → Etapa 4 | Momentos críticos extraídos | Todos os flags vermelhos e amarelos extraídos; cada momento tem análise de impacto | Voltar a Etapa 3 (revisar canvas para flags não identificados) |
+| Etapa 4 → Etapa 5 | Padrões e tendências documentados | Tendências documentadas com dados; ponto de virada identificado; correlações mapeadas | Voltar a Etapa 4 (aprofundar análise de correlação com dados dos blocos) |
+| Etapa 5 → Conclusão | minute-by-minute-audit-quality | Todas as seções preenchidas, evidências citadas, recomendações acionáveis, score preliminar calculado | Voltar a Etapa 5 (completar seções faltantes ou refinar recomendações) |
+
+## Decision Points
+- Após Etapa 2: se mais de 50% dos blocos possuem flag verde → call de boa qualidade, focar análise em oportunidades de refinamento; se mais de 30% dos blocos possuem flag vermelho → call crítica, priorizar identificação de padrões de erro sistêmico
+- Após Etapa 3: se momentos críticos concentram-se em uma única fase da call → direcionar coaching para fase específica; se estão distribuídos ao longo de toda a call → indicar necessidade de treinamento abrangente
+- Após Etapa 4: se tendência mostra piora progressiva ao longo da call → sinalizar perda de controle de frame como tema central; se tendência mostra melhora → reconhecer capacidade de recuperação do closer
+
+## Escalation Triggers
+- Se score médio de engajamento do lead < 2.0 em 3+ blocos consecutivos → pausar workflow, escalar para sales-chief para avaliação de gravidade e possível intervenção imediata
+- Se 5+ blocos consecutivos possuem flag vermelho → escalar para sales-chief como call de performance crítica que demanda coaching urgente
+- Se há divergência significativa entre notas de técnica e notas de engajamento (técnica alta, engajamento baixo) → escalar para deal-risk-doctor para investigar se o problema é do lead ou da abordagem

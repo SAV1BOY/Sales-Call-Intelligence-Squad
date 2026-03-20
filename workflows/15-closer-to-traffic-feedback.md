@@ -124,3 +124,25 @@ Analisar a qualidade dos leads que chegam às calls segmentando por origem de tr
 ## Próximo Workflow
 
 → 16-closer-to-offer-feedback.md (insights sobre fit da oferta)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | data-sample-size-validation | Amostra mínima de 5 calls por origem respeitada; origens com amostra insuficiente registradas | Voltar a Etapa 1 para acumular mais dados antes de analisar |
+| Etapa 2 → Etapa 3 | Score baseado em múltiplos critérios | Qualidade avaliada nos 5 critérios (fit, consciência, urgência, budget, autoridade); padrões com evidência | Voltar a Etapa 2 para completar critérios faltantes |
+| Etapa 3 → Etapa 4 | ROI calculado e verificado | Dados de conversão e ticket verificados; ranking consistente com métricas | Voltar a Etapa 3 para corrigir cálculos inconsistentes |
+| Etapa 4 → Etapa 5 | cross-squad-feedback-quality | Dados verificados e recomendações acionáveis de segmentação | Voltar a Etapa 4 para tornar recomendações mais específicas |
+| Etapa 5 → Conclusão | Sales-chief aprovou | Conclusões robustas com amostra suficiente; métricas de follow-up definidas | Voltar a Etapa 4 para fortalecer argumentação |
+
+## Decision Points
+- Após Etapa 1: se origem tem menos de 5 calls no período → acumular para próximo relatório e não incluir análise parcial; se tem amostra suficiente → prosseguir com análise completa
+- Após Etapa 3: se origem apresenta alto volume mas conversão abaixo de 10% → recomendar pausa ou revisão urgente de segmentação; se origem tem alta conversão mas baixo volume → recomendar aumento de budget
+- Após Etapa 5: se Traffic Squad contesta dados → agendar reunião de calibração com dados brutos; se aceita recomendações → definir timeline de implementação
+
+## Escalation Triggers
+- Se origem de tráfego com alto budget apresenta conversão zero por 2+ semanas → pausar, escalar para sales-chief para comunicação imediata ao Traffic Squad
+- Se perfil de leads muda drasticamente sem mudança de campanha (possível fraude ou bot) → pausar, escalar para sales-chief e Traffic Squad para investigação
+- Se custo de ineficiência (tempo do closer com leads ruins) ultrapassa 40% do tempo total → pausar, escalar para sales-chief para revisão emergencial de alocação de tráfego

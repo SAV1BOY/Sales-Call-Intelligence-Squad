@@ -1,3 +1,56 @@
+# Schema Definition
+_schema:
+  description: "Registro central de metadados de todas as calls de vendas ingeridas e auditadas pelo squad"
+  fields:
+    id:
+      type: string
+      required: true
+      description: "Identificador único da call (ex: CALL-001)"
+    date:
+      type: date
+      required: true
+      description: "Data em que a call foi realizada"
+    closer:
+      type: string
+      required: true
+      description: "Nome ou ID do closer que conduziu a call"
+    lead:
+      type: string
+      required: true
+      description: "Nome ou identificação do lead"
+    offer:
+      type: string
+      required: true
+      description: "Oferta ou produto apresentado na call"
+    source:
+      type: string
+      required: false
+      description: "Origem do lead (tráfego pago, orgânico, indicação, etc.)"
+    duration:
+      type: number
+      required: true
+      description: "Duração da call em minutos"
+    outcome:
+      type: string
+      required: true
+      description: "Resultado da call (fechou, não fechou, follow-up, no-show)"
+    score:
+      type: number
+      required: false
+      description: "Score total da auditoria (0-100)"
+    audited:
+      type: string
+      required: true
+      description: "Status da auditoria (sim, não, pendente)"
+  updated_by: "intake-call-recording"
+  update_frequency: "per-call"
+  owner: "transcript-analyst"
+  cross_references:
+    - "data/registries/scorecards-registry.yaml"
+    - "data/registries/closers-registry.yaml"
+    - "data/transcripts/cleaned"
+
+# ---
 # Registro de Calls
 # Registro central de todas as calls de vendas auditadas
 # Última atualização: Pendente

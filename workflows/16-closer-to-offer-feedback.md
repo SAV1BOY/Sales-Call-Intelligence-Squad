@@ -124,3 +124,25 @@ Identificar e documentar evidências de desalinhamento entre a oferta atual e as
 ## Próximo Workflow
 
 → 20-ralphloop-sales-retro.md (insights alimentam retrospectiva e aprendizado contínuo)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Sinais baseados em múltiplas calls | Mismatch evidenciado em 3+ calls; separação clara entre problema de oferta e problema de execução do closer | Voltar a Etapa 1 para ampliar amostra ou reclassificar sinais |
+| Etapa 2 → Etapa 3 | Componentes avaliados com evidência | Cada componente da oferta avaliado contra feedback de calls; impacto quantificado | Voltar a Etapa 2 para preencher componentes não avaliados |
+| Etapa 3 → Etapa 4 | Análise de preço representativa | Amostra representativa; distinção clara entre resistência de preço absoluto e valor percebido | Voltar a Etapa 3 para refinar análise com mais dados |
+| Etapa 4 → Etapa 5 | strategic-feedback-quality + c-level-communication-standards | Recomendações priorizadas com evidência, impacto estimado e esforço de implementação | Voltar a Etapa 4 para reformatar para padrão C-Level |
+| Etapa 5 → Conclusão | Apresentação feita e follow-up agendado | C-Level recebeu feedback; follow-up de implementação agendado | Voltar a Etapa 5 para completar entrega |
+
+## Decision Points
+- Após Etapa 1: se sinais indicam problema de execução do closer (não da oferta) → redirecionar para coaching (workflow 05) em vez de feedback de oferta; se confirmado como mismatch de oferta → prosseguir
+- Após Etapa 3: se resistência é predominantemente de valor percebido (não preço absoluto) → focar recomendações em comunicação e posicionamento; se é preço absoluto → recomendar revisão de pricing ou criação de tiers
+- Após Etapa 4: se recomendações envolvem mudança estrutural na oferta → preparar business case completo para C-Level; se são ajustes de posicionamento → seguir com relatório padrão
+
+## Escalation Triggers
+- Se mais de 50% das perdas no período têm causa raiz de mismatch de oferta → pausar, escalar para sales-chief para reunião emergencial com C-Level
+- Se leads consistentemente mencionam concorrente como superior em aspecto crítico → pausar, escalar para sales-chief para análise competitiva urgente
+- Se nova oferta em validação tem taxa de conversão abaixo de 5% após 2+ semanas → pausar, escalar para sales-chief para recomendar pivô ou pausa na oferta

@@ -64,3 +64,30 @@ Criar ritual semanal de análise que identifica tendências cedo, celebra acerto
 - [ ] Ações anteriores verificadas
 - [ ] Novas ações definidas com responsável
 - [ ] Ata gerada e distribuída
+
+---
+
+## Contexto
+Esta task existe para criar um ritual semanal de análise que identifica tendências cedo, celebra acertos e direciona correções antes que problemas se consolidem. É a cadência mínima para melhoria contínua — sem ela, problemas só aparecem quando já impactaram resultados de vendas.
+
+## Especificação de I/O
+- **Input**: Scorecards de todas as calls da semana, relatórios de causa raiz, status de coaching, win/loss patterns, dashboard executivo anterior
+- **Output**: Ata da review em `reports/reviews/weekly-review-YYYY-WNN` usando `templates/reports/executive-sales-intelligence-report.md`
+
+## Quality Gates Intermediários
+- Após consolidação de métricas (step 1-3): todas as calls da semana incluídas, comparação com semana anterior presente
+- Antes de output final: ações da review anterior verificadas (concluídas/pendentes), novas ações têm responsável e prazo definidos
+
+## Escalation & Rework
+- Se closer em queda por 2+ semanas consecutivas: escalar para closer-trainer para plano de intervenção
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- average_call_score semanal (tendência de melhoria)
+- Taxa de execução das ações definidas na review anterior
+
+## Referências Cruzadas
+- Workflow: `workflows/11-weekly-sales-quality-review.md`
+- Agents: `agents/sales-chief.md`, `agents/revenue-intelligence-analyst.md`, `agents/scorecard-analyst.md`, `agents/win-loss-miner.md`
+- Templates: `templates/reports/executive-sales-intelligence-report.md`, `templates/briefs/weekly-sales-review-brief.md`
+- Registries atualizados: `data/registries/intelligence-registry.yaml`, `data/registries/review-registry.yaml`

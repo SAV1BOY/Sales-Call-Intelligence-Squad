@@ -129,3 +129,25 @@ Analisar deals perdidos para identificar quais são recuperáveis, diagnosticar 
 ## Próximo Workflow
 
 → 06-full-funnel-call-audit.md (se a call de reativação acontecer, auditar normalmente)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | deal-recovery-viability-checklist | Cada critério de recuperabilidade avaliado com evidência; priorização por recuperabilidade × ticket | Voltar a Etapa 1 para reavaliar deals sem evidência suficiente |
+| Etapa 2 → Etapa 3 | Estratégia alinhada com causa raiz | Diagnóstico claro do que precisa mudar; precauções documentadas | Voltar a Etapa 2 para aprofundar diagnóstico |
+| Etapa 3 → Etapa 4 | reactivation-script-quality | Script personalizado, respeitoso e que endereça causa raiz; versões por canal | Voltar a Etapa 3 para reescrever scripts genéricos ou pressurantes |
+| Etapa 4 → Etapa 5 | Briefing autocontido | Closer pode executar sem ler transcrição inteira; armadilhas sinalizadas | Voltar a Etapa 4 para completar contexto faltante |
+| Etapa 5 → Conclusão | Tracking ativo | Todos os deals em recuperação rastreados com status atualizado | Voltar a Etapa 5 para incluir deals não rastreados |
+
+## Decision Points
+- Após Etapa 1: se deal é classificado como "não recuperável" → arquivar e alimentar banco de padrões de perda; se "alta recuperabilidade" → priorizar para Etapa 2 imediata
+- Após Etapa 2: se causa da perda foi relacionamento danificado → designar closer diferente para reativação; se causa foi objeção endereçável → manter mesmo closer com novo ângulo
+- Após Etapa 3: se lead pediu explicitamente para não ser contatado → respeitar e não prosseguir com reativação; se lead está aberto → seguir com script aprovado
+
+## Escalation Triggers
+- Se deal de alto ticket (top 10% do pipeline) é perdido e classificado como recuperável → pausar, escalar para sales-chief para supervisão direta da estratégia de recuperação
+- Se taxa de recuperação do período cai abaixo de 10% → pausar, escalar para sales-chief para revisar qualidade dos diagnósticos e scripts
+- Se closer reporta que lead reagiu negativamente à tentativa de reativação → pausar, escalar para deal-risk-doctor para reavaliar abordagem antes de nova tentativa

@@ -64,3 +64,31 @@ Mapear cada objeção, classificar sua causa raiz real, avaliar a qualidade da r
 - [ ] Objeções preventivas verificadas
 - [ ] Novas objeções sinalizadas para biblioteca
 - [ ] Nota atribuída com justificativa
+
+---
+
+## Contexto
+Objeções mal tratadas são a causa direta de deals perdidos. Esta task existe para mapear cada objeção com sua causa raiz real (não apenas o sintoma declarado), avaliar a qualidade da resposta do closer e alimentar a biblioteca de objeções — permitindo coaching específico e prevenção de objeções recorrentes.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, seção de objeções + biblioteca de objeções em `data/libraries/objections-library.yaml` + relatório de frameworks detectados
+- **Output**: `templates/reports/objection-analysis-report.md` + `templates/rewrites/objection-rewrite-template.md` (para objeções não resolvidas) + tabela objeção/tipo/causa raiz/resposta/eficácia
+
+## Quality Gates Intermediários
+- Após análise inicial: cada objeção registrada com trecho exato, timestamp e classificação por tipo (preço, timing, decisor, confiança, concorrência, fit); causa raiz identificada para cada uma
+- Antes de output final: qa-guardian valida coerência entre causa raiz das objeções e notas de discovery/pitch (objeção de preço com discovery raso deve ser sinalizada como problema de discovery, não de pricing)
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar seção de objeções)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Belfort vs. Miner sobre técnica de resolução): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- 100% das objeções com causa raiz classificada (não apenas tipo superficial)
+- Taxa de novas objeções identificadas e adicionadas à biblioteca por ciclo
+
+## Referências Cruzadas
+- Workflow: `workflows/07-objection-root-cause-analysis.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/objection-specialist.md`, `agents/call-auditor.md`, `agents/experts/jordan-belfort.md`, `agents/experts/jeremy-miner.md`, `agents/experts/bradley-lea.md`, `agents/experts/eli-wilde.md`
+- Templates: `templates/reports/objection-analysis-report.md`, `templates/rewrites/objection-rewrite-template.md`
+- Registries atualizados: `data/registries/objections-registry`, `data/registries/deal-risk-registry`

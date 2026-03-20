@@ -63,3 +63,30 @@ Identificar o DNA das calls que convertem — quais técnicas, sequências e com
 - [ ] Frases de impacto catalogadas
 - [ ] Contraste com calls perdidas realizado
 - [ ] Biblioteca de melhores momentos atualizada
+
+---
+
+## Contexto
+Vitórias em vendas raramente são acidentais. Esta task existe para identificar o DNA das calls que convertem -- quais frameworks, sequências, frases e comportamentos aparecem consistentemente nas vitórias -- permitindo replicar sistematicamente o que funciona.
+
+## Especificação de I/O
+- **Input**: Scorecards de calls ganhas (últimas 20-30) + transcrições segmentadas + relatórios de frameworks detectados + dados de oferta/ticket/ICP
+- **Output**: `templates/reports/win-loss-analysis-report` (relatório de win patterns com top 5 padrões e frases de impacto)
+
+## Quality Gates Intermediários
+- Após extração de padrões e frases (steps 2-5): checklist `win-loss-analysis-quality` — cada padrão tem evidência de 3+ calls, correlação com resultado validada
+- Antes de output final: checklist `best-moments-library-quality` — frases representativas (não cherry-picked), contraste com calls perdidas incluído
+
+## Escalation & Rework
+- Se amostra insuficiente (< 5 calls ganhas no período): escalar para `revenue-intelligence-analyst` para ampliar janela temporal
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `score_improvement_rate`: evolução do score médio do time após disseminação dos padrões
+- `framework_usage_rate`: % de calls onde frameworks vencedores identificados são aplicados
+
+## Referências Cruzadas
+- Workflow: `workflows/09-win-pattern-extraction.md`
+- Agents: `agents/win-loss-miner.md`, `agents/revenue-intelligence-analyst.md`, `agents/framework-detector.md`
+- Templates: `templates/reports/win-loss-analysis-report.md`
+- Registries atualizados: `data/registries/win-patterns-registry`, `data/libraries/best-moments-library.yaml`

@@ -64,3 +64,30 @@ Manter processo formal de certificação que garante padrão mínimo de qualidad
 - [ ] Certificações atualizadas no registry
 - [ ] Comunicação de resultados realizada
 - [ ] Próxima review agendada
+
+---
+
+## Contexto
+Esta task existe para manter um processo formal de certificação que garante padrão mínimo de qualidade na equipe de closers. Sem certificação periódica, não há como identificar quem está pronto para mais responsabilidade e quem precisa de suporte intensivo antes que os resultados de vendas sejam impactados.
+
+## Especificação de I/O
+- **Input**: Scorecards do mês por closer, relatórios de coaching e evolução, planos de treino vigentes, certificações anteriores, benchmarks da equipe
+- **Output**: Relatório de certificação em `reports/reviews/monthly-certification-YYYY-MM` usando `templates/reports/closer-certification-report.md`
+
+## Quality Gates Intermediários
+- Após compilação de performance mensal (step 1-3): todos os closers ativos avaliados, performance baseada em mínimo 5 calls
+- Antes de output final: decisões de certificação justificadas com dados, closers em risco identificados com plano de ação
+
+## Escalation & Rework
+- Se closer está 2 meses consecutivos abaixo do mínimo (score < 60): escalar para sales-chief + c_level_squad para avaliar fit closer-oferta
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- certification_pass_rate (taxa de aprovação na certificação)
+- score_improvement_rate dos closers em plano de desenvolvimento
+
+## Referências Cruzadas
+- Workflow: `workflows/12-monthly-closer-certification.md`
+- Agents: `agents/closer-trainer.md`, `agents/scorecard-analyst.md`, `agents/qa-guardian.md`, `agents/sales-chief.md`
+- Templates: `templates/reports/closer-certification-report.md`, `templates/scorecards/closer-performance-scorecard.md`, `templates/scorecards/certification-scorecard.md`
+- Registries atualizados: `data/registries/closer-certification-registry.yaml`, `data/registries/closer-performance-registry.yaml`, `data/registries/review-registry.yaml`

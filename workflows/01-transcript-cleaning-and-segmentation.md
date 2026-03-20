@@ -128,3 +128,26 @@ Pegar a transcrição normalizada do workflow 00 e aplicar segmentação semânt
 ## Próximo Workflow
 
 → 02-minute-by-minute-analysis.md (análise minuto a minuto da call)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Validação da transcrição base | Transcrição legível, speakers identificados, sem blocos faltantes, formato HH:MM:SS | Voltar a Etapa 1 (revalidar ou reprocessar no workflow 00) |
+| Etapa 2 → Etapa 3 | Limpeza semântica completa | Zero termos técnicos errados; citações do lead marcadas com tag; emoções tagueadas | Voltar a Etapa 2 (corrigir termos com glossário e revisar tags) |
+| Etapa 3 → Etapa 4 | Mapa de fases validado | Todas as fases presentes mapeadas com timestamps; fases ausentes documentadas | Voltar a Etapa 3 (revisar transições de fase não identificadas) |
+| Etapa 4 → Etapa 5 | phase-segmentation-checklist | Fases delimitadas com separadores, durações calculadas, momentos-chave destacados | Voltar a Etapa 4 (ajustar delimitadores e recalcular distribuição temporal) |
+| Etapa 5 → Etapa 6 | Resumo executivo completo | Resumo cobre contexto, dores, solução, objeções, resultado; talk-time calculado | Voltar a Etapa 5 (completar seções faltantes do resumo) |
+| Etapa 6 → Conclusão | Exportação e handoff corretos | Arquivo exportado, registry atualizado para "segmentada", flags de roteamento criadas | Voltar a Etapa 6 (corrigir status no registry ou criar flags faltantes) |
+
+## Decision Points
+- Após Etapa 1: se transcrição base passa validação completa → prosseguir para Etapa 2; se há blocos faltantes ou speakers não identificados → devolver ao workflow 00 para reprocessamento
+- Após Etapa 3: se todas as fases padrão estão presentes na call → prosseguir normalmente; se fases críticas estão ausentes (ex: diagnóstico inexistente, close não tentado) → documentar como anomalia e sinalizar para análise prioritária no workflow 02
+- Após Etapa 6: se call resultou em "fechou" ou "perdeu" → criar flags para workflows 09/10 respectivamente; se resultado é "follow-up" → criar flag para acompanhamento sem roteamento imediato
+
+## Escalation Triggers
+- Se mais de 3 fases da call estão fora da ordem padrão (ex: preço antes do diagnóstico) → sinalizar para sales-chief como call com estrutura atípica para revisão prioritária
+- Se talk-time ratio do closer > 70% em fases de diagnóstico → escalar para coaching-rewriter como indicador de diagnóstico superficial
+- Se há conflito entre a segmentação automática e a revisão manual do transcript-analyst → escalar para qa-guardian para arbitragem

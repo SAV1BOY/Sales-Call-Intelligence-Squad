@@ -121,3 +121,25 @@ Selecionar os momentos mais impactantes da call (erros, oportunidades perdidas, 
 ## Próximo Workflow
 
 → 06-full-funnel-call-audit.md (auditoria completa end-to-end — este workflow alimenta o master)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Momentos priorizados por impacto | 3-5 momentos selecionados com trechos extraídos (com 30s de contexto); frameworks mapeados para cada momento | Voltar a Etapa 1 (revisar relatórios dos workflows 02-04 para momentos não identificados) |
+| Etapa 2 → Etapa 3 | rewrite-quality | Reescrita realista para cada momento; framework corretamente aplicado; explicação clara do before/after | Voltar a Etapa 2 (refinar rewrites com input dos specialists) |
+| Etapa 3 → Etapa 4 | Teste de realismo aprovado | Cada rewrite é executável pelo closer, compatível com seu estilo e leva em conta o contexto do lead | Voltar a Etapa 3 (ajustar rewrites artificiais ou desconectados do fluxo) |
+| Etapa 4 → Etapa 5 | coaching-delivery-standards | Pacote acionável, específico, respeitoso, com exercícios práticos e métricas de melhoria | Voltar a Etapa 4 (adicionar exercícios ou refinar contexto de coaching) |
+| Etapa 5 → Conclusão | Registro e disponibilização | Coaching registrado no histórico, closer notificado, exercícios com prazo definido | Voltar a Etapa 5 (corrigir registries ou definir prazos faltantes) |
+
+## Decision Points
+- Após Etapa 1: se momentos críticos envolvem objeções → acionar objection-specialist como consultor na Etapa 2; se envolvem preço/ancoragem → acionar pricing-anchoring-analyst; se envolvem ambos → acionar ambos os specialists
+- Após Etapa 3: se rewrites passam no teste de realismo → prosseguir para pacote de coaching; se mais de 50% dos rewrites soam artificiais → retornar à Etapa 2 com orientação de manter tom mais natural e coloquial
+- Após Etapa 4: se o closer tem histórico de padrão recorrente do mesmo erro → incluir exercícios de repetição com maior frequência; se é erro pontual → exercício mais leve com acompanhamento em 1 call futura
+
+## Escalation Triggers
+- Se o closer apresenta o mesmo padrão de erro em 3+ calls consecutivas mesmo após coaching anterior → escalar para sales-chief para revisão do plano de desenvolvimento e possível mudança de abordagem
+- Se os specialists divergem sobre a reescrita ideal para um mesmo momento → escalar para qa-guardian para definição de best practice
+- Se o coaching identifica gap fundamental que impede o closer de executar calls → escalar para sales-chief para decisão sobre afastamento temporário até treinamento

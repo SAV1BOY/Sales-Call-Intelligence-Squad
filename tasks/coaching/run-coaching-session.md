@@ -68,3 +68,30 @@ Conduzir sessão de coaching eficaz que transforme dados da auditoria em melhori
 - [ ] Compromisso registrado
 - [ ] Follow-up agendado
 - [ ] Sessão documentada no registry
+
+---
+
+## Contexto
+Dados sem prática deliberada não geram mudança de comportamento. Esta task existe para garantir que a sessão de coaching siga estrutura comprovada (abertura positiva, diagnóstico, role-play, compromisso), transformando insights da auditoria em melhoria real de performance.
+
+## Especificação de I/O
+- **Input**: Pack de coaching completo + reescritas dos momentos críticos + scorecard da call + plano de treino vigente
+- **Output**: Registro de sessão em `reports/coaching/CALL-ID-session-log` + compromissos documentados
+
+## Quality Gates Intermediários
+- Após prática deliberada (step 5): checklist `coaching-plan-quality` — role-play realizado, repetição até execução natural, feedback imediato dado
+- Antes de output final: verificar que ações definidas são específicas, mensuráveis e com prazo
+
+## Escalation & Rework
+- Se closer não demonstra evolução após 3 sessões consecutivas: escalar para `sales-chief` para reavaliação de fit
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `coaching_impact_score`: delta de score entre call auditada e calls pós-sessão
+- `rewrite_adoption_rate`: % de técnicas praticadas na sessão que aparecem nas calls seguintes
+
+## Referências Cruzadas
+- Workflow: `workflows/05-coaching-rewrite-loop.md`
+- Agents: `agents/closer-trainer.md`, `agents/coaching-rewriter.md`, `agents/sales-chief.md`
+- Templates: `templates/reports/manager-coaching-report.md`
+- Registries atualizados: `data/registries/coaching-registry.yaml`, `data/registries/closer-performance-registry.yaml`

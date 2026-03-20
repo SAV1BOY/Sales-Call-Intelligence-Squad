@@ -65,3 +65,31 @@ Ir além dos sintomas (score baixo) e identificar a causa raiz real que determin
 - [ ] Recorrência verificada no histórico do closer
 - [ ] Tipo classificado: skill gap vs. problema sistêmico
 - [ ] Ações corretivas priorizadas e documentadas
+
+---
+
+## Contexto
+Sem diagnóstico de causa raiz, coaching e ações corretivas são genéricos e ineficazes. Esta task existe para ir além dos sintomas (score baixo) e identificar se o problema está no closer (técnica), no lead (qualificação), na oferta (fit), no pricing (estratégia) ou no handoff (SDR) — habilitando intervenções cirúrgicas em vez de treinamento genérico.
+
+## Especificação de I/O
+- **Input**: Scorecard completo da call + todas as análises de etapa (rapport a close) + relatório de frameworks detectados + relatório minuto a minuto + informações de oferta e ICP
+- **Output**: `templates/reports/full-call-audit-report.md`, seção "Causa Raiz" + árvore de causalidade (causa → consequência → impacto) + ações corretivas priorizadas (impacto x facilidade)
+
+## Quality Gates Intermediários
+- Após análise inicial: causa raiz primária identificada com evidência textual; causas secundárias documentadas; classificação entre skill gap vs. problema sistêmico realizada
+- Antes de output final: qa-guardian valida coerência entre causa raiz e blocos mais fracos do scorecard; ações corretivas são específicas, acionáveis e priorizadas (não genéricas)
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar) e call-auditor (complementar análises de etapa)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts sobre causa raiz (ex: deal-risk-doctor vs. offer-fit-analyst): escalar para qa-guardian para arbitragem; sales-chief valida diagnóstico final
+
+## Métricas de Sucesso
+- Taxa de causas raiz classificadas corretamente (validação pelo sales-chief) > 90%
+- Recorrência de causa raiz: mesma causa raiz não deve aparecer 3+ vezes para o mesmo closer sem intervenção
+
+## Referências Cruzadas
+- Workflow: `workflows/04-scoring-and-root-cause.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/deal-risk-doctor.md`, `agents/call-auditor.md`, `agents/offer-fit-analyst.md`, `agents/sdr-handoff-analyst.md`, `agents/sales-chief.md`
+- Templates: `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/calls-registry`, `data/registries/deal-risk-registry`

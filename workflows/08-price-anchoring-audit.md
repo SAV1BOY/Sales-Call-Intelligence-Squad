@@ -123,3 +123,25 @@ Avaliar como o closer construiu (ou não) a percepção de valor antes de revela
 ## Próximo Workflow
 
 → 05-coaching-rewrite-loop.md (para reescrita dos momentos de preço) ou 16-closer-to-offer-feedback.md (se problema for da oferta)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Mapa da jornada de valor completo | Todos os momentos de construção de valor mapeados cronologicamente com timestamps; gaps documentados | Voltar a Etapa 1 (revisitar transcrição para momentos de valor não identificados) |
+| Etapa 2 → Etapa 3 | value-equation-completeness | Todos os 5 componentes da value equation avaliados (1-10) com evidências; componente mais fraco identificado | Voltar a Etapa 2 (completar avaliação de componentes sem evidência suficiente) |
+| Etapa 3 → Etapa 4 | Análise de ancoragem validada | Cada elemento de ancoragem avaliado (âncora alta, contraste, stack, timing); sequência comparada com framework ideal | Voltar a Etapa 3 (detalhar elementos de ancoragem não avaliados) |
+| Etapa 4 → Etapa 5 | Recomendações com scripts | Top 3 gaps identificados; cada gap com recomendação específica e script executável; benchmarking realizado | Voltar a Etapa 4 (refinar recomendações genéricas ou adicionar scripts faltantes) |
+| Etapa 5 → Conclusão | price-anchoring-audit-checklist 100% | Relatório compilado, registries atualizados, sinalização closer vs. oferta definida | Voltar a Etapa 5 (corrigir registries ou completar sinalização) |
+
+## Decision Points
+- Após Etapa 2: se score da value equation é alto mas lead ainda objetou preço → problema está na ancoragem/timing (focar Etapa 3); se score da value equation é baixo → problema é na construção de valor (priorizar recomendações de value building)
+- Após Etapa 3: se preço foi revelado antes de construção suficiente de valor → recomendar reestruturação da sequência do pitch; se ancoragem foi feita mas com âncora insuficiente → recomendar ajuste nos valores de referência
+- Após Etapa 4: se os gaps são do closer (técnica fraca) → rotear para workflow 05 (coaching); se os gaps são da oferta (stack de valor fraco, preço desalinhado) → rotear para workflow 16 (feedback para squad de produto)
+
+## Escalation Triggers
+- Se value equation score < 3.0 em 3+ calls do mesmo closer → escalar para sales-chief para treinamento intensivo em construção de valor
+- Se análise revela que o problema de preço é sistêmico (aparece com múltiplos closers para o mesmo produto) → escalar para sales-chief para revisão da oferta e pricing strategy
+- Se closer revela preço antes de qualquer construção de valor em padrão recorrente → escalar para sales-chief como risco crítico que demanda intervenção imediata

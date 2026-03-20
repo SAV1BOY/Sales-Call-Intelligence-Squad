@@ -58,3 +58,25 @@ Top 3 prioridades com justificativa da auditoria, exercicios detalhados, metrica
 ## Agente Responsavel
 
 Coaching Plan Agent
+
+---
+
+## Scoring Rubric
+
+Cada item acima deve ser pontuado de 0 a 5:
+
+| Score | Significado |
+|-------|------------|
+| 0 | Ausente — item nao abordado |
+| 1 | Mencionado sem evidencia |
+| 2 | Presente com evidencia fraca ou generica |
+| 3 | Presente com evidencia especifica (trecho + timestamp) |
+| 4 | Forte — evidencia + analise + recomendacao |
+| 5 | Exemplar — material para swipe file |
+
+### Thresholds
+- **Pass minimo**: media >= 3.0 (todos os items)
+- **GOOD**: media >= 3.5
+- **GOLD**: media >= 4.5
+- **Rework trigger**: qualquer item com score 0 OU media < 2.5
+- **Aprovacao**: QA Guardian valida; Sales Chief aprova output final

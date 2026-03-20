@@ -64,3 +64,30 @@ Garantir que as auditorias produzidas pelo squad são precisas, consistentes e c
 - [ ] Completude e precisão verificadas
 - [ ] Ações corretivas definidas
 - [ ] Calibração atualizada se necessário
+
+---
+
+## Contexto
+Esta task existe para garantir que as próprias auditorias do squad são precisas, consistentes e calibradas. Sem meta-auditoria, vieses se acumulam silenciosamente, scores perdem confiabilidade e todo o sistema de coaching e certificação fica comprometido.
+
+## Especificação de I/O
+- **Input**: Últimas 10-20 auditorias completas, scorecards do período, checklists aplicados, histórico de calibração, feedback dos gestores
+- **Output**: Relatório de QA em `reports/reviews/qa-audit-PERIODO`, taxa de concordância inter-auditor, ações corretivas para calibração
+
+## Quality Gates Intermediários
+- Após re-auditoria independente (step 2-3): variação de score quantificada por bloco, re-auditoria feita sem acesso ao original
+- Antes de output final: completude verificada em 100% da amostra, ações corretivas específicas por discrepância identificada
+
+## Escalation & Rework
+- Se variância > 15% entre auditores no mesmo call: escalar para qa-guardian para sessão de calibração imediata
+- Se quality gate falha: rework loop (max 1 ciclo), depois escalar para sales-chief para convocar calibration session
+
+## Métricas de Sucesso
+- Taxa de concordância inter-auditor (target: variação < 5 pontos no score total)
+- Completude das auditorias (% de campos e seções preenchidos corretamente)
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`, `workflows/04-scoring-and-root-cause.md`
+- Agents: `agents/qa-guardian.md`, `agents/sales-chief.md`, `agents/scorecard-analyst.md`
+- Templates: `templates/scorecards/call-scorecard-template.md`, `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/qa-registry.yaml`, `data/registries/review-registry.yaml`

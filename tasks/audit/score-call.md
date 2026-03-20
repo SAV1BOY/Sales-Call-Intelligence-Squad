@@ -62,3 +62,31 @@ Gerar score objetivo e granular da call que permita comparação entre closers, 
 - [ ] Forças e fraquezas identificadas
 - [ ] Comparação histórica realizada
 - [ ] Registry de scorecards atualizado
+
+---
+
+## Contexto
+O score é o artefato central do pipeline de auditoria — sem pontuação objetiva e granular, não há como comparar closers, medir evolução temporal nem priorizar coaching. Esta task existe para eliminar avaliações subjetivas, produzindo um score de 0-100 em 10 blocos com evidência textual por bloco, que serve como base para causa raiz, coaching e certificação.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada com timestamps + relatório de frameworks detectados + mapa de etapas da call + scorecard template vigente com pesos por tipo de call + calibração de scoring atualizada
+- **Output**: `templates/scorecards/call-scorecard-template.md` + score total ponderado (0-100) com classificação de performance + top 3 forças e top 3 fraquezas com evidência
+
+## Quality Gates Intermediários
+- Após análise inicial: todos os 10 blocos pontuados com nota de 0-10; cada nota tem evidência textual com timestamp; pesos aplicados conforme tipo de call
+- Antes de output final: qa-guardian audita consistência de scoring com calibração vigente; score total calculado corretamente (soma ponderada); comparação histórica incluída
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar) e framework-detector (complementar detecções)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre scorecard-analyst e call-auditor sobre nota de bloco: escalar para qa-guardian para arbitragem com base na calibração vigente
+
+## Métricas de Sucesso
+- Precisão do score: variância < 10% entre auditores diferentes na mesma call (calibração)
+- 100% dos blocos com evidência textual (zero notas sem justificativa)
+
+## Referências Cruzadas
+- Workflow: `workflows/04-scoring-and-root-cause.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/scorecard-analyst.md`, `agents/call-auditor.md`, `agents/qa-guardian.md`
+- Templates: `templates/scorecards/call-scorecard-template.md`, `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/scorecards-registry`

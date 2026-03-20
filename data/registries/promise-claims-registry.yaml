@@ -1,3 +1,32 @@
+# Schema Definition
+_schema:
+  description: "Registro de promessas feitas pelos closers durante as calls, provas sociais oferecidas e nível de risco associado"
+  fields:
+    call_id:
+      type: string
+      required: true
+      description: "ID da call auditada (referência ao calls-registry)"
+    promises_made:
+      type: list
+      required: true
+      description: "Lista de promessas feitas pelo closer durante a call"
+    proof_offered:
+      type: list
+      required: false
+      description: "Provas sociais, cases ou evidências oferecidas para sustentar as promessas"
+    risk_level:
+      type: string
+      required: true
+      description: "Nível de risco das promessas (baixo, médio, alto — baseado em sustentação)"
+  updated_by: "extract-loss-patterns"
+  update_frequency: "monthly"
+  owner: "win-loss-miner"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/deal-risk-registry.yaml"
+    - "data/registries/loss-patterns-registry.yaml"
+
+# ---
 # Registro de Promessas e Claims
 # Monitoramento de promessas feitas e provas oferecidas durante as calls
 # Última atualização: Pendente

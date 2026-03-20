@@ -63,3 +63,30 @@ Determinar o tipo exato da call para que o scorecard, os frameworks e os critér
 - [ ] Pesos do scorecard ajustados conforme tipo
 - [ ] Registry atualizado com classificação
 - [ ] Brief de auditoria atualizado com ajustes
+
+---
+
+## Contexto
+Auditar uma follow-up com os mesmos critérios de uma first call gera scores injustos e recomendações irrelevantes. Esta task existe para classificar corretamente o tipo de call e ajustar pesos do scorecard, garantindo que a auditoria avalie o closer no contexto certo.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada com mapa de etapas + metadata da call (resultado, closer, lead) + histórico de calls do lead
+- **Output**: Campo `call_type` atualizado em `data/registries/calls-registry.yaml` + ajustes de peso no `templates/briefs/call-audit-brief`
+
+## Quality Gates Intermediários
+- Após classificação (step 4): evidências textuais documentadas (2-3 trechos da transcrição que comprovam o tipo)
+- Antes de output final: checklist `transcript-normalization-quality` — pesos ajustados corretamente para o tipo, registry atualizado
+
+## Escalation & Rework
+- Se classificação ambígua (call mistura características de 2+ tipos): escalar para `call-auditor` para decisão com contexto adicional
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `framework_usage_rate`: % de calls com tipo corretamente classificado antes da auditoria
+- `audit_cycle_time`: redução no tempo de auditoria por classificação precisa
+
+## Referências Cruzadas
+- Workflow: `workflows/00-recording-to-transcript.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/transcript-analyst.md`, `agents/call-auditor.md`, `agents/sdr-handoff-analyst.md`
+- Templates: `templates/briefs/call-audit-brief.md`
+- Registries atualizados: `data/registries/calls-registry.yaml`

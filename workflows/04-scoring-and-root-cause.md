@@ -130,3 +130,25 @@ Aplicar o modelo de scoring padronizado em 10 blocos de competência, gerar pont
 ## Próximo Workflow
 
 → 05-coaching-rewrite-loop.md (reescrita de momentos críticos com before/after)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Dossiê de evidências organizado | Cada bloco (1-10) tem pelo menos 1 evidência; evidências são citações diretas com timestamp | Voltar a Etapa 1 (buscar evidências adicionais nos relatórios dos workflows 02 e 03) |
+| Etapa 2 → Etapa 3 | scoring-consistency-checklist | Notas justificadas sem viés, evidências citadas, score total calculado, classificação atribuída | Voltar a Etapa 2 (revisar notas inconsistentes ou sem evidência suficiente) |
+| Etapa 3 → Etapa 4 | root-cause-evidence-checklist | Causa raiz apoiada por evidências, 5 Porquês documentados, classificação por categoria e controlabilidade | Voltar a Etapa 3 (aprofundar análise dos 5 Porquês com evidências adicionais) |
+| Etapa 4 → Etapa 5 | Recomendações validadas | Recomendações são específicas, acionáveis e ligadas a evidências do scorecard; impacto estimado | Voltar a Etapa 4 (refinar recomendações vagas ou sem conexão com evidências) |
+| Etapa 5 → Conclusão | Registro completo | Score registrado no histórico, causa raiz documentada, dados disponíveis para workflows downstream | Voltar a Etapa 5 (corrigir registries ou disponibilizar dados faltantes) |
+
+## Decision Points
+- Após Etapa 2: se score total >= 70 (Forte/Elite) → focar recomendações em refinamento de alto nível; se score total < 40 (Crítica) → priorizar intervenção urgente com coaching intensivo
+- Após Etapa 3: se causa raiz é controlável pelo closer (skill gap) → direcionar para workflow 05 (coaching); se causa raiz é não-controlável (lead desqualificado, oferta inadequada) → direcionar feedback para workflows 14-16 (cross-squad)
+- Após Etapa 4: se recomendações exigem ação do gestor ou de outro squad → incluir roteamento adicional além do workflow 05
+
+## Escalation Triggers
+- Se score total < 40 em 3+ calls consecutivas do mesmo closer → pausar workflow, escalar para sales-chief para avaliação de gravidade e possível afastamento temporário de calls
+- Se causa raiz aponta para problema de oferta (mismatch recorrente) → escalar para sales-chief para feedback ao squad de produto via workflow 16
+- Se há divergência entre scorecard-analyst e deal-risk-doctor sobre a causa raiz principal → escalar para qa-guardian para arbitragem baseada em evidências

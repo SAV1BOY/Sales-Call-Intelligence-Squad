@@ -65,3 +65,30 @@ Garantir que insights das calls cheguem aos times que podem agir sobre eles — 
 - [ ] Feedback compartilhado com squads relevantes
 - [ ] Status de feedbacks anteriores verificado
 - [ ] Registry atualizado
+
+---
+
+## Contexto
+Esta task existe para garantir que insights extraídos das calls cheguem aos times que podem agir sobre eles. Objeções recorrentes devem virar ajustes de copy, leads ruins devem virar ajustes de tráfego, e gaps de oferta devem subir para o C-level — sem esse sync, inteligência de vendas morre dentro do squad.
+
+## Especificação de I/O
+- **Input**: Relatórios de win/loss patterns, análises de fit oferta-dor-ICP, objeções com causa raiz externa, feedback de handoff SDR→closer
+- **Output**: Briefings por squad em `reports/intelligence/cross-squad-sync-PERIODO` usando `templates/operational/cross-squad-handoff-template.md`
+
+## Quality Gates Intermediários
+- Após classificação por squad destino (step 2): cada insight tem evidência de múltiplas calls (não anedótico)
+- Antes de output final: ações sugeridas são específicas e implementáveis, tom construtivo, priorização por impacto na conversão
+
+## Escalation & Rework
+- Se insight requer decisão estratégica (ex: mudança de pricing ou oferta): escalar para sales-chief para handoff ao c_level_squad
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- cross_squad_delivery_rate (taxa de entrega de insights aos squads destino)
+- Taxa de implementação dos insights entregues (feedback loop)
+
+## Referências Cruzadas
+- Workflow: `workflows/14-closer-to-copy-feedback.md`, `workflows/15-closer-to-traffic-feedback.md`, `workflows/16-closer-to-offer-feedback.md`, `workflows/13-sdr-to-closer-feedback-loop.md`
+- Agents: `agents/revenue-intelligence-analyst.md`, `agents/sales-chief.md`, `agents/offer-fit-analyst.md`, `agents/sdr-handoff-analyst.md`
+- Templates: `templates/operational/cross-squad-handoff-template.md`, `templates/briefs/cross-squad-insight-brief.md`
+- Registries atualizados: `data/registries/intelligence-registry.yaml`, `data/registries/cross-squad-feedback-registry.yaml`

@@ -63,3 +63,30 @@ Manter scorecards individuais e de equipe sempre atualizados — base para coach
 - [ ] Tendência verificada
 - [ ] Benchmarks atualizados
 - [ ] Alertas gerados se mudança significativa
+
+---
+
+## Contexto
+Esta task existe para manter scorecards individuais e de equipe sempre atualizados como base para coaching, certificação e dashboards executivos. Scorecards desatualizados invalidam rankings, tendências e todas as análises que dependem deles.
+
+## Especificação de I/O
+- **Input**: Scorecard da call recém-auditada, scorecards históricos do closer, calibração de scoring vigente, benchmarks da equipe
+- **Output**: Scorecards atualizados em `data/registries/scorecards-registry.yaml`, ranking atualizado, alertas de mudança significativa
+
+## Quality Gates Intermediários
+- Após inserção do novo scorecard (step 1): verificar que não há duplicata e dados batem com auditoria original
+- Antes de output final: média móvel e desvio padrão recalculados corretamente, ranking sem empates não resolvidos, tendência coerente
+
+## Escalation & Rework
+- Se closer cruzou limiar de certificação (para baixo): escalar para closer-trainer para plano de ação imediato
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- score_improvement_rate (melhoria do score ao longo do tempo)
+- average_call_score (score médio das calls — atualizado em tempo real)
+
+## Referências Cruzadas
+- Workflow: `workflows/04-scoring-and-root-cause.md`, `workflows/11-weekly-sales-quality-review.md`
+- Agents: `agents/scorecard-analyst.md`, `agents/qa-guardian.md`, `agents/revenue-intelligence-analyst.md`
+- Templates: `templates/scorecards/call-scorecard-template.md`, `templates/scorecards/closer-performance-scorecard.md`, `templates/scorecards/team-quality-scorecard.md`
+- Registries atualizados: `data/registries/scorecards-registry.yaml`, `data/registries/closer-performance-registry.yaml`

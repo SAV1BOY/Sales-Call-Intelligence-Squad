@@ -59,3 +59,30 @@ Garantir que toda call que entra no sistema tenha metadata padronizada, rastreá
 - [ ] Brief de auditoria criado
 - [ ] Transcrição bruta extraída ou recebida
 - [ ] Call encaminhada para normalização
+
+---
+
+## Contexto
+Sem intake padronizado, calls entram no sistema com metadata incompleta, gerando retrabalho em todas as etapas downstream. Esta task existe para garantir que toda gravação tenha contexto completo e rastreável desde o primeiro momento.
+
+## Especificação de I/O
+- **Input**: Arquivo de gravação (áudio/vídeo) + nome do closer + lead + oferta + data + resultado + origem + SDR
+- **Output**: Entrada em `data/registries/calls-registry.yaml` + brief em `templates/briefs/call-audit-brief` + transcrição bruta em `data/transcripts/raw/`
+
+## Quality Gates Intermediários
+- Após registro de metadata (step 3): checklist `transcript-normalization-quality` — todos os campos preenchidos, ID único atribuído, sem duplicidade
+- Antes de output final: brief de auditoria criado com contexto completo, áudio validado como audível
+
+## Escalation & Rework
+- Se áudio < 80% audível ou duração < 5 minutos: escalar para `transcript-analyst` com flag `low_audio_confidence`
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `audit_cycle_time`: tempo entre recebimento da gravação e início da auditoria
+- `cross_squad_delivery_rate`: % de calls com metadata completa na primeira tentativa
+
+## Referências Cruzadas
+- Workflow: `workflows/00-recording-to-transcript.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/transcript-analyst.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
+- Templates: `templates/briefs/call-audit-brief.md`
+- Registries atualizados: `data/registries/calls-registry.yaml`

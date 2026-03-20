@@ -66,3 +66,30 @@ Manter registries como fonte única de verdade para todo o squad — dados desat
 - [ ] Consistência verificada (dados batem com relatórios)
 - [ ] Backup realizado
 - [ ] Log de atualizações documentado
+
+---
+
+## Contexto
+Esta task existe para manter os registries como fonte única de verdade (single source of truth) do squad. Dados desatualizados geram análises incorretas, dashboards defasados, decisões de coaching erradas e perda de rastreabilidade.
+
+## Especificação de I/O
+- **Input**: Scorecard da call concluída, relatório de causa raiz, relatório de frameworks detectados, sessão de coaching (se realizada)
+- **Output**: Registries atualizados em `data/registries/`, log de atualizações, confirmação de integridade
+
+## Quality Gates Intermediários
+- Após atualização de cada registry (steps 1-7): sem campos obrigatórios vazios, IDs consistentes entre registries
+- Antes de output final: backup realizado, consistência verificada (dados batem com relatórios originais), timestamps corretos
+
+## Escalation & Rework
+- Se inconsistência entre registries detectada: escalar para qa-guardian para investigação e correção
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- audit_cycle_time (tempo de call até registries atualizados)
+- Taxa de integridade dos registries (0 campos obrigatórios vazios)
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`, `workflows/04-scoring-and-root-cause.md`
+- Agents: `agents/call-auditor.md`, `agents/scorecard-analyst.md`, `agents/qa-guardian.md`
+- Templates: `templates/operational/lessons-learned-template.md`
+- Registries atualizados: `data/registries/calls-registry.yaml`, `data/registries/scorecards-registry.yaml`, `data/registries/closer-performance-registry.yaml`, `data/registries/framework-detection-registry.yaml`, `data/registries/root-cause-patterns-registry.yaml`, `data/registries/coaching-registry.yaml`

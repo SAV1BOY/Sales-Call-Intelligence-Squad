@@ -123,3 +123,25 @@ Analisar a qualidade do handoff entre SDR e closer a partir das evidências enco
 ## Próximo Workflow
 
 → 14-closer-to-copy-feedback.md (insights cross-squad para Copy)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Evidências extraídas | Primeiros minutos de cada call analisados; classificação justificada com citação | Voltar a Etapa 1 para completar análise das calls faltantes |
+| Etapa 2 → Etapa 3 | Padrões documentados | Frequência calculada e correlação handoff×conversão estabelecida | Voltar a Etapa 2 para revalidar padrões com amostra insuficiente |
+| Etapa 3 → Etapa 4 | feedback-objectivity-checklist | Feedback baseado em dados, construtivo e acionável | Voltar a Etapa 3 para remover viés ou adicionar evidências |
+| Etapa 4 → Etapa 5 | Sales-chief aprovou | Feedback alinhado com estratégia; tom apropriado para cross-squad | Voltar a Etapa 3 para ajustar tom ou recomendações |
+| Etapa 5 → Conclusão | Registro completo | Registry atualizado e reavaliação agendada | Voltar a Etapa 5 para completar registro |
+
+## Decision Points
+- Após Etapa 2: se mais de 40% dos handoffs são classificados como "deficiente" ou "prejudicial" → priorizar feedback urgente ao invés de esperar consolidação semanal; se maioria é "adequado/excelente" → seguir fluxo normal quinzenal
+- Após Etapa 2: se problemas concentram-se em um SDR específico → produzir feedback individualizado além do feedback geral do time
+- Após Etapa 4: se recomendações envolvem mudança de processo (não apenas ajuste de abordagem) → escalar para reunião conjunta Sales + SDR leads
+
+## Escalation Triggers
+- Se handoff prejudicial causa perda de deal de alto ticket (acima de 2x ticket médio) → pausar, escalar para sales-chief para comunicação imediata ao líder de SDRs
+- Se padrão de "expectativa inflada" pelo SDR é recorrente por 2+ semanas → pausar, escalar para sales-chief para intervenção direta com gestão de SDRs
+- Se taxa de no-show de leads agendados por SDR específico ultrapassa 50% → pausar, escalar para sales-chief para investigação conjunta

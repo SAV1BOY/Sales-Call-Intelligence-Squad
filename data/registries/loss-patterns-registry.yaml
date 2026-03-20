@@ -1,3 +1,36 @@
+# Schema Definition
+_schema:
+  description: "Catálogo de padrões recorrentes identificados em calls perdidas, com causa raiz e frequência"
+  fields:
+    pattern_id:
+      type: string
+      required: true
+      description: "Identificador único do padrão (ex: LOSS-001)"
+    description:
+      type: string
+      required: true
+      description: "Descrição detalhada do padrão de perda identificado"
+    frequency:
+      type: number
+      required: true
+      description: "Número de vezes que o padrão foi observado"
+    root_cause:
+      type: string
+      required: true
+      description: "Causa raiz identificada para o padrão de perda"
+    example_calls:
+      type: list
+      required: false
+      description: "IDs de calls que exemplificam este padrão"
+  updated_by: "extract-loss-patterns"
+  update_frequency: "monthly"
+  owner: "win-loss-miner"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/deal-risk-registry.yaml"
+    - "data/registries/objections-registry.yaml"
+
+# ---
 # Registro de Padrões de Perda
 # Padrões recorrentes identificados em calls que não resultaram em fechamento
 # Última atualização: Pendente

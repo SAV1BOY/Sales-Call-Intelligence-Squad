@@ -61,3 +61,30 @@ Criar mapa estrutural da call para que cada agente especialista analise apenas a
 - [ ] Anomalias de sequência documentadas
 - [ ] Transcrição segmentada salva no diretório correto
 - [ ] Mapa de distribuição temporal gerado
+
+---
+
+## Contexto
+O princípio `phase_first` da arquitetura exige que cada agente especialista analise apenas a fase relevante da call. Esta task existe para criar o mapa estrutural que viabiliza análise granular por etapa, detectando anomalias de sequência que impactam o resultado.
+
+## Especificação de I/O
+- **Input**: Transcrição normalizada com timestamps e speaker tags em `data/transcripts/cleaned/CALL-ID.md` + Sales Call Stage Taxonomy + metadata da call
+- **Output**: Transcrição segmentada em `data/transcripts/segmented/CALL-ID.md` + mapa de etapas com timestamps, durações e percentuais
+
+## Quality Gates Intermediários
+- Após segmentação das 6 etapas (steps 2-3): todas as etapas delimitadas ou marcadas como ausentes, timestamps sem sobreposição, soma = 100%
+- Antes de output final: `call-auditor` valida segmentação e identifica etapas ausentes; `framework-detector` confirma coerência entre etapa e frameworks
+
+## Escalation & Rework
+- Se call tem estrutura atípica (< 3 etapas identificáveis): escalar para `call-auditor` para análise manual com contexto adicional
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `audit_cycle_time`: tempo de transcrição normalizada até segmentação pronta
+- `framework_usage_rate`: % de calls segmentadas corretamente na primeira tentativa
+
+## Referências Cruzadas
+- Workflow: `workflows/01-transcript-cleaning-and-segmentation.md`
+- Agents: `agents/transcript-analyst.md`, `agents/call-auditor.md`, `agents/framework-detector.md`
+- Templates: `templates/reports/minute-by-minute-audit-report.md`
+- Registries atualizados: `data/transcripts/segmented/`, `data/registries/calls-registry.yaml`

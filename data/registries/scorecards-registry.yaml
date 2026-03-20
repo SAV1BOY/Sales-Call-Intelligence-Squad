@@ -1,3 +1,40 @@
+# Schema Definition
+_schema:
+  description: "Registro dos scorecards de auditoria com score total, scores por bloco e técnicas detectadas em cada call"
+  fields:
+    call_id:
+      type: string
+      required: true
+      description: "ID da call auditada (referência ao calls-registry)"
+    total_score:
+      type: number
+      required: true
+      description: "Score total da auditoria (0-100)"
+    per_block_scores:
+      type: list
+      required: true
+      description: "Scores individuais dos 10 blocos de avaliação"
+    closer_id:
+      type: string
+      required: true
+      description: "ID do closer avaliado (referência ao closers-registry)"
+    date:
+      type: date
+      required: true
+      description: "Data da auditoria"
+    auditor:
+      type: string
+      required: true
+      description: "Identificação do auditor (sistema ou pessoa)"
+  updated_by: "full-call-audit, analyze-rapport-and-frame, analyze-discovery, analyze-pitch, analyze-closing, analyze-talk-ratio, calibrate-scoring"
+  update_frequency: "per-call"
+  owner: "scorecard-analyst"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/closers-registry.yaml"
+    - "data/registries/framework-detection-registry.yaml"
+
+# ---
 # Registro de Scorecards
 # Scorecards completos das auditorias de calls
 # Última atualização: Pendente

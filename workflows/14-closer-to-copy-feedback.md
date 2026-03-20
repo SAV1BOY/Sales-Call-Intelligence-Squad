@@ -123,3 +123,25 @@ Produzir relatório de inteligência para o Copy Squad contendo as objeções ma
 ## Próximo Workflow
 
 → 15-closer-to-traffic-feedback.md (insights para Traffic Squad)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Citações categorizadas | Citações exatas (não parafraseadas), anonimizadas e agrupadas por frequência | Voltar a Etapa 1 para corrigir paráfrases ou anonimizar dados |
+| Etapa 2 → Etapa 3 | Gaps apoiados por evidência | Gaps identificados com base em múltiplas calls; oportunidades de copy mapeadas | Voltar a Etapa 2 para buscar mais evidências em calls adicionais |
+| Etapa 3 → Etapa 4 | cross-squad-feedback-quality | Pacote acionável, baseado em dados e priorizado por impacto | Voltar a Etapa 3 para reescrever recomendações vagas |
+| Etapa 4 → Etapa 5 | Sales-chief aprovou | Insights representativos (não baseados em 1 call isolada); recomendações viáveis | Voltar a Etapa 3 para ampliar amostra ou ajustar recomendações |
+| Etapa 5 → Conclusão | Loop de feedback planejado | Tracking de implementação criado com métricas de acompanhamento | Voltar a Etapa 5 para definir métricas |
+
+## Decision Points
+- Após Etapa 2: se gap crítico é identificado (promessa da copy gerando objeções em 30%+ das calls) → produzir alerta urgente para Copy Squad sem esperar relatório completo; se gaps são moderados → seguir fluxo normal
+- Após Etapa 3: se insights revelam oportunidade de novo ângulo de copy com alto potencial → priorizar esta recomendação no topo do pacote; se insights são incrementais → consolidar como melhorias contínuas
+- Após Etapa 5: se Copy Squad implementou recomendações anteriores → medir impacto na próxima rodada; se ignorou → escalar para reunião de alinhamento
+
+## Escalation Triggers
+- Se copy está gerando expectativa falsa que resulta em perda recorrente de deals → pausar, escalar para sales-chief para comunicação urgente ao Copy Squad e C-Level
+- Se linguagem dos leads mudou significativamente (novo perfil de público) e copy está desatualizada → pausar, escalar para sales-chief para solicitar revisão completa de copy
+- Se dados de anonimização falham e citações identificáveis são incluídas → pausar, escalar para sales-chief para revisão de compliance antes da entrega

@@ -122,3 +122,25 @@ Dissecar cada objeção levantada pelo lead durante a call, identificar a causa 
 ## Próximo Workflow
 
 → 18-preventive-objections-implementation.md (implementar objeções preventivas no pitch)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Inventário completo de objeções | Todas as objeções explícitas e implícitas identificadas; trechos exatos citados com timestamp; severidade classificada | Voltar a Etapa 1 (revisitar transcrição para objeções implícitas não detectadas) |
+| Etapa 2 → Etapa 3 | Classificação taxonômica em 3 camadas | Cada objeção classificada: declarada → real → necessidade não atendida; cortinas de fumaça identificadas | Voltar a Etapa 2 (aprofundar análise de camadas para objeções com classificação incompleta) |
+| Etapa 3 → Etapa 4 | Causa raiz com evidência textual | Causa raiz apoiada por evidência da transcrição; momento da semente identificado; controlabilidade classificada | Voltar a Etapa 3 (buscar evidências adicionais na transcrição ou consultar deal-risk-doctor) |
+| Etapa 4 → Etapa 5 | Avaliação de tratamento completa | Cada resposta do closer avaliada com critérios objetivos; padrões de resposta documentados | Voltar a Etapa 4 (revisar avaliações sem critério objetivo ou padrões não identificados) |
+| Etapa 5 → Conclusão | Playbook de prevenção e tratamento | Playbook específico para objeções encontradas; scripts realistas e executáveis | Voltar a Etapa 5 (refinar scripts genéricos ou adicionar scripts faltantes) |
+
+## Decision Points
+- Após Etapa 2: se objeção declarada difere da objeção real (cortina de fumaça confirmada) → aprofundar investigação da necessidade não atendida antes de prosseguir; se objeção declarada = objeção real → prosseguir diretamente para causa raiz
+- Após Etapa 3: se causa raiz é prevenível pelo closer (falha em diagnóstico ou ancoragem) → focar playbook em prevenção no pitch; se causa raiz é externa (lead sem fit, decisor ausente) → focar recomendações em qualificação upstream
+- Após Etapa 4: se closer sempre usa a mesma técnica para objeções diferentes (ex: sempre oferece desconto) → sinalizar padrão vicioso para coaching urgente no workflow 05
+
+## Escalation Triggers
+- Se a mesma objeção aparece em 5+ calls do mesmo closer sem resolução → escalar para sales-chief para inclusão em treinamento obrigatório
+- Se a análise revela que a objeção é causada por problema na oferta (gap real do produto) → escalar para sales-chief para feedback ao squad de produto via workflow 16
+- Se há conflito entre objection-specialist e deal-risk-doctor sobre a causa raiz de uma objeção → escalar para qa-guardian para arbitragem com base em evidências

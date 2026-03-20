@@ -127,3 +127,25 @@ Analisar calls que resultaram em perda (não fechou, no-show em follow-up, desis
 
 → 17-lost-deal-recovery.md (para tentativa de recuperação de deals perdidos)
 → 11-weekly-sales-quality-review.md (para consolidação no review semanal)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Calls classificadas por tipo de perda | Contexto completo para cada call; classificação inicial por loss-taxonomy aplicada; correlações iniciais identificadas | Voltar a Etapa 1 (completar metadados ou revisar classificação de tipo de perda) |
+| Etapa 2 → Etapa 3 | Catálogo de padrões de falha completo | Ponto de ruptura identificado para cada call; evidências textuais citadas; classificação controlável vs. não-controlável | Voltar a Etapa 2 (aprofundar mineração em calls sem ponto de ruptura claro) |
+| Etapa 3 → Etapa 4 | Análise de recorrência concluída | Correlações apoiadas por dados; custo estimado calculado; tendências temporais mapeadas | Voltar a Etapa 3 (completar cruzamento com banco histórico ou recalcular custos) |
+| Etapa 4 → Etapa 5 | Diagnóstico sistêmico validado | Problemas individuais separados de sistêmicos; causa raiz estrutural identificada; nível de solução definido | Voltar a Etapa 4 (revalidar separação individual vs. sistêmico com dados adicionais) |
+| Etapa 5 → Conclusão | loss-pattern-extraction-quality | Mapa de riscos com top 5 padrões, alertas preventivos, recomendações acionáveis por nível (closer/squad/C-level) | Voltar a Etapa 5 (refinar alertas genéricos ou completar recomendações por nível) |
+
+## Decision Points
+- Após Etapa 1: se a maioria das perdas concentra-se em um tipo (ex: "objeção não resolvida") → aprofundar mineração nessa categoria na Etapa 2; se perdas são distribuídas entre vários tipos → analisar todas as categorias com profundidade uniforme
+- Após Etapa 3: se padrão de perda correlaciona-se fortemente com um closer específico → direcionar para coaching individual (workflow 05); se correlaciona-se com um produto ou origem de lead → direcionar para feedback cross-squad (workflows 14-16)
+- Após Etapa 4: se diagnóstico aponta problema sistêmico (treinamento, oferta, lead gen) → incluir recomendação de ação estrutural no relatório; se problema é exclusivamente individual → limitar recomendação a coaching
+
+## Escalation Triggers
+- Se custo estimado dos padrões de perda ultrapassa threshold definido pelo squad (ex: R$ 100k em deals perdidos no mês) → escalar para sales-chief para ação corretiva imediata
+- Se padrão de perda indica lead generation atraindo perfil sistematicamente inadequado → escalar para sales-chief para feedback ao time de marketing/SDR
+- Se 3+ closers apresentam o mesmo padrão de falha no mesmo período → escalar para sales-chief como problema de treinamento do time que demanda workshop emergencial

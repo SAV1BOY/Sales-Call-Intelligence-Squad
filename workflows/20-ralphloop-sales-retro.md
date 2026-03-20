@@ -140,3 +140,25 @@ Realizar retrospectiva periódica do Sales-Call-Intelligence-Squad para consolid
 ## Próximo Workflow
 
 → 00-recording-to-transcript.md (o ciclo recomeça — agora com o sistema melhorado)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Métricas coletadas de todas as fontes | Produtividade, impacto e qualidade consolidados; cálculos verificados | Voltar a Etapa 1 para coletar dados de registries faltantes |
+| Etapa 2 → Etapa 3 | Cada workflow avaliado com evidência | Todos os workflows (00-19) avaliados; recomendações justificadas | Voltar a Etapa 2 para avaliar workflows não cobertos |
+| Etapa 3 → Etapa 4 | Tendências baseadas em 3+ meses | Correlações significativas entre intervenções e resultados; projeções fundamentadas | Voltar a Etapa 3 para ampliar janela de dados se insuficiente |
+| Etapa 4 → Etapa 5 | improvement-action-viability | Top 3 melhorias específicas, mensuráveis, com responsável e prazo | Voltar a Etapa 4 para detalhar melhorias vagas |
+| Etapa 5 → Conclusão | retro-completeness-checklist | Ata publicada; sistema atualizado; novo ciclo iniciado com metas | Voltar a Etapa 5 para completar atualizações pendentes |
+
+## Decision Points
+- Após Etapa 2: se workflow específico não foi executado no período → investigar causa (falta de demanda vs. falha de processo); se quality gates de um workflow falharam repetidamente → priorizar redesign desse workflow
+- Após Etapa 3: se intervenções do squad não estão gerando impacto mensurável → reavaliar abordagem de coaching e frameworks; se impacto é alto em área específica → replicar abordagem para outras áreas
+- Após Etapa 4: se melhorias exigem mudança em frameworks core → planejar fase de transição com treinamento; se são ajustes operacionais → implementar imediatamente no próximo ciclo
+
+## Escalation Triggers
+- Se métricas de impacto do squad mostram declínio por 2+ meses consecutivos → pausar, escalar para sales-chief para revisão estratégica do squad com C-Level
+- Se mais de 30% dos workflows não foram executados conforme projetado no período → pausar, escalar para sales-chief para avaliar capacidade e priorização do squad
+- Se feedbacks cross-squad (workflows 13-16) são consistentemente ignorados pelos squads destinatários → pausar, escalar para sales-chief para alinhar com C-Level sobre governança cross-squad

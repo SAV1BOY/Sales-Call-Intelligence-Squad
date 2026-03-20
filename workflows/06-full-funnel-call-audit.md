@@ -138,3 +138,29 @@ Orquestrar todos os workflows de análise (00 a 05) em sequência, garantindo qu
   - Call ganha → 09-win-pattern-extraction.md
   - Call perdida → 10-loss-pattern-extraction.md
   - Closer em certificação → 12-monthly-closer-certification.md
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Intake e planejamento validados | Todos os inputs completos (gravação + metadados); ticket criado com ID único e SLA definido | Voltar a Etapa 1 (solicitar inputs faltantes ou redefinir prioridade) |
+| Etapa 2 (WF00) → Etapa 2 (WF01) | Quality gate do workflow 00 aprovado | Transcrição normalizada, speakers identificados, segmentação por blocos concluída | Voltar ao workflow 00 (reprocessar etapa falha) |
+| Etapa 2 (WF01) → Etapa 2 (WF02+03) | Quality gate do workflow 01 aprovado | Transcrição segmentada por fases, resumo executivo gerado, talk-time calculado | Voltar ao workflow 01 (corrigir segmentação ou resumo) |
+| Etapa 2 (WF02+03) → Etapa 2 (WF04) | Quality gates dos workflows 02 e 03 aprovados | Análise minuto a minuto completa e detecção de frameworks validada por specialists | Voltar ao workflow 02 ou 03 (completar análise pendente) |
+| Etapa 2 (WF04) → Etapa 2 (WF05) | Quality gate do workflow 04 aprovado | Scorecard com 10 blocos pontuados, causa raiz identificada, recomendações priorizadas | Voltar ao workflow 04 (revisar scoring ou aprofundar causa raiz) |
+| Etapa 2 (WF05) → Etapa 3 | Quality gate do workflow 05 aprovado | Rewrites before/after validados, pacote de coaching com exercícios práticos | Voltar ao workflow 05 (refinar rewrites ou completar pacote) |
+| Etapa 3 → Etapa 4 | Relatório executivo consolidado | Todas as seções preenchidas; parecer do sales-chief incluído; comparação histórica feita | Voltar a Etapa 3 (completar seções faltantes ou adicionar parecer) |
+| Etapa 4 → Etapa 5 | full-audit-orchestration-checklist 100% | Consistência entre seções, evidências citadas, recomendações acionáveis, relatório compreensível | Voltar a Etapa 4 (corrigir inconsistências ou seções reprovadas) |
+| Etapa 5 → Conclusão | Entrega e registro completos | Ticket fechado, todos os registries atualizados, stakeholders notificados | Voltar a Etapa 5 (atualizar registries faltantes ou notificar stakeholders) |
+
+## Decision Points
+- Após Etapa 2 (WF01 concluído): se transcrição possui fases fora de ordem ou fases ausentes → sinalizar para call-auditor e framework-detector como anomalia antes de disparar workflows 02 e 03
+- Após Etapa 3: se score final < 40 (Crítica) → incluir flag de urgência no relatório e priorizar entrega; se score >= 85 (Elite) → incluir flag para extração de win patterns (workflow 09) mesmo em calls não fechadas
+- Após Etapa 4: se QA identifica inconsistências entre score e causa raiz → devolver seções específicas para revisão em vez de reprovar relatório inteiro
+
+## Escalation Triggers
+- Se qualquer workflow individual (00-05) excede o SLA definido → sales-chief intervém para destravar bloqueio e realocar recursos
+- Se há divergência entre agentes sobre o diagnóstico final (ex: scorecard-analyst e deal-risk-doctor discordam sobre causa raiz) → sales-chief arbitra com base em evidências consolidadas
+- Se o closer em questão possui 3+ auditorias consecutivas com score < 55 → escalar para sales-chief para decisão sobre programa intensivo de recuperação ou remoção do time

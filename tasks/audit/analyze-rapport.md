@@ -61,3 +61,31 @@ Determinar se o closer estabeleceu conexão genuína, assumiu controle do frame 
 - [ ] Duração e proporção do rapport documentadas
 - [ ] Transição para discovery avaliada
 - [ ] Nota atribuída com justificativa textual
+
+---
+
+## Contexto
+Rapport e frame setting nos primeiros minutos condicionam todo o resto da call. Esta task existe para avaliar se o closer estabeleceu autoridade (Doctor Frame), conexão genuína e comunicou as 3 intenções do First Pact — sem essa fundação, discovery vira interrogatório e pitch vira apresentação forçada.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, seção de rapport delimitada (primeiros 2-5 minutos) + score de talk ratio na fase de rapport
+- **Output**: `templates/reports/full-call-audit-report.md`, seções "Rapport e Abertura" e "Primeiro Pacto e Frame" + status de cada intenção (aplicada/parcial/ausente)
+
+## Quality Gates Intermediários
+- Após análise inicial: quebra de gelo avaliada com evidência textual; frame setting classificado (Doctor Frame vs. vendedor); 3 intenções verificadas individualmente com trecho e timestamp
+- Antes de output final: qa-guardian valida coerência entre nota de rapport e engajamento do lead nas fases seguintes (rapport forte com discovery desengajado é sinal de inconsistência)
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar primeiros minutos, verificar speaker tags e timestamps)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Gordon vs. Wilde sobre qualidade do frame): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Taxa de closers com First Pact completo (3 intenções presentes) rastreada por período
+- Correlação entre nota de rapport e nota global da call > 0.4
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/call-auditor.md`, `agents/experts/cole-gordon.md`, `agents/experts/dan-lok.md`, `agents/framework-detector.md`
+- Templates: `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/scorecards-registry`

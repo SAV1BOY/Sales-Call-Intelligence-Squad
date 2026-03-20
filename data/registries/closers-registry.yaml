@@ -1,3 +1,44 @@
+# Schema Definition
+_schema:
+  description: "Cadastro e acompanhamento de performance de todos os closers do time de vendas"
+  fields:
+    id:
+      type: string
+      required: true
+      description: "Identificador único do closer (ex: CLO-001)"
+    name:
+      type: string
+      required: true
+      description: "Nome completo do closer"
+    start_date:
+      type: date
+      required: true
+      description: "Data de início do closer no time"
+    calls_audited:
+      type: number
+      required: true
+      description: "Número total de calls auditadas"
+    avg_score:
+      type: number
+      required: false
+      description: "Score médio nas auditorias (0-100)"
+    level:
+      type: string
+      required: true
+      description: "Nível atual do closer (júnior, pleno, sênior, especialista)"
+    certification_status:
+      type: string
+      required: true
+      description: "Status de certificação (em treinamento, certificado, expirado)"
+  updated_by: "certify-closer, monthly-closer-certification"
+  update_frequency: "monthly"
+  owner: "closer-trainer"
+  cross_references:
+    - "data/registries/scorecards-registry.yaml"
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/lessons-learned-registry.yaml"
+
+# ---
 # Registro de Closers
 # Cadastro e acompanhamento de todos os closers do time de vendas
 # Última atualização: Pendente

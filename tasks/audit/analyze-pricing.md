@@ -65,3 +65,31 @@ Verificar se o closer apresentou o preço de forma estratégica — ancorando va
 - [ ] Concessões classificadas
 - [ ] Frame durante pricing avaliado
 - [ ] Nota atribuída com evidência textual
+
+---
+
+## Contexto
+A forma como o preço é apresentado determina se o lead percebe investimento ou custo. Esta task existe para auditar a estratégia de ancoragem, value stack, risk reversal e concessões — diferenciando closer que vende valor de closer que vende preço. Sem essa análise, objeções de preço são tratadas como problema de fechamento quando na verdade são problema de ancoragem.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, seção de pricing delimitada + detalhes da oferta e preço apresentado + análise de pitch (value proposition construída)
+- **Output**: `templates/reports/pricing-analysis-report.md` + nota do bloco ancoragem (0-10) com justificativa
+
+## Quality Gates Intermediários
+- Após análise inicial: momento exato de revelação de preço identificado com timestamp; ancoragem de valor verificada (presente/ausente); value stack documentado com componentes listados; concessões classificadas (estratégicas vs. desesperadas)
+- Antes de output final: qa-guardian valida coerência entre nota de pricing e objeções de preço registradas; se houve objeção de preço forte, nota de ancoragem deve refletir isso
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar seção de pricing, verificar se preço foi mencionado)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Hormozi vs. Suby sobre risk reversal): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Taxa de concessão de preço por closer rastreada e comparada com benchmark do time
+- Correlação entre nota de ancoragem e ausência de objeção de preço > 0.5
+
+## Referências Cruzadas
+- Workflow: `workflows/08-price-anchoring-audit.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/pricing-anchoring-analyst.md`, `agents/experts/alex-hormozi.md`, `agents/experts/sabri-suby.md`
+- Templates: `templates/reports/pricing-analysis-report.md`
+- Registries atualizados: `data/registries/pricing-concessions-registry`

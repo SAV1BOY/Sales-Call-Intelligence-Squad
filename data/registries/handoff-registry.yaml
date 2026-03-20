@@ -1,3 +1,40 @@
+# Schema Definition
+_schema:
+  description: "Registro da qualidade do handoff entre SDR e closer, incluindo gaps de informação e impacto na call"
+  fields:
+    call_id:
+      type: string
+      required: true
+      description: "ID da call auditada (referência ao calls-registry)"
+    sdr:
+      type: string
+      required: true
+      description: "Nome ou ID do SDR responsável pelo agendamento"
+    closer:
+      type: string
+      required: true
+      description: "Nome ou ID do closer que recebeu a call"
+    info_quality:
+      type: string
+      required: true
+      description: "Qualidade das informações passadas (excelente, boa, regular, ruim)"
+    gaps:
+      type: list
+      required: false
+      description: "Gaps de informação identificados no handoff"
+    impact:
+      type: string
+      required: true
+      description: "Impacto dos gaps no resultado da call (nenhum, leve, moderado, severo)"
+  updated_by: "analyze-sdr-handoff"
+  update_frequency: "per-call"
+  owner: "sdr-handoff-analyst"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/deal-risk-registry.yaml"
+    - "data/registries/closers-registry.yaml"
+
+# ---
 # Registro de Handoff (SDR → Closer)
 # Qualidade da passagem de bastão entre SDR e closer
 # Última atualização: Pendente

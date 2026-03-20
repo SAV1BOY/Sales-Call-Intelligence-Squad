@@ -1,3 +1,36 @@
+# Schema Definition
+_schema:
+  description: "Catálogo de padrões recorrentes identificados em calls de vendas bem-sucedidas, com frequência e frameworks correlacionados"
+  fields:
+    pattern_id:
+      type: string
+      required: true
+      description: "Identificador único do padrão (ex: WIN-001)"
+    description:
+      type: string
+      required: true
+      description: "Descrição detalhada do padrão de vitória identificado"
+    frequency:
+      type: number
+      required: true
+      description: "Número de vezes que o padrão foi observado"
+    frameworks_correlated:
+      type: list
+      required: false
+      description: "Frameworks que aparecem correlacionados com este padrão"
+    example_calls:
+      type: list
+      required: false
+      description: "IDs de calls que exemplificam este padrão"
+  updated_by: "extract-win-patterns"
+  update_frequency: "monthly"
+  owner: "win-loss-miner"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/framework-detection-registry.yaml"
+    - "data/registries/best-moments-registry.yaml"
+
+# ---
 # Registro de Padrões de Vitória
 # Padrões recorrentes identificados em calls que resultaram em fechamento
 # Última atualização: Pendente

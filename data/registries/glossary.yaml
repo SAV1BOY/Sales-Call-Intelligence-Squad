@@ -1,3 +1,31 @@
+# Schema Definition
+_schema:
+  description: "Glossário de termos técnicos e jargões utilizados na auditoria de calls de vendas do squad"
+  fields:
+    term:
+      type: string
+      required: true
+      description: "Termo ou expressão a ser definido"
+    definition:
+      type: string
+      required: true
+      description: "Definição clara e objetiva do termo"
+    context:
+      type: string
+      required: false
+      description: "Contexto de uso do termo no processo de vendas"
+    related_terms:
+      type: list
+      required: false
+      description: "Termos relacionados para referência cruzada"
+  updated_by: "cross-squad-intelligence-sync"
+  update_frequency: "weekly"
+  owner: "sales-chief"
+  cross_references:
+    - "data/registries/framework-detection-registry.yaml"
+    - "data/registries/objections-registry.yaml"
+
+# ---
 # Glossário
 # Definições de termos utilizados no sistema de auditoria de calls
 # Última atualização: Pendente

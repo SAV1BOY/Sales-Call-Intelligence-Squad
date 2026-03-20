@@ -66,3 +66,30 @@ Estabelecer baseline confiável de performance do novo closer desde o primeiro d
 - [ ] Plano de desenvolvimento criado
 - [ ] Cadência de acompanhamento definida
 - [ ] Registro criado em todos os registries
+
+---
+
+## Contexto
+Esta task existe para estabelecer um baseline confiável de performance desde o primeiro dia do closer. Sem baseline, não há como medir evolução real — e sem plano estruturado, o closer demora mais para atingir o padrão mínimo do time.
+
+## Especificação de I/O
+- **Input**: Informações do novo closer (experiência, background), scorecard template, frameworks obrigatórios, calls de referência (alta performance)
+- **Output**: Perfil do closer em `data/registries/closer-performance-registry.yaml`, baseline de performance (scores das 3 primeiras calls), plano de desenvolvimento inicial
+
+## Quality Gates Intermediários
+- Após auditoria das 3 primeiras calls (step 4): baseline documentado com scores por bloco e comparação com média da equipe
+- Antes de output final: plano de desenvolvimento com top 3 prioridades, cadência de acompanhamento definida, mentor atribuído
+
+## Escalation & Rework
+- Se baseline muito abaixo da média (score < 40): escalar para sales-chief para avaliar fit closer-oferta antes de prosseguir
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- time_to_competence (tempo para closer atingir score mínimo de certificação: 70)
+- coaching_impact_score nas primeiras 4 semanas
+
+## Referências Cruzadas
+- Workflow: `workflows/12-monthly-closer-certification.md`, `workflows/05-coaching-rewrite-loop.md`
+- Agents: `agents/closer-trainer.md`, `agents/call-auditor.md`, `agents/scorecard-analyst.md`, `agents/sales-chief.md`
+- Templates: `templates/scorecards/closer-performance-scorecard.md`, `templates/reports/manager-coaching-report.md`
+- Registries atualizados: `data/registries/closer-performance-registry.yaml`, `data/registries/closer-certification-registry.yaml`, `data/registries/coaching-registry.yaml`

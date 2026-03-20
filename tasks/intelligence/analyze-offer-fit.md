@@ -65,3 +65,30 @@ Determinar se o problema está na execução do closer ou no fit da oferta — s
 - [ ] Conversão por segmento analisada
 - [ ] Recomendações de ajuste documentadas
 - [ ] Feedback encaminhado para time de oferta
+
+---
+
+## Contexto
+Quando a oferta não resolve a dor real do ICP, nenhuma melhoria de execução do closer vai compensar. Esta task existe para separar problema de oferta de problema de execução, gerando feedback acionável para o time de produto/oferta via cross-squad.
+
+## Especificação de I/O
+- **Input**: Transcrições de calls com objeções de fit + dados de conversão por oferta/segmento + descrição da oferta + relatórios de causa raiz com tag "oferta"
+- **Output**: `templates/reports/executive-sales-intelligence-report` (relatório de fit oferta-dor-ICP)
+
+## Quality Gates Intermediários
+- Após mapeamento de dores e gaps (steps 1-3): checklist `qualification-analysis-quality` — dores mapeadas com evidência de 3+ calls, gaps documentados com frequência
+- Antes de output final: checklist `promise-sanity-check-quality` — recomendações específicas e implementáveis, Value Equation avaliada por segmento
+
+## Escalation & Rework
+- Se análise revela mismatch estrutural oferta-mercado: escalar para `sales-chief` para handoff ao `c_level_squad` via `templates/operational/cross-squad-handoff-template`
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `close_rate_by_offer`: evolução da taxa de conversão por oferta após ajustes recomendados
+- `price_concession_rate`: redução de concessões de preço após alinhamento oferta-dor
+
+## Referências Cruzadas
+- Workflow: `workflows/16-closer-to-offer-feedback.md`
+- Agents: `agents/offer-fit-analyst.md`, `agents/revenue-intelligence-analyst.md`, `agents/alex-hormozi.md`
+- Templates: `templates/reports/executive-sales-intelligence-report.md`
+- Registries atualizados: `data/registries/deal-risk-registry`

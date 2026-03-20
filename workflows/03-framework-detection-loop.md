@@ -117,3 +117,25 @@ Analisar a transcrição segmentada para identificar quais frameworks de vendas 
 ## Próximo Workflow
 
 → 04-scoring-and-root-cause.md (pontuação dos 10 blocos e análise de causa raiz)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Inventário de frameworks completo | Todos os frameworks relevantes listados; indicadores de presença são específicos e verificáveis; matriz framework x fase criada | Voltar a Etapa 1 (revisar repositório de frameworks e completar mapeamento) |
+| Etapa 2 → Etapa 3 | Varredura de detecção concluída | Cada célula da matriz tem status (detectado/ausente) + justificativa com evidência textual | Voltar a Etapa 2 (completar varredura em fases não analisadas) |
+| Etapa 3 → Etapa 4 | Validação por especialistas concluída | Todas as detecções em áreas de objeção e pricing revisadas pelos specialists correspondentes | Voltar a Etapa 3 (acionar specialist faltante para validação) |
+| Etapa 4 → Etapa 5 | Gap analysis completo | Todos os gaps classificados por severidade (crítico/moderado/menor); padrões identificados | Voltar a Etapa 4 (revisar classificação de severidade com evidências adicionais) |
+| Etapa 5 → Conclusão | framework-detection-quality | Evidências citadas, gaps priorizados, score de cobertura calculado, recomendações acionáveis | Voltar a Etapa 5 (refinar relatório e completar seções faltantes) |
+
+## Decision Points
+- Após Etapa 2: se cobertura de frameworks > 70% → closer demonstra boa aderência, focar em qualidade de execução; se cobertura < 40% → closer necessita treinamento fundamental em frameworks, priorizar gaps críticos
+- Após Etapa 3: se specialists concordam com as detecções preliminares → prosseguir para gap analysis; se há divergência significativa entre detector e specialists → reunir evidências adicionais e arbitrar com base em citações textuais
+- Após Etapa 4: se gaps são predominantemente de execução (framework tentado mas mal aplicado) → direcionar para coaching de refinamento; se gaps são de ausência (framework sequer tentado) → direcionar para treinamento básico
+
+## Escalation Triggers
+- Se cobertura de frameworks < 30% em call perdida → escalar para sales-chief para avaliação de capacitação do closer e possível suspensão temporária de calls até treinamento
+- Se há conflito entre objection-specialist e pricing-anchoring-analyst sobre a mesma detecção → escalar para qa-guardian para arbitragem
+- Se padrão de gap se repete em 3+ calls do mesmo closer (mesmo framework ausente) → escalar para sales-chief para inclusão em plano de desenvolvimento individual

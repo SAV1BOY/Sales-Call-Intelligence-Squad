@@ -62,3 +62,31 @@ Verificar se o closer construiu um pitch que conecta diretamente com a dor desco
 - [ ] Personalização do pitch verificada
 - [ ] Engajamento do lead durante o pitch registrado
 - [ ] Nota atribuída com evidência textual
+
+---
+
+## Contexto
+Pitch genérico é sinal de discovery fraco ou falta de técnica — e é o momento onde o closer converte dor em desejo de compra. Esta task existe para avaliar se o pitch conectou diretamente com a dor descoberta, apresentou valor claro via Value Equation e usou prova social relevante, garantindo que o closer não está "apresentando slides" mas sim prescrevendo uma solução personalizada.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, seção de pitch delimitada + análises de discovery e ampliação de dor concluídas + detalhes da oferta
+- **Output**: `templates/reports/full-call-audit-report.md`, seções "Empresa/Método/Produto" e "Pitch Amarrado à Fala do Lead" + nota do bloco pitch (0-10)
+
+## Quality Gates Intermediários
+- Após análise inicial: ponte diagnóstico-solução verificada com trecho exato; palavras do lead reutilizadas no pitch documentadas; Value Equation avaliada componente por componente
+- Antes de output final: qa-guardian valida coerência entre nota de pitch e nota de discovery (pitch personalizado com discovery raso é inconsistência a ser investigada)
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar seção de pitch, verificar delimitação de etapas)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Hormozi vs. Gordon sobre abordagem de value proposition): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Taxa de pitches classificados como "personalizado" vs. "genérico" por closer (tracking de evolução)
+- Correlação entre nota de pitch e taxa de conversão > 0.5
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/call-auditor.md`, `agents/experts/alex-hormozi.md`, `agents/experts/cole-gordon.md`, `agents/experts/sabri-suby.md`
+- Templates: `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/scorecards-registry`

@@ -1,3 +1,36 @@
+# Schema Definition
+_schema:
+  description: "Registro de frameworks de vendas detectados e ausentes em cada call auditada, com evidências e fase"
+  fields:
+    call_id:
+      type: string
+      required: true
+      description: "ID da call auditada (referência ao calls-registry)"
+    frameworks_detected:
+      type: list
+      required: true
+      description: "Lista de frameworks identificados na call"
+    frameworks_missing:
+      type: list
+      required: true
+      description: "Lista de frameworks que deveriam ter sido usados mas não foram"
+    evidence:
+      type: string
+      required: false
+      description: "Evidência textual ou timestamp que comprova a detecção ou ausência"
+    phase:
+      type: string
+      required: true
+      description: "Fase da call onde o framework foi detectado ou deveria ter sido usado"
+  updated_by: "full-call-audit, framework-detection"
+  update_frequency: "per-call"
+  owner: "framework-detector"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/scorecards-registry.yaml"
+    - "data/registries/win-patterns-registry.yaml"
+
+# ---
 # Registro de Detecção de Frameworks
 # Rastreamento de frameworks utilizados e ausentes em cada call auditada
 # Última atualização: Pendente

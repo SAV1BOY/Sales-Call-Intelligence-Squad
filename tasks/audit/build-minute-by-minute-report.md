@@ -61,3 +61,31 @@ Criar o artefato mais granular da auditoria — um mapa temporal completo que pe
 - [ ] 5 momentos mais críticos destacados
 - [ ] Timeline visual gerada
 - [ ] Relatório consolidado e salvo
+
+---
+
+## Contexto
+O relatório minuto a minuto é o artefato mais granular da auditoria — permite que gestor e closer vejam exatamente o que aconteceu em cada momento da call com avaliação e sugestão de melhoria. Sem ele, o feedback fica abstrato e o closer não consegue localizar onde errou no fluxo temporal da conversa.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada com timestamps + todas as análises de etapa concluídas (rapport, discovery, pitch, pricing, objeções, close) + relatório de frameworks detectados + scorecard da call
+- **Output**: `templates/reports/minute-by-minute-audit-report.md` + timeline visual com código de cores (verde/amarelo/vermelho) + lista dos 5 momentos mais críticos com contexto e recomendação
+
+## Quality Gates Intermediários
+- Após análise inicial: 100% dos minutos da call cobertos sem gaps; cada momento classificado (positivo/neutro/negativo) com evidência; frameworks detectados vinculados ao minuto correspondente
+- Antes de output final: qa-guardian valida que os 5 momentos mais críticos destacados são coerentes com os blocos mais fracos do scorecard; timeline visual gerada e legível
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar transcrição com timestamps mais granulares)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre análise minuto a minuto e scorecard (momento classificado como positivo mas bloco com nota baixa): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Cobertura temporal: 100% dos minutos mapeados em cada auditoria
+- Utilidade percebida pelo closer: taxa de consulta do relatório minuto a minuto > 70%
+
+## Referências Cruzadas
+- Workflow: `workflows/02-minute-by-minute-analysis.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/call-auditor.md`, `agents/scorecard-analyst.md`, `agents/framework-detector.md`, `agents/coaching-rewriter.md`
+- Templates: `templates/reports/minute-by-minute-audit-report.md`
+- Registries atualizados: `data/registries/calls-registry`

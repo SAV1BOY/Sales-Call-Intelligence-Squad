@@ -1,3 +1,36 @@
+# Schema Definition
+_schema:
+  description: "Registro de lições aprendidas extraídas das auditorias, coaching e revisões, com categoria e ações tomadas"
+  fields:
+    lesson_id:
+      type: string
+      required: true
+      description: "Identificador único da lição (ex: LES-001)"
+    call_id:
+      type: string
+      required: true
+      description: "ID da call de origem (referência ao calls-registry)"
+    description:
+      type: string
+      required: true
+      description: "Descrição detalhada da lição aprendida"
+    category:
+      type: string
+      required: true
+      description: "Categoria da lição (técnica, comportamental, processual, estratégica)"
+    action_taken:
+      type: string
+      required: false
+      description: "Ação tomada ou recomendada com base na lição"
+  updated_by: "rewrite-critical-moments, build-coaching-pack, weekly-sales-quality-review, cross-squad-intelligence-sync"
+  update_frequency: "per-call"
+  owner: "closer-trainer"
+  cross_references:
+    - "data/registries/calls-registry.yaml"
+    - "data/registries/scorecards-registry.yaml"
+    - "data/registries/closers-registry.yaml"
+
+# ---
 # Registro de Lições Aprendidas
 # Lições extraídas das auditorias de calls
 # Última atualização: Pendente

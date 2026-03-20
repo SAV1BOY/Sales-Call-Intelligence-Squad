@@ -63,3 +63,30 @@ Garantir que novos auditores produzam auditorias com a mesma qualidade e consist
 - [ ] 3 calls auditadas com supervisão e aprovadas
 - [ ] QA Guardian aprovou para operação independente
 - [ ] Registro criado no qa-registry
+
+---
+
+## Contexto
+Esta task existe para garantir que novos auditores produzam auditorias com qualidade e consistência equivalentes às dos auditores existentes. Auditor descalibrado gera scores incomparáveis, coaching equivocado e erosão de confiança no sistema de auditoria.
+
+## Especificação de I/O
+- **Input**: Documentação do sistema de auditoria, scorecard template, biblioteca de frameworks, 5 calls já auditadas (referência), checklists de qualidade vigentes
+- **Output**: Perfil do auditor em `data/registries/qa-registry.yaml`, resultado da calibração (variação por bloco), aprovação ou pendência para operação independente
+
+## Quality Gates Intermediários
+- Após exercício de calibração (step 4-5): variação < 5 pontos no score total vs. auditoria de referência
+- Antes de output final: 3 calls auditadas com supervisão aprovadas pelo QA Guardian, todos os frameworks obrigatórios treinados
+
+## Escalation & Rework
+- Se variação persiste > 5 pontos após 2 rodadas de calibração: escalar para sales-chief para decidir calibração adicional ou reatribuição
+- Se quality gate falha: rework loop (max 2 ciclos de re-calibração), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- time_to_competence do novo auditor (dias até operação independente)
+- Variância do novo auditor vs. auditores calibrados nas primeiras 10 auditorias
+
+## Referências Cruzadas
+- Workflow: `workflows/04-scoring-and-root-cause.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/qa-guardian.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
+- Templates: `templates/scorecards/call-scorecard-template.md`, `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/qa-registry.yaml`

@@ -63,3 +63,31 @@ Mapear exatamente quais técnicas e frameworks o closer aplicou (consciente ou i
 - [ ] Frameworks ausentes identificados
 - [ ] Conflitos metodológicos reportados
 - [ ] Registry de detecção atualizado
+
+---
+
+## Contexto
+Saber quais frameworks o closer aplicou (consciente ou inconscientemente) e quais estavam ausentes é a base para scoring preciso e coaching direcionado. Esta task existe para produzir um mapa de cobertura de frameworks com evidência textual — sem ela, o coaching se baseia em impressões subjetivas em vez de dados concretos sobre técnica.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada com timestamps + biblioteca de frameworks em `frameworks/` + mapa de etapas da call
+- **Output**: `templates/reports/framework-detection-report.md` + lista: framework, etapa, timestamp, trecho, nível de execução (completo/parcial/incorreto) + frameworks ausentes com recomendação
+
+## Quality Gates Intermediários
+- Após análise inicial: cada detecção tem trecho exato da transcrição com timestamp; nível de execução avaliado para cada framework; zero detecções sem evidência textual
+- Antes de output final: qa-guardian valida que frameworks ausentes estão alinhados com os blocos fracos do scorecard; especialistas (objection-specialist, pricing-anchoring-analyst) confirmaram detecções nas suas áreas
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar transcrição com segmentação mais precisa)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: detecção de SPIN vs. NEPQ no mesmo trecho): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Taxa de falsos positivos na detecção < 5% (validação por especialistas)
+- Score de cobertura de frameworks (% de frameworks aplicáveis utilizados) rastreado por closer
+
+## Referências Cruzadas
+- Workflow: `workflows/03-framework-detection-loop.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/framework-detector.md`, `agents/experts/alex-hormozi.md`, `agents/experts/jeremy-miner.md`, `agents/experts/jordan-belfort.md`, `agents/experts/cole-gordon.md`, `agents/experts/neil-rackham.md`, `agents/experts/matthew-dixon.md`, `agents/call-auditor.md`
+- Templates: `templates/reports/framework-detection-report.md`
+- Registries atualizados: `data/registries/framework-detection-registry`

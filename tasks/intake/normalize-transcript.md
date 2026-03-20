@@ -60,3 +60,30 @@ Transformar transcrição bruta em documento limpo, padronizado e navegável —
 - [ ] Resumo executivo gerado
 - [ ] Transcrição salva em `data/transcripts/cleaned/`
 - [ ] QA Guardian validou qualidade
+
+---
+
+## Contexto
+Transcrições brutas de ferramentas automáticas contêm artefatos, speakers misturados e timestamps inconsistentes. Esta task existe para criar uma base textual confiável e padronizada que todas as análises downstream possam usar sem ambiguidade.
+
+## Especificação de I/O
+- **Input**: Transcrição bruta em `data/transcripts/raw/CALL-ID` + metadata da call do `calls-registry.yaml` + gravação original para conferência
+- **Output**: Transcrição normalizada em `data/transcripts/cleaned/CALL-ID.md` (formato `templates/reports/minute-by-minute-audit-report`)
+
+## Quality Gates Intermediários
+- Após aplicação de speaker tags e timestamps (steps 3-4): checklist `transcript-normalization-quality` — 100% dos turnos com tags, timestamps em ordem crescente
+- Antes de output final: QA Guardian valida zero artefatos remanescentes, trechos inaudíveis marcados, resumo executivo coerente
+
+## Escalation & Rework
+- Se transcrição < 80% audível: escalar para `transcript-analyst` com flag `low_audio_confidence`; `call-auditor` ajusta score
+- Se quality gate falha: rework loop (max 3 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `audit_cycle_time`: tempo de gravação bruta até transcrição normalizada pronta
+- `discovery_depth_score`: qualidade da transcrição impacta profundidade da análise downstream
+
+## Referências Cruzadas
+- Workflow: `workflows/00-recording-to-transcript.md`, `workflows/01-transcript-cleaning-and-segmentation.md`
+- Agents: `agents/transcript-analyst.md`, `agents/qa-guardian.md`
+- Templates: `templates/reports/minute-by-minute-audit-report.md`
+- Registries atualizados: `data/transcripts/cleaned/`, `data/registries/calls-registry.yaml`
