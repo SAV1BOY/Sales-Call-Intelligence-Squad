@@ -63,3 +63,30 @@ Transformar os erros identificados na auditoria em exemplos concretos de melhori
 - [ ] Reescritas naturais e adaptadas ao closer
 - [ ] QA Guardian validou qualidade
 - [ ] Documento formatado e salvo
+
+---
+
+## Contexto
+Feedback genérico ("melhore seu discovery") não muda comportamento. Esta task existe para transformar erros reais da call em exemplos concretos ANTES/DEPOIS com fundamentação técnica, acelerando o aprendizado do closer com material específico e praticável.
+
+## Especificação de I/O
+- **Input**: Relatório minuto a minuto com 5 momentos mais críticos + transcrição segmentada com timestamps + scorecard da call
+- **Output**: `templates/rewrites/objection-rewrite-template`, `templates/rewrites/pitch-rewrite-template`, `templates/rewrites/closing-rewrite-template`, `templates/rewrites/discovery-rewrite-template` (conforme fase do momento)
+
+## Quality Gates Intermediários
+- Após seleção dos momentos e reescrita (steps 1-6): checklist `rewrite-quality` — cada reescrita tem ANTES exato, DEPOIS com framework, POR QUE educativo
+- Antes de output final: checklist `coaching-plan-quality` — reescritas naturais, adaptadas ao estilo do closer, priorizadas por impacto
+
+## Escalation & Rework
+- Se momento crítico envolve objeção complexa: escalar para `objection-specialist` para validação de técnica
+- Se quality gate falha: rework loop (max 3 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `rewrite_adoption_rate`: % de reescritas que o closer implementou nas calls seguintes
+- `coaching_impact_score`: melhoria no score do bloco correspondente à reescrita
+
+## Referências Cruzadas
+- Workflow: `workflows/05-coaching-rewrite-loop.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/coaching-rewriter.md`, `agents/closer-trainer.md`, `agents/objection-specialist.md`
+- Templates: `templates/rewrites/objection-rewrite-template.md`, `templates/rewrites/pitch-rewrite-template.md`, `templates/rewrites/closing-rewrite-template.md`, `templates/rewrites/discovery-rewrite-template.md`
+- Registries atualizados: `data/rewrites`, `data/registries/lessons-learned-registry`

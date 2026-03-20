@@ -62,3 +62,30 @@ Construir acervo curado de momentos excepcionais das calls — trechos reais que
 - [ ] Nota explicativa incluída por momento
 - [ ] Replicabilidade validada
 - [ ] Biblioteca versionada com data
+
+---
+
+## Contexto
+Esta task existe para construir e manter um acervo curado de momentos de excelência extraídos de calls reais. Sem essa biblioteca, conhecimento tácito de alta performance se perde e o time não tem referência concreta de "como se faz bem".
+
+## Especificação de I/O
+- **Input**: Scorecards com blocos ≥ 9, reescritas exemplares do coaching-rewriter, transcrições com timestamps
+- **Output**: `data/libraries/best-moments-library.yaml` (biblioteca atualizada e versionada)
+
+## Quality Gates Intermediários
+- Após coleta de momentos candidatos (step 1-2): validar que cada momento tem trecho real, timestamp e framework identificado
+- Antes de output final: verificar duplicatas eliminadas, nota explicativa presente por momento, replicabilidade confirmada
+
+## Escalation & Rework
+- Se momento depende de contexto único (não replicável): devolver ao win-loss-miner para reclassificação ou descarte
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- Quantidade de novos momentos adicionados por período (crescimento do acervo)
+- Taxa de utilização dos momentos em sessões de coaching (rewrite_adoption_rate)
+
+## Referências Cruzadas
+- Workflow: `workflows/09-win-pattern-extraction.md`
+- Agents: `agents/win-loss-miner.md`, `agents/coaching-rewriter.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
+- Templates: `templates/operational/call-clip-library-template.md`
+- Registries atualizados: `data/libraries/best-moments-library.yaml`, `data/registries/intelligence-registry.yaml`

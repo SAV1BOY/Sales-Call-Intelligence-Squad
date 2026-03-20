@@ -62,3 +62,31 @@ Verificar se o closer conduziu o fechamento com clareza e segurança — pedindo
 - [ ] Post-close avaliado
 - [ ] Tratamento de perda documentado (se aplicável)
 - [ ] Nota atribuída com evidência textual
+
+---
+
+## Contexto
+Esta task existe para garantir que o momento mais decisivo da call — o fechamento — seja avaliado com rigor. Sem análise estruturada do close, não é possível distinguir se a perda ocorreu por falha técnica do closer ou por fatores anteriores (discovery fraco, pricing mal ancorado).
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, seção de closing delimitada + análises prévias de pricing e objeções
+- **Output**: `templates/reports/full-call-audit-report.md`, seção "Fechamento e Próximos Passos" + nota do bloco closing no scorecard
+
+## Quality Gates Intermediários
+- Após análise inicial: pedido de decisão identificado com timestamp exato; next steps listados com prazos concretos; 100% dos trechos com citação e minuto
+- Antes de output final: qa-guardian valida coerência entre nota de closing e notas de pricing/objeções; score de closing alinhado com resultado real da call (ganhou/perdeu)
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar seção de closing com timestamps corrigidos)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Belfort vs. Gordon sobre assertividade): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Taxa de concordância entre nota de closing e resultado real da call > 85%
+- 100% das análises de close com next steps documentados (presentes ou ausentes)
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/call-auditor.md`, `agents/experts/jordan-belfort.md`, `agents/experts/cole-gordon.md`, `agents/experts/eli-wilde.md`
+- Templates: `templates/reports/full-call-audit-report.md`, `templates/scorecards/call-scorecard-template.md`
+- Registries atualizados: `data/registries/scorecards-registry`

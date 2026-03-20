@@ -130,3 +130,25 @@ Realizar avaliação mensal completa de cada closer do time, consolidando scores
 ## Próximo Workflow
 
 → 13-sdr-to-closer-feedback-loop.md (feedbacks cross-squad mensais)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | Dossiê quantitativo completo | Pelo menos 4 calls auditadas no mês; métricas calculadas corretamente | Voltar a Etapa 1 para completar coleta |
+| Etapa 2 → Etapa 3 | Competências avaliadas com evidência | Cada competência com evidência de pelo menos 2 calls; deltas calculados | Voltar a Etapa 2 para revisar avaliações sem evidência |
+| Etapa 3 → Etapa 4 | Validação QA aprovada | Sem discrepâncias significativas; certification-fairness-checklist aprovado | Voltar a Etapa 2 para recalibrar avaliações com viés |
+| Etapa 4 → Etapa 5 | Nível justificado | Nível de certificação alinhado com dados; plano de desenvolvimento específico e acionável | Voltar a Etapa 4 para ajustar nível ou plano |
+| Etapa 5 → Conclusão | certification-assessment-completeness | 100% das seções preenchidas; comunicação realizada | Voltar a Etapa 5 para completar registro |
+
+## Decision Points
+- Após Etapa 3: se QA identifica viés ou discrepância → retornar à Etapa 2 para recalibração; se aprovado sem ressalvas → prosseguir para determinação de nível
+- Após Etapa 4: se closer sofre rebaixamento de nível → acionar coaching intensivo (workflow 05) imediatamente; se closer é promovido a Diamante → considerar como mentor para closers Bronze/Prata
+- Após Etapa 4: se closer está em Bronze por 2+ meses consecutivos → escalar decisão sobre continuidade ao gestor
+
+## Escalation Triggers
+- Se closer tem menos de 4 calls auditadas no mês → pausar certificação, escalar para sales-chief para decisão sobre certificar com dados parciais ou adiar
+- Se QA reprova avaliação por viés comprovado → pausar, escalar para sales-chief para reassignment do avaliador
+- Se mais de 30% do time cai de nível no mesmo mês → pausar, escalar para sales-chief para investigar causa sistêmica (problema de oferta, tráfego ou processo)

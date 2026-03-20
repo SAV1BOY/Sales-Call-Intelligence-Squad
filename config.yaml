@@ -360,3 +360,205 @@ defaults:
   cross_squad_sync: weekly
   certification_cadence: monthly
   qa_calibration_cadence: quarterly
+
+# ============================================================
+# ESCALATION RULES
+# ============================================================
+
+escalation_rules:
+  low_confidence_score:
+    trigger: "score_confidence < 0.7 OR dados insuficientes para pontuar bloco"
+    action: "retornar ao call-auditor para reanálise com contexto adicional"
+    escalate_to: sales-chief
+    max_rework_cycles: 2
+
+  conflicting_expert_advice:
+    trigger: "2+ especialistas divergem na mesma fase da call"
+    action: "qa-guardian arbitra usando evidência da transcrição; sales-chief aprova"
+    escalate_to: qa-guardian
+    final_authority: sales-chief
+
+  out_of_scope:
+    trigger: "task requer análise fora do domínio de vendas (ex: produto, financeiro, jurídico)"
+    action: "documentar o que foi encontrado, criar handoff brief, delegar ao squad relevante"
+    escalate_to: sales-chief
+    handoff_template: templates/operational/cross-squad-handoff-template
+
+  quality_gate_fail:
+    trigger: "output falha em checklist obrigatório (quality_gates.mandatory)"
+    action: "rework loop — retornar ao agente owner para correção"
+    max_rework_cycles: 3
+    final_escalation: sales-chief
+    final_action: "sales-chief decide: aprovar com ressalvas OU reassignar OU escalar para HRM"
+
+  audio_quality_issue:
+    trigger: "transcrição < 80% audível ou speakers não identificáveis"
+    action: "transcript-analyst marca trechos inaudíveis; call-auditor ajusta score com flag"
+    escalate_to: transcript-analyst
+    flag: "low_audio_confidence"
+
+# ============================================================
+# DELEGATION RULES
+# ============================================================
+
+delegation_rules:
+  within_squad:
+    transcript_issues: transcript-analyst
+    framework_questions: framework-detector
+    score_disputes: qa-guardian
+    pricing_analysis: pricing-anchoring-analyst
+    objection_classification: objection-specialist
+    deal_risk_assessment: deal-risk-doctor
+    win_loss_patterns: win-loss-miner
+    sdr_handoff_issues: sdr-handoff-analyst
+    offer_fit_questions: offer-fit-analyst
+
+  cross_squad:
+    copy_messaging: "copy_squad — quando objeção revela problema de messaging"
+    traffic_lead_quality: "traffic_squad — quando lead source impacta close rate"
+    offer_pricing_strategy: "c_level_squad — quando pricing precisa de decisão estratégica"
+    data_analytics: "data_squad — quando análise requer cohort/pipeline data"
+    brand_perception: "brand_squad — quando call revela problema de percepção de marca"
+    storytelling_cases: "storytelling_squad — quando faltam cases para social proof"
+
+# ============================================================
+# REVIEW AGENTS
+# ============================================================
+
+review_agents:
+  per_task_review: qa-guardian
+  final_review: sales-chief
+  cross_squad_review: sales-chief
+  certification_review: [closer-trainer, qa-guardian, sales-chief]
+  scoring_calibration: [qa-guardian, scorecard-analyst]
+  rewrite_review: [coaching-rewriter, qa-guardian]
+
+# ============================================================
+# SCORE THRESHOLDS
+# ============================================================
+
+score_thresholds:
+  call_quality:
+    critical: 40              # Treinamento imediato obrigatório
+    developing: 60            # Coaching semanal com foco nos 3 piores blocos
+    good: 80                  # Refinamento tático
+    excellent: 90             # Closer referência, material para swipe
+    gold_standard: 95         # Padrão ouro — benchmark do squad
+  operational:
+    rework_trigger: 50        # Abaixo → rework obrigatório antes de publicar
+    certification_min: 70     # Mínimo para certificação de closer
+    audit_min_confidence: 0.7 # Confiança mínima no score
+  checklist:
+    pass_threshold: 0.8       # 80% dos items obrigatórios devem passar
+    gold_threshold: 0.95      # 95% = nível GOLD
+
+# ============================================================
+# REWORK LOOPS
+# ============================================================
+
+rework_loops:
+  audit_rework:
+    trigger: "qa-guardian rejeita output de auditoria"
+    return_to: "agente owner da etapa que falhou"
+    max_cycles: 3
+    escalation: "sales-chief decide: aprovar com notas OU reassignar OU escalar"
+    registry: data/registries/lessons-learned-registry
+
+  coaching_rework:
+    trigger: "closer score < score_thresholds.call_quality.developing após ciclo de coaching"
+    return_to: closer-trainer
+    max_cycles: 2
+    escalation: "sales-chief + c_level_squad para avaliar fit closer↔oferta"
+
+  scoring_calibration_rework:
+    trigger: "variância > 15% entre auditores no mesmo call"
+    return_to: qa-guardian
+    max_cycles: 1
+    escalation: "sales-chief convoca calibration session"
+
+# ============================================================
+# CADENCE
+# ============================================================
+
+cadence:
+  per_call:
+    - intake-call-recording
+    - normalize-and-segment
+    - full-call-audit
+    - framework-detection
+    - rewrite-critical-moments
+    - build-coaching-pack
+  weekly:
+    - weekly-sales-quality-review
+    - cross-squad-intelligence-sync
+    - update-objections-library
+    - calibrate-scoring
+  monthly:
+    - monthly-closer-certification
+    - extract-win-patterns
+    - extract-loss-patterns
+  quarterly:
+    - analyze-offer-fit
+    - certify-closer
+
+# ============================================================
+# TAXONOMY
+# ============================================================
+
+taxonomy:
+  call_types:
+    - discovery           # Primeira call — diagnóstico
+    - follow_up           # Retorno — avançar negociação
+    - closing             # Fechamento — decisão final
+    - rescue              # Resgate — deal quase perdido
+    - upsell              # Upgrade — cliente existente
+    - renewal             # Renovação — retenção
+
+  objection_types:
+    - money               # "É caro", "não tenho orçamento"
+    - timing              # "Preciso pensar", "agora não"
+    - authority           # "Preciso falar com X"
+    - trust               # "Não sei se funciona"
+    - competitor          # "Já tentei algo parecido"
+    - inertia             # "Estou bem como estou"
+
+  deal_risk_levels:
+    - low                 # Pipeline saudável, sem red flags
+    - medium              # 1-2 red flags, monitorar
+    - high                # 3+ red flags, intervenção necessária
+    - critical            # Deal em risco iminente de perda
+
+  closer_maturity:
+    - junior              # Score médio < 60, < 6 meses
+    - pleno               # Score 60-79, 6-18 meses
+    - senior              # Score 80-89, 18+ meses
+    - expert              # Score 90+, referência do time
+
+  output_quality:
+    - weak                # Falha em quality gates, rework obrigatório
+    - fair                # Passa gates mínimos, mas sem profundidade
+    - good                # Completo, evidenciado, acionável
+    - gold                # Exemplar — material para swipe e treinamento
+    - sota                # State of the art — benchmark do sistema
+
+# ============================================================
+# OUTPUT FORMATS
+# ============================================================
+
+output_formats:
+  full_audit: templates/reports/full-call-audit-report
+  scorecard: templates/scorecards/call-scorecard-template
+  coaching_pack: templates/reports/manager-coaching-report
+  framework_detection: templates/reports/framework-detection-report
+  objection_analysis: templates/reports/objection-analysis-report
+  pricing_analysis: templates/reports/pricing-analysis-report
+  win_loss_report: templates/reports/win-loss-analysis-report
+  executive_intelligence: templates/reports/executive-sales-intelligence-report
+  minute_by_minute: templates/reports/minute-by-minute-audit-report
+  sdr_handoff: templates/reports/sdr-handoff-audit-report
+  certification: templates/reports/closer-certification-report
+  rewrite_objection: templates/rewrites/objection-rewrite-template
+  rewrite_pitch: templates/rewrites/pitch-rewrite-template
+  rewrite_closing: templates/rewrites/closing-rewrite-template
+  rewrite_discovery: templates/rewrites/discovery-rewrite-template
+  cross_squad_handoff: templates/operational/cross-squad-handoff-template

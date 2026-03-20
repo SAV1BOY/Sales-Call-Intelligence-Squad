@@ -68,3 +68,30 @@ Garantir que o score de 75 de um auditor signifique exatamente o mesmo que o sco
 - [ ] Exemplos âncora criados
 - [ ] Variação < 3 pontos validada
 - [ ] Padrões distribuídos para todos os auditores
+
+---
+
+## Contexto
+Esta task existe para garantir que scores de diferentes auditores sejam comparáveis entre si. Sem calibração periódica, os scores derivam silenciosamente e perdem valor como base para coaching, certificação e decisões de gestão.
+
+## Especificação de I/O
+- **Input**: Scorecards de mesmas calls por diferentes auditores, resultado da meta-auditoria, critérios de scoring vigentes, 3-5 calls selecionadas para calibração
+- **Output**: Relatório de calibração em `reports/operations/calibration-PERIODO`, critérios de scoring atualizados, exemplos âncora por bloco
+
+## Quality Gates Intermediários
+- Após pontuação independente (step 2): verificar que nenhum auditor viu scores de outro (sem contaminação)
+- Antes de output final: variação final < 3 pontos por bloco entre auditores, exemplos âncora criados para cada bloco
+
+## Escalation & Rework
+- Se variação persiste > 5 pontos após discussão: escalar para sales-chief para sessão de calibração presencial
+- Se quality gate falha: rework loop (max 1 ciclo de re-pontuação), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- Variância inter-auditor por bloco (target: < 3 pontos)
+- audit_min_confidence mantida ≥ 0.7 em todas as auditorias pós-calibração
+
+## Referências Cruzadas
+- Workflow: `workflows/12-monthly-closer-certification.md`, `workflows/04-scoring-and-root-cause.md`
+- Agents: `agents/qa-guardian.md`, `agents/scorecard-analyst.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
+- Templates: `templates/scorecards/call-scorecard-template.md`
+- Registries atualizados: `data/registries/qa-registry.yaml`, `data/registries/calibration-registry.yaml`

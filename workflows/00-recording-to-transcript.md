@@ -120,3 +120,26 @@ Receber o arquivo de áudio/vídeo da call e produzir uma transcrição textual 
 ## Próximo Workflow
 
 → 01-transcript-cleaning-and-segmentation.md (limpeza avançada e segmentação por fase da call)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | audio-intake-checklist | Formato OK, duração > 5min, SNR aceitável, metadados completos | Voltar a Etapa 1 (solicitar regravação ou fonte alternativa) |
+| Etapa 2 → Etapa 3 | Cobertura mínima de transcrição | >= 95% do áudio transcrito; trechos inaudíveis < 5% | Voltar a Etapa 2 (reprocessar com engine alternativo ou ajustar parâmetros) |
+| Etapa 3 → Etapa 4 | Identificação completa de speakers | 100% dos speakers identificados e nenhum trecho atribuído incorretamente | Voltar a Etapa 3 (revisar diarização e cruzar metadados) |
+| Etapa 4 → Etapa 5 | transcript-normalization-quality | Formato padronizado, nomes corretos, valores legíveis, sem artefatos de áudio | Voltar a Etapa 4 (corrigir termos, formatos e artefatos remanescentes) |
+| Etapa 5 → Etapa 6 | Segmentação completa com índice | Todos os blocos possuem header descritivo; índice reflete conteúdo real | Voltar a Etapa 5 (ajustar headers e regenerar índice) |
+| Etapa 6 → Conclusão | Exportação e registro validados | Arquivo salvo no diretório correto, registry atualizado, próximo workflow notificado | Voltar a Etapa 6 (corrigir nome do arquivo ou atualizar registry) |
+
+## Decision Points
+- Após Etapa 1: se áudio íntegro e SNR aceitável → prosseguir para Etapa 2; se áudio corrompido ou inaudível > 20% → rejeitar e solicitar regravação ou fonte alternativa
+- Após Etapa 2: se cobertura >= 95% e trechos inaudíveis < 5% → prosseguir para Etapa 3; se cobertura < 95% → reprocessar com engine alternativo ou aplicar filtragem de ruído antes de nova tentativa
+- Após Etapa 3: se todos os speakers identificados com confiança → prosseguir para Etapa 4; se há ambiguidade na identificação (ex: 3+ participantes sem metadados claros) → escalar para confirmação manual com gestor da call
+
+## Escalation Triggers
+- Se áudio possui qualidade degradada mas não atinge o limiar de rejeição (inaudível entre 10-20%) → pausar workflow, escalar para sales-chief para decisão sobre prosseguir com scope reduzido ou aguardar fonte alternativa
+- Se a transcrição bruta apresenta divergências significativas entre engines diferentes → escalar para transcript-analyst sênior para arbitragem
+- Se metadados estão incompletos e não é possível identificar closer ou lead → escalar para sales-chief para preenchimento antes de prosseguir

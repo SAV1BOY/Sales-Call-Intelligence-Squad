@@ -61,3 +61,31 @@ Verificar se o closer transformou a dor identificada no discovery em urgência r
 - [ ] Ética da ampliação validada
 - [ ] Nota atribuída com evidência textual
 - [ ] Urgência do lead verificada no momento de pricing
+
+---
+
+## Contexto
+Sem amplificação de dor, o lead não sente urgência para decidir e posterga a compra. Esta task avalia se o closer transformou a dor identificada no discovery em pressão real e ética para agir — é o elo entre um discovery bem feito e um pricing que não gera objeção de preço.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, transição discovery-pitch + análise de discovery concluída (dor identificada)
+- **Output**: `templates/reports/full-call-audit-report.md`, seção "Ampliação de Dor e Implicação" + nota do bloco amplificação (0-10)
+
+## Quality Gates Intermediários
+- Após análise inicial: consequências exploradas listadas com trechos exatos e timestamps; custo da inação documentado (quantificado ou verbalizado pelo lead)
+- Antes de output final: qa-guardian valida que a amplificação foi classificada como ética; nota coerente com a urgência demonstrada pelo lead no momento de pricing
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar transição discovery-pitch)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Hormozi vs. Miner sobre intensidade da amplificação): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- 100% das análises com avaliação ética explícita (pressão genuína vs. manipulação)
+- Correlação entre nota de amplificação e ausência de objeção de preço > 0.5
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/call-auditor.md`, `agents/experts/jeremy-miner.md`, `agents/experts/alex-hormozi.md`, `agents/experts/dan-lok.md`
+- Templates: `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/scorecards-registry`

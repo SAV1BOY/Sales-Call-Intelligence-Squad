@@ -226,3 +226,157 @@ DEPOIS: "fala ideal reescrita"
 JUSTIFICATIVA: por que a reescrita é mais eficaz
 FRAMEWORK: qual framework embasa a reescrita
 ```
+
+---
+
+## Quality Gate Cascade
+
+O squad opera com **4 níveis de quality gate** em cascata. Nenhum output avança sem passar no gate do seu nível.
+
+### Nível 1 — Agent-Level Gate
+Cada agente valida seu próprio output antes de entregar.
+- **Critério**: checklist obrigatório do agente ≥ 80% dos items
+- **Evidência**: todo item deve ter trecho + timestamp da transcrição
+- **Rework**: se falha, o agente refaz (max 2 ciclos internos)
+- **Escalation**: se não resolve em 2 ciclos → sobe para QA Guardian
+
+### Nível 2 — Task-Level Gate
+QA Guardian valida o output consolidado da task.
+- **Critério**: todos os checklists obrigatórios da task passam em ≥ 80%
+- **Coerência**: sem contradições entre outputs de diferentes agentes
+- **Completude**: todos os campos obrigatórios do template preenchidos
+- **Rework**: se falha → retorna ao agente owner (max 3 ciclos)
+- **Escalation**: se 3 ciclos falham → Sales Chief decide
+
+### Nível 3 — Chief-Level Gate
+Sales Chief valida o entregável final antes de publicar.
+- **Critério**: output atende score_thresholds do config.yaml
+- **Coerência cross-task**: outputs de diferentes tasks se complementam
+- **Acionabilidade**: closer/manager consegue agir com base no output
+- **Decisão**: APROVAR / APROVAR COM NOTAS / REWORK / ESCALAR
+
+### Nível 4 — Cross-Squad Gate
+Antes de qualquer handoff sair do squad.
+- **Critério**: handoff brief completo (template/operational/cross-squad-handoff-template)
+- **Contexto**: squad receptor tem informação suficiente para agir
+- **Qualidade**: output atende padrão GOOD ou superior
+- **Registro**: handoff registrado em data/registries/lessons-learned-registry
+- **Responsável**: Sales Chief aprova todo handoff cross-squad
+
+---
+
+## Escalation Protocol
+
+### Quando Escalar
+| Situação | Escalar Para | SLA |
+|----------|-------------|-----|
+| Score com confiança < 70% | Sales Chief | Mesmo dia |
+| Experts divergem na mesma fase | QA Guardian → Sales Chief | Mesmo dia |
+| Task fora do escopo do squad | Sales Chief → Squad relevante | 24h |
+| Quality gate falha 3x | Sales Chief | Mesmo dia |
+| Closer score < 40 (crítico) | Sales Chief + C-Level Squad | 24h |
+| Variância > 15% entre auditores | QA Guardian (calibration) | 1 semana |
+
+### O que Documentar na Escalation
+1. Contexto: o que aconteceu e por que não foi resolvido no nível atual
+2. Tentativas: o que já foi tentado (rework cycles)
+3. Evidência: trechos, scores, análises que suportam a escalation
+4. Recomendação: o que o agente sugere como resolução
+5. Registro: toda escalation é registrada em data/registries/lessons-learned-registry
+
+---
+
+## Handling de Tasks Fora do Escopo
+
+### Como Identificar
+Uma task está fora do escopo quando:
+- Requer decisão estratégica de pricing/oferta (→ C-Level Squad)
+- Requer criação de copy/messaging (→ Copy Squad)
+- Requer análise de tráfego/lead source (→ Traffic Squad)
+- Requer mudança de marca/posicionamento (→ Brand Squad)
+- Requer análise estatística/cohort (→ Data Squad)
+- Requer criação de narrativa/case (→ Storytelling Squad)
+
+### Protocolo de Handoff
+1. Sales Chief identifica que task saiu do escopo
+2. Preenche `templates/operational/cross-squad-handoff-template.md`
+3. Inclui: contexto, evidências coletadas, recomendação, urgência
+4. Registra em `data/registries/lessons-learned-registry.yaml`
+5. Envia para chief do squad receptor
+6. Monitora retorno e integra ao pipeline quando volta
+
+---
+
+## Learning & Memory System (RalphLoop)
+
+### Como o Squad Aprende
+```
+Execução → Output → Registry → Análise de Padrões → Ajuste de Processo → Próxima Execução
+```
+
+### Ciclo de Aprendizado
+1. **Per-call**: Cada auditoria registra win patterns, loss patterns, objeções e rewrites em registries
+2. **Semanal**: weekly-sales-quality-review consolida padrões da semana
+3. **Mensal**: certification review identifica gaps sistêmicos de closers
+4. **Trimestral**: intelligence extraction atualiza frameworks e checklists baseado em dados acumulados
+
+### Registries como Memória Operacional
+| Registry | O que armazena | Alimenta |
+|----------|---------------|----------|
+| calls-registry | Metadata de todas as calls | Seleção de calls para análise |
+| scorecards-registry | Scores por call/closer/time | Benchmarking e trends |
+| objections-registry | Objeções classificadas | Treinamento e frameworks |
+| win-patterns-registry | Padrões de calls ganhas | Swipe files e coaching |
+| loss-patterns-registry | Padrões de calls perdidas | Prevenção e alertas |
+| lessons-learned-registry | Aprendizados do sistema | Melhoria contínua |
+| framework-detection-registry | Frameworks detectados por call | Calibração de detecção |
+
+### Regra de Feedback Loop
+- Todo output de auditoria DEVE atualizar pelo menos 1 registry
+- Todo padrão que aparece 3+ vezes DEVE virar item de checklist ou framework update
+- Toda objeção nova DEVE ser classificada e adicionada ao objections-registry
+- Todo rewrite que melhora score em 10+ pontos DEVE ir para swipe/best-rewrites/
+
+---
+
+## Go/No-Go Rules
+
+### Quando um Output Está Pronto para Publicar
+| Tipo de Output | Critério Go | Critério No-Go |
+|---------------|-------------|----------------|
+| Full audit report | Score calculado + 10 blocos + evidências + causa raiz + 3 rewrites | Falta evidência em qualquer bloco |
+| Scorecard | Todos 10 blocos pontuados + justificativa | Bloco sem evidência |
+| Coaching pack | Top 3 prioridades + rewrites + plano de ação | Sem rewrites ou sem plano |
+| Rewrite | Antes/depois + framework + justificativa | Sem justificativa ou sem framework |
+| Intelligence report | Dados de 10+ calls + padrões estatísticos | < 10 calls ou sem tendência |
+| Cross-squad handoff | Brief completo + contexto + evidências | Brief incompleto |
+
+### Threshold de Qualidade
+- **WEAK** (< 50% checklist): bloqueado — rework obrigatório
+- **FAIR** (50-79%): publicável com flag "needs improvement"
+- **GOOD** (80-94%): publicável — padrão operacional
+- **GOLD** (95%+): publicável + vai para swipe como referência
+
+---
+
+## HRM Layer — Integração com Camada Superior
+
+### Quando o Squad Reporta para Cima
+O Sales Call Intelligence Squad reporta para a camada HRM/Central Command quando:
+1. **Decisão estratégica**: pricing, oferta ou modelo de vendas precisa mudar
+2. **Performance sistêmica**: close rate do time cai abaixo de threshold por 2+ semanas
+3. **Conflito cross-squad**: dois squads divergem sobre responsabilidade
+4. **Resource gap**: squad precisa de capability que não possui
+5. **Escalation terminal**: rework loops esgotados sem resolução
+
+### O que Sobe para HRM
+- Relatório executivo mensal (executive-sales-intelligence-report)
+- Alertas de performance crítica (closer score < 40 por 2+ calls)
+- Pedidos de decisão estratégica (com contexto + recomendação + evidência)
+- Propostas de melhoria de processo (com ROI estimado)
+
+### O que Desce do HRM
+- Mudanças de pricing/oferta → atualizar registries e frameworks
+- Novos closers → onboarding via onboard-new-closer task
+- Mudanças de processo → atualizar workflows e checklists
+- Metas de performance → atualizar score_thresholds no config.yaml

@@ -119,3 +119,25 @@ Produzir relatório semanal que consolida todas as auditorias, scores, padrões 
 ## Próximo Workflow
 
 → 12-monthly-closer-certification.md (alimenta dados para certificação mensal)
+
+---
+
+## Quality Gates por Step
+
+| Transição | Gate | Critério Pass | Rework Path |
+|-----------|------|--------------|-------------|
+| Etapa 1 → Etapa 2 | data-accuracy-verification | Dados cruzados entre registries sem inconsistências; nenhum closer sem auditoria | Voltar a Etapa 1 para recoleta |
+| Etapa 2 → Etapa 3 | Tendências calculadas | Pelo menos 2 calls por closer para base de tendência | Voltar a Etapa 1 para incluir calls faltantes |
+| Etapa 3 → Etapa 4 | Padrões consolidados | Frequência calculada e destaque semanal justificado | Voltar a Etapa 3 para revalidar padrões |
+| Etapa 4 → Etapa 5 | weekly-review-completeness | Todas as seções do relatório preenchidas e dados verificados | Voltar a Etapa 4 para completar seções |
+| Etapa 5 → Conclusão | Plano de ação completo | Responsáveis e prazos definidos para cada ação | Voltar a Etapa 5 para detalhar plano |
+
+## Decision Points
+- Após Etapa 1: se todos os registries estão completos → prosseguir; se há closer sem auditoria na semana → sinalizar gap e decidir se inclui dados parciais ou solicita auditoria emergencial
+- Após Etapa 2: se closer apresenta declínio consistente por 3+ semanas → acionar coaching prioritário imediato; se performance estável → seguir fluxo normal
+- Após Etapa 4: se relatório revela situação crítica (queda abrupta de conversão ou score) → antecipar publicação e convocar reunião emergencial
+
+## Escalation Triggers
+- Se taxa de conversão do time cai mais de 20% vs. semana anterior → pausar, escalar para sales-chief para análise de causa raiz imediata
+- Se mais de 50% dos closers ficaram sem auditoria na semana → pausar, escalar para sales-chief para revisão de capacidade do squad
+- Se dados entre registries apresentam inconsistências graves → pausar, escalar para scorecard-analyst para reconciliação antes de prosseguir

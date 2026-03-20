@@ -64,3 +64,30 @@ Manter a biblioteca de objeções viva e atualizada — cada call auditada pode 
 - [ ] Duplicatas eliminadas
 - [ ] Biblioteca versionada
 - [ ] Log de alterações documentado
+
+---
+
+## Contexto
+Esta task existe para manter a biblioteca de objeções como arma competitiva cumulativa. Cada call auditada pode revelar objeções novas ou respostas superiores, e sem atualização contínua o time responde com base em teoria em vez de evidência real de campo.
+
+## Especificação de I/O
+- **Input**: Análises de objeções das auditorias do período, objections-registry, win patterns de calls ganhas
+- **Output**: `data/libraries/objections-library.yaml` (biblioteca atualizada e versionada)
+
+## Quality Gates Intermediários
+- Após coleta de objeções novas (step 1-3): cada objeção deve ter tipo, causa raiz e contexto documentados
+- Antes de output final: taxas de resolução atualizadas com dados reais, duplicatas eliminadas, respostas recomendadas baseadas em evidência
+
+## Escalation & Rework
+- Se objeção tem causa raiz fora do domínio de vendas (ex: problema de produto): escalar para sales-chief para handoff cross-squad
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+
+## Métricas de Sucesso
+- objection_library_currency (biblioteca de objeções atualizada — tempo desde última atualização)
+- Taxa média de resolução das respostas recomendadas
+
+## Referências Cruzadas
+- Workflow: `workflows/07-objection-root-cause-analysis.md`
+- Agents: `agents/objection-specialist.md`, `agents/win-loss-miner.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
+- Templates: `templates/briefs/objection-library-update-brief.md`, `templates/reports/objection-analysis-report.md`
+- Registries atualizados: `data/libraries/objections-library.yaml`, `data/registries/objections-registry.yaml`, `data/registries/intelligence-registry.yaml`

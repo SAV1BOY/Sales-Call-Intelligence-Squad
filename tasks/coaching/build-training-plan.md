@@ -67,3 +67,30 @@ Criar plano de desenvolvimento estruturado para o closer baseado em padrões ide
 - [ ] Top 3 gaps identificados com dados
 - [ ] Exercício prático e métricas definidos por prioridade
 - [ ] Prazos, cadência estabelecidos e plano aprovado pelo Sales Chief
+
+---
+
+## Contexto
+Coaching pontual por call não resolve gaps recorrentes. Esta task existe para transformar padrões identificados em múltiplas auditorias em um plano de desenvolvimento estruturado e mensurável, atacando causas sistêmicas de baixa performance.
+
+## Especificação de I/O
+- **Input**: Scorecards das últimas 5-10 calls do closer + relatórios de causa raiz + histórico de coaching + perfil de maturidade
+- **Output**: `reports/training/CLOSER-NAME-training-plan` (formato definido por `templates/reports/manager-coaching-report`)
+
+## Quality Gates Intermediários
+- Após identificação dos top 3 gaps (step 2-3): checklist `coaching-plan-quality` — cada gap baseado em dados, não impressão; impacto na conversão justificado
+- Antes de output final: QA Guardian valida que exercícios são específicos, mensuráveis e com prazo
+
+## Escalation & Rework
+- Se closer tem score médio < 40 (nível crítico): escalar para `sales-chief` para avaliar fit closer-oferta junto com `c_level_squad`
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `time_to_competence`: tempo para closer atingir score mínimo nos blocos treinados
+- `coaching_impact_score`: delta de score antes e depois do plano de treino
+
+## Referências Cruzadas
+- Workflow: `workflows/12-monthly-closer-certification.md`
+- Agents: `agents/closer-trainer.md`, `agents/scorecard-analyst.md`, `agents/sales-chief.md`, `agents/qa-guardian.md`
+- Templates: `templates/reports/manager-coaching-report.md`, `templates/scorecards/closer-performance-scorecard.md`
+- Registries atualizados: `data/registries/coaching-registry.yaml`, `data/registries/closer-performance-registry.yaml`

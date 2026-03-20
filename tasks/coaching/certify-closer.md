@@ -68,3 +68,30 @@ Criar processo formal de certificação que garanta que closers na operação at
 - [ ] Nível de maturidade classificado
 - [ ] Decisão de aprovação/reprovação documentada
 - [ ] Próxima reavaliação agendada
+
+---
+
+## Contexto
+Sem certificação formal, closers operam sem padrão mínimo de qualidade, impactando diretamente a taxa de conversão e a receita. Esta task existe para criar um processo objetivo de avaliação que protege a operação e identifica quem precisa de desenvolvimento intensivo.
+
+## Especificação de I/O
+- **Input**: Scorecards das últimas 10 calls (mínimo 5) + relatórios de causa raiz + histórico de coaching + benchmarks da equipe
+- **Output**: `templates/scorecards/certification-scorecard` + `templates/reports/closer-certification-report`
+
+## Quality Gates Intermediários
+- Após cálculo de score médio e evolução (steps 1-2): checklist `rep-certification-quality` — mínimo 5 calls, tendência temporal analisada, desvio padrão calculado
+- Antes de output final: `qa-guardian` audita consistência da avaliação; `sales-chief` valida decisão final
+
+## Escalation & Rework
+- Se score médio < 50 (reprovado): escalar para `sales-chief` + `closer-trainer` para plano intensivo obrigatório
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `certification_pass_rate`: % de closers aprovados na certificação
+- `score_improvement_rate`: evolução do score entre ciclos de certificação
+
+## Referências Cruzadas
+- Workflow: `workflows/12-monthly-closer-certification.md`
+- Agents: `agents/closer-trainer.md`, `agents/qa-guardian.md`, `agents/sales-chief.md`
+- Templates: `templates/scorecards/certification-scorecard.md`, `templates/reports/closer-certification-report.md`
+- Registries atualizados: `data/registries/closers-registry`

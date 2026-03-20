@@ -67,3 +67,30 @@ Entregar ao gestor um pacote pronto para uso com diagnóstico, prioridades, rees
 - [ ] Reescritas incluídas e vinculadas às prioridades
 - [ ] Roteiro de sessão preparado com timing e perguntas de coaching
 - [ ] Evolução histórica comparada e pack formatado
+
+---
+
+## Contexto
+Gestores comerciais não têm tempo para auditar calls individualmente. Esta task existe para entregar um pacote pronto para uso que transforma dados de auditoria em material de coaching acionável, eliminando o gap entre análise técnica e sessão de desenvolvimento.
+
+## Especificação de I/O
+- **Input**: Scorecard completo da call + relatório de causa raiz + reescritas dos momentos críticos + histórico de coaching do closer
+- **Output**: `templates/reports/manager-coaching-report` + `templates/scorecards/closer-performance-scorecard`
+
+## Quality Gates Intermediários
+- Após compilação do resumo executivo (step 1): checklist `manager-review-quality` — resumo de 1 página, sem jargão técnico, prioridades claras
+- Antes de output final: checklist `coaching-plan-quality` — roteiro com timing, perguntas reflexivas, evolução histórica presente
+
+## Escalation & Rework
+- Se histórico de coaching insuficiente (< 2 sessões anteriores): escalar para `closer-trainer` para reconstruir baseline
+- Se quality gate falha: rework loop (max 3 ciclos), depois escalar para `sales-chief`
+
+## Métricas de Sucesso
+- `coaching_impact_score`: melhoria no score do closer após sessão conduzida com o pack
+- `rewrite_adoption_rate`: % de reescritas do pack que o closer implementou nas calls seguintes
+
+## Referências Cruzadas
+- Workflow: `workflows/05-coaching-rewrite-loop.md`, `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/closer-trainer.md`, `agents/scorecard-analyst.md`, `agents/sales-chief.md`
+- Templates: `templates/reports/manager-coaching-report.md`, `templates/scorecards/closer-performance-scorecard.md`
+- Registries atualizados: `data/registries/lessons-learned-registry`

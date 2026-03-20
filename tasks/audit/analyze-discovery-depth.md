@@ -62,3 +62,31 @@ Medir se o closer cavou fundo o suficiente para entender a dor real do lead, ou 
 - [ ] Gaps de discovery listados
 - [ ] Nota atribuída com evidência textual
 - [ ] Proporção closer/lead na discovery calculada
+
+---
+
+## Contexto
+Discovery raso é a causa raiz #1 de calls perdidas em high ticket. Esta task existe para medir objetivamente se o closer investigou a dor real do lead com profundidade suficiente — sem essa análise, o coaching fica genérico e o closer repete os mesmos erros.
+
+## Especificação de I/O
+- **Input**: Transcrição segmentada no formato `[MM:SS] [SPEAKER]: text`, seção de discovery delimitada + frameworks SPIN/NEPQ como referência
+- **Output**: `templates/reports/full-call-audit-report.md`, seção "Diagnóstico e Descoberta" + mapa de perguntas classificadas (SPIN/NEPQ)
+
+## Quality Gates Intermediários
+- Após análise inicial: 100% das perguntas do closer mapeadas e classificadas por tipo (S/P/I/N ou NEPQ); camadas de profundidade contadas com evidência
+- Antes de output final: qa-guardian valida que a nota de discovery é coerente com a nota de pitch (discovery fraco deve refletir em pitch genérico)
+
+## Escalation & Rework
+- Se dados insuficientes para análise: escalar para transcript-analyst (reprocessar seção de discovery, verificar speaker tags)
+- Se quality gate falha: rework loop (max 2 ciclos), depois escalar para sales-chief
+- Se conflito entre experts (ex: Rackham vs. Miner sobre classificação de pergunta): escalar para qa-guardian para arbitragem
+
+## Métricas de Sucesso
+- Precisão da classificação de perguntas: concordância entre experts > 90%
+- Correlação entre nota de discovery e taxa de conversão da call > 0.6
+
+## Referências Cruzadas
+- Workflow: `workflows/06-full-funnel-call-audit.md`
+- Agents: `agents/call-auditor.md`, `agents/experts/neil-rackham.md`, `agents/experts/jeremy-miner.md`, `agents/experts/cole-gordon.md`
+- Templates: `templates/reports/full-call-audit-report.md`
+- Registries atualizados: `data/registries/scorecards-registry`, `data/registries/deal-risk-registry`
