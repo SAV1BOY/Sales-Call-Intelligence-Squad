@@ -1,0 +1,27 @@
+# Taxa de Fechamento por Oferta
+# Taxa de fechamento segmentada por produto ou oferta apresentada
+
+metadata:
+  name: "close-rate-by-offer"
+  description: "Taxa de fechamento por oferta/produto, identificando quais ofertas convertem melhor e quais precisam de ajustes."
+  frequency: "monthly"
+  source: "calls-registry"
+
+dimensions:
+  - oferta/produto
+  - período (mensal)
+  - closer
+  - faixa de preço
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: ">= 45%"
+  good: ">= 30%"
+  needs_improvement: ">= 18%"
+  critical: "< 18%"
+
+calculation:
+  formula: "Close rate por oferta = fechamentos da oferta X / total de calls com oferta X * 100"
+  inputs: "total de calls por oferta, total de fechamentos por oferta, período"

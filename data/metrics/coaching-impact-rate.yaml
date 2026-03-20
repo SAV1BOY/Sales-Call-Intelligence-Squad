@@ -1,0 +1,27 @@
+# Taxa de Impacto do Coaching
+# Medição do impacto do coaching na evolução do score dos closers
+
+metadata:
+  name: "coaching-impact-rate"
+  description: "Impacto do coaching no score de auditoria dos closers, comparando performance antes e depois de intervenções de desenvolvimento."
+  frequency: "monthly"
+  source: "scorecards-registry, closers-registry, lessons-learned-registry"
+
+dimensions:
+  - closer
+  - tipo de coaching (individual, grupo, treinamento)
+  - área de foco (rapport, discovery, pitch, close, objeções)
+  - período (antes vs depois)
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "melhoria de score >= 15 pontos após coaching"
+  good: "melhoria de score >= 8 pontos após coaching"
+  needs_improvement: "melhoria de score >= 3 pontos após coaching"
+  critical: "melhoria de score < 3 pontos ou regressão após coaching"
+
+calculation:
+  formula: "Impacto = score médio pós-coaching (5 calls) - score médio pré-coaching (5 calls); Taxa de impacto = closers com melhoria / total de closers que receberam coaching * 100"
+  inputs: "scores pré-coaching, scores pós-coaching, data do coaching, tipo de intervenção"

@@ -1,0 +1,26 @@
+# Métricas de Talk Ratio
+# Proporção de fala do closer vs lead em cada call
+
+metadata:
+  name: "talk-ratio-metrics"
+  description: "Proporção de tempo de fala entre closer e lead, indicador crítico de qualidade da escuta ativa e condução da call."
+  frequency: "weekly"
+  source: "calls-registry, scorecards-registry"
+
+dimensions:
+  - closer
+  - fase da call (rapport, discovery, pitch, close)
+  - período
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "closer 30-40% / lead 60-70%"
+  good: "closer 40-50% / lead 50-60%"
+  needs_improvement: "closer 50-60% / lead 40-50%"
+  critical: "closer > 60% / lead < 40%"
+
+calculation:
+  formula: "Talk ratio = tempo de fala do closer / duração total da call * 100; Lead ratio = tempo de fala do lead / duração total da call * 100"
+  inputs: "duração da call, tempo de fala do closer, tempo de fala do lead"

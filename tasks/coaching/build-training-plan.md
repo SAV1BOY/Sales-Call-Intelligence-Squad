@@ -65,7 +65,5 @@ Criar plano de desenvolvimento estruturado para o closer baseado em padrões ide
 ## Critérios de Conclusão
 - [ ] Tendências de score analisadas (mínimo 3 calls)
 - [ ] Top 3 gaps identificados com dados
-- [ ] Exercício prático definido por prioridade
-- [ ] Métricas de progresso definidas
-- [ ] Prazos e cadência estabelecidos
-- [ ] Plano aprovado pelo Sales Chief
+- [ ] Exercício prático e métricas definidos por prioridade
+- [ ] Prazos, cadência estabelecidos e plano aprovado pelo Sales Chief

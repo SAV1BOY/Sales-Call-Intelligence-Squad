@@ -1,0 +1,26 @@
+# Taxa de Fechamento por Closer
+# Taxa de fechamento individual de cada closer
+
+metadata:
+  name: "close-rate-by-closer"
+  description: "Taxa de fechamento individual por closer, permitindo comparação de performance e identificação de top performers."
+  frequency: "weekly"
+  source: "calls-registry, closers-registry"
+
+dimensions:
+  - closer
+  - período (semanal/mensal)
+  - oferta
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: ">= 40%"
+  good: ">= 30%"
+  needs_improvement: ">= 20%"
+  critical: "< 20%"
+
+calculation:
+  formula: "Close rate = número de calls fechadas / total de calls realizadas pelo closer * 100"
+  inputs: "total de calls por closer, total de fechamentos por closer, período"

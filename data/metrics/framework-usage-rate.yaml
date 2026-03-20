@@ -1,0 +1,27 @@
+# Taxa de Uso de Frameworks
+# Frequência de utilização de frameworks por closer
+
+metadata:
+  name: "framework-usage-rate"
+  description: "Taxa de utilização de frameworks de vendas por closer, identificando aderência às metodologias definidas."
+  frequency: "weekly"
+  source: "framework-detection-registry, closers-registry"
+
+dimensions:
+  - closer
+  - framework específico
+  - fase da call
+  - período
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "uso de frameworks em >= 90% das fases aplicáveis"
+  good: "uso de frameworks em >= 75% das fases aplicáveis"
+  needs_improvement: "uso de frameworks em >= 55% das fases aplicáveis"
+  critical: "uso de frameworks em < 55% das fases aplicáveis"
+
+calculation:
+  formula: "Taxa de uso = frameworks detectados / frameworks esperados por fase * 100; Calculado por closer e por framework individual"
+  inputs: "frameworks detectados por call, frameworks esperados por fase, closer responsável"

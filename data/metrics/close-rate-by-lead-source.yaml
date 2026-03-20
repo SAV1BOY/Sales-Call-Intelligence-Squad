@@ -1,0 +1,27 @@
+# Taxa de Fechamento por Origem do Lead
+# Taxa de fechamento segmentada pela fonte de origem do lead
+
+metadata:
+  name: "close-rate-by-lead-source"
+  description: "Taxa de fechamento por origem do lead (tráfego pago, orgânico, indicação, etc.), identificando os canais mais qualificados."
+  frequency: "monthly"
+  source: "calls-registry"
+
+dimensions:
+  - origem do lead (tráfego pago, orgânico, indicação, parceiro, evento)
+  - período (mensal)
+  - closer
+  - oferta
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: ">= 45%"
+  good: ">= 30%"
+  needs_improvement: ">= 18%"
+  critical: "< 18%"
+
+calculation:
+  formula: "Close rate por fonte = fechamentos de leads da fonte X / total de calls com leads da fonte X * 100"
+  inputs: "total de calls por fonte de lead, total de fechamentos por fonte, período"

@@ -1,0 +1,26 @@
+# Correlação Score vs Taxa de Fechamento
+# Análise da correlação entre o score da auditoria e a taxa de fechamento
+
+metadata:
+  name: "score-vs-close-rate"
+  description: "Correlação entre o score da auditoria da call e a probabilidade de fechamento, validando a eficácia do scorecard."
+  frequency: "monthly"
+  source: "scorecards-registry, calls-registry"
+
+dimensions:
+  - faixa de score (0-50, 51-65, 66-80, 81-90, 91-100)
+  - closer
+  - período
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "correlação >= 0.8 (score alto = alta taxa de fechamento)"
+  good: "correlação >= 0.6"
+  needs_improvement: "correlação >= 0.4"
+  critical: "correlação < 0.4 (scorecard pode não estar calibrado)"
+
+calculation:
+  formula: "Agrupar calls por faixa de score e calcular close rate por faixa; Correlação de Pearson entre score e outcome binário (fechou/não fechou)"
+  inputs: "score total da auditoria, outcome da call (fechou/não fechou)"

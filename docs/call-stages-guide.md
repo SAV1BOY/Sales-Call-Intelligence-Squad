@@ -1,97 +1,122 @@
 # Guia das Etapas da Call de Vendas
 
-> Cada call de vendas segue uma estrutura de 6 etapas. Este guia detalha o que acontece, o que avaliar e o que diferencia excelência de mediocridade em cada uma.
+> Detalhamento das 6 etapas de uma call de vendas high ticket: o que avaliar, sinais de qualidade e red flags em cada fase.
 
 ## Visão Geral das Etapas
 
-Uma call de vendas high ticket segue este fluxo natural:
-
-1. Rapport → 2. Discovery → 3. Pitch → 4. Pricing → 5. Objections → 6. Closing
-
-As etapas não são rigidamente sequenciais. Um closer experiente pode transitar entre elas de forma fluida, retornando ao discovery durante objeções, por exemplo. Porém, a estrutura geral deve ser respeitada.
+Toda call de vendas high ticket segue uma estrutura de 6 etapas. Nem toda call percorre todas as etapas, e a ordem pode variar, mas o modelo canônico é: Rapport → Discovery → Pitch → Pricing → Objections → Closing.
 
 ## Etapa 1 — Rapport (2-5 minutos)
 
-### O Que Acontece
-O closer estabelece conexão humana, demonstra interesse genuíno e define o frame da conversa. É onde se constrói a confiança inicial.
+### O que Avaliar
+- O closer estabeleceu conexão genuína ou foi superficial
+- Houve quebra de gelo personalizada (referência a algo do lead)
+- O closer definiu frame e agenda da call
+- O prospect se sentiu à vontade para falar abertamente
 
-### O Que Avaliar
-- **Frame setting**: o closer assumiu o controle da conversa desde o início?
-- **Agenda clara**: foi apresentada uma estrutura para a call?
-- **Conexão pessoal**: houve perguntas genuínas sobre o lead?
-- **Tonalidade**: tom caloroso, confiante, sem nervosismo?
-- **Transição**: rapport fluiu naturalmente para discovery?
+### Sinais de Qualidade
+- Prospect ri ou demonstra conforto nos primeiros 2 minutos
+- Closer faz referência a informações prévias do lead
+- Frame estabelecido com clareza ("vou fazer algumas perguntas, depois explico como funciona")
+- Transição natural para discovery sem ruptura
 
-### Sinais de Excelência
-O closer define o frame com autoridade suave, faz o lead se sentir ouvido e cria expectativa positiva para o restante da call.
-
-### Sinais de Problema
-Rapport mecânico, perguntas genéricas tipo "como está o tempo?", ausência de frame, lead assumindo controle da conversa.
+### Red Flags
+- Rapport genérico sem personalização
+- Pular direto para pitch sem estabelecer conexão
+- Rapport longo demais (mais de 7 minutos) indicando falta de controle
 
 ## Etapa 2 — Discovery (10-20 minutos)
 
-### O Que Acontece
-O closer investiga dor, situação atual, impacto do problema, tentativas anteriores e estado desejado. É a etapa mais importante da call.
+### O que Avaliar
+- Profundidade das perguntas (superficial vs. 3-4 camadas de dor)
+- Uso de frameworks (SPIN, NEPQ, Consequence Questions)
+- Proporção de fala (prospect deve falar 60-70% nesta fase)
+- Qualidade das perguntas de implicação e consequência
 
-### O Que Avaliar
-- **Profundidade das perguntas**: foi além do superficial? Chegou na dor emocional?
-- **Framework utilizado**: SPIN, NEPQ, ou abordagem proprietária?
-- **Escuta ativa**: o closer ouviu de verdade ou só esperou sua vez de falar?
-- **Camadas de dor**: identificou consequências pessoais, financeiras, emocionais?
-- **Urgência**: criou senso de urgência natural baseado nas respostas do lead?
+### Sinais de Qualidade
+- Prospect verbaliza dor emocional, não apenas racional
+- Closer faz pelo menos 3 camadas de aprofundamento em cada dor
+- Perguntas de consequência fazem o prospect refletir sobre custo da inação
+- Closer sumariza a situação do prospect com precisão antes de avançar
 
-### Sinais de Excelência
-4+ camadas de profundidade, lead verbalizando a dor, silêncios estratégicos, perguntas de implicação que fazem o lead refletir.
-
-### Sinais de Problema
-Perguntas superficiais, checklist mecânico, interromper o lead, pular para o pitch sem aprofundar.
+### Red Flags
+- Perguntas fechadas demais (sim/não)
+- Discovery superficial com menos de 8 minutos
+- Closer fala mais que o prospect nesta fase
+- Não explorar impacto financeiro ou emocional da dor
 
 ## Etapa 3 — Pitch (5-10 minutos)
 
-### O Que Acontece
-Apresentação da solução conectada diretamente às dores descobertas. Não é um monólogo sobre features — é uma ponte entre problema e solução.
+### O que Avaliar
+- Ponte entre discovery e solução (a dor do prospect conecta com o que é oferecido)
+- Personalização da apresentação usando informações da discovery
+- Clareza na comunicação de valor e diferenciação
+- Uso de provas sociais relevantes para o contexto do prospect
 
-### O Que Avaliar
-- **Ponte dor-solução**: cada elemento do pitch responde a uma dor específica?
-- **Prova social**: cases, resultados, depoimentos relevantes ao contexto do lead?
-- **Customização**: pitch adaptado ou genérico?
-- **Engajamento**: lead participando ou apenas ouvindo?
+### Sinais de Qualidade
+- Pitch referencia diretamente as dores mencionadas pelo prospect
+- Closer usa cases similares ao perfil do prospect
+- Valor é comunicado antes do preço
+- Prospect faz perguntas de curiosidade indicando interesse
 
-### Sinais de Excelência
-Pitch que parece feito sob medida, lead dizendo "é exatamente isso que eu preciso", micro-commits durante a apresentação.
+### Red Flags
+- Pitch genérico sem personalização
+- Feature dumping sem conectar com dores
+- Pitch longo demais sem interação com prospect
 
-## Etapa 4 — Pricing (2-5 minutos)
+## Etapa 4 — Pricing (3-5 minutos)
 
-### O Que Acontece
-Revelação do investimento com ancoragem adequada, value stack e condições.
+### O que Avaliar
+- Ancoragem de valor antes da revelação de preço
+- Value stack bem construído
+- Confiança na entrega do preço (sem hesitação)
+- Risk reversal e garantias apresentadas
 
-### O Que Avaliar
-- **Ancoragem**: o valor percebido foi construído antes do preço?
-- **Value stack**: os componentes de valor foram empilhados?
-- **Confiança**: o closer apresentou o preço sem hesitação?
-- **Risk reversal**: garantias ou redutores de risco foram apresentados?
+### Sinais de Qualidade
+- Valor percebido pelo prospect é 5-10x maior que o preço
+- Closer apresenta preço com naturalidade e silêncio depois
+- Value stack com pelo menos 4-5 componentes
+- Garantia ou risk reversal que reduz percepção de risco
 
-## Etapa 5 — Objections (variável)
+### Red Flags
+- Revelar preço sem ancoragem prévia
+- Pedir desculpa ou justificar o preço
+- Não fazer silêncio depois de revelar o preço
 
-### O Que Acontece
-O lead levanta preocupações, dúvidas ou resistências que precisam ser resolvidas.
+## Etapa 5 — Objections (5-15 minutos)
 
-### O Que Avaliar
-- **Isolamento**: o closer isolou a objeção real?
-- **Empatia primeiro**: validou a preocupação antes de responder?
-- **Técnica**: usou framework adequado (looping, belief shift, reframe)?
-- **Resolução**: a objeção foi resolvida de fato ou apenas contornada?
+### O que Avaliar
+- Identificação correta do tipo de objeção (real vs. cortina de fumaça)
+- Técnica de isolamento utilizada
+- Resolução efetiva sem pressão excessiva
+- Prevenção de objeções nas fases anteriores
 
-## Etapa 6 — Closing (2-5 minutos)
+### Sinais de Qualidade
+- Closer isola a objeção antes de resolver
+- Uso de looping quando necessário
+- Objeção resolvida com mudança de estado emocional do prospect
+- Closer valida a preocupação antes de responder
 
-### O Que Acontece
-Transição para o compromisso e próximos passos concretos.
+### Red Flags
+- Argumentar contra a objeção sem entender a causa raiz
+- Pressionar em excesso gerando resistência
+- Ignorar objeções não verbalizadas
 
-### O Que Avaliar
-- **Timing**: o closer identificou o momento certo de fechar?
-- **Técnica**: assumptive close, next step lock, ou trial close?
-- **Clareza**: próximos passos foram definidos com data e ação específica?
-- **Urgência**: sem pressão artificial, mas com motivo real para decidir agora?
+## Etapa 6 — Closing (3-5 minutos)
 
-### Sinais de Excelência
-Fechamento que parece consequência natural da conversa, lead comprometido e entusiasmado.
+### O que Avaliar
+- Tipo de close utilizado (assumptive, direct, alternative)
+- Clareza no próximo passo
+- Lock-in do compromisso
+- Follow-up definido
+
+### Sinais de Qualidade
+- Transição natural de objeções resolvidas para fechamento
+- Close assumptive com confiança
+- Próximo passo concreto com data e hora definidos
+- Prospect confirma compromisso verbalmente
+
+### Red Flags
+- Não pedir o fechamento explicitamente
+- Deixar call aberta sem próximo passo definido
+- Encerrar com "pensa e me avisa"

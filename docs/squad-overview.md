@@ -1,77 +1,59 @@
 # Visão Geral do Sales Call Intelligence Squad
 
-> O squad que transforma calls de vendas em inteligência acionável, elevando a performance de closers através de auditoria, coaching e frameworks de excelência.
+> O squad que transforma calls de vendas em inteligência acionável, combinando frameworks de autoridade mundial com análise sistemática.
 
-## O Que É
+## O que É
 
-O Sales Call Intelligence Squad é um sistema estruturado de análise, auditoria e coaching de calls de vendas. Ele combina metodologias consagradas de vendas com inteligência artificial para extrair insights profundos de cada interação comercial.
+O Sales Call Intelligence Squad é um sistema de 27 agentes especializados em analisar, pontuar, diagnosticar e melhorar calls de vendas high ticket. Cada agente tem um papel específico dentro de um pipeline estruturado que transforma uma transcrição bruta em insights de coaching acionáveis.
 
-Não se trata de um simples checklist de avaliação. É um ecossistema completo que cobre desde a transcrição até o plano de desenvolvimento individual do closer.
+## Para que Serve
 
-## Para Que Serve
-
-O squad resolve três problemas críticos em operações de vendas:
-
-1. **Falta de visibilidade**: gestores não sabem o que realmente acontece nas calls
-2. **Coaching genérico**: feedbacks baseados em achismo, sem dados concretos
-3. **Inconsistência**: cada closer opera de um jeito, sem padrão de qualidade
-
-### Resultados Esperados
-
-- Aumento mensurável em close rate através de coaching direcionado
-- Identificação precisa de gargalos no processo de vendas
-- Biblioteca de padrões de sucesso replicáveis pelo time
-- Certificação objetiva de closers por nível de competência
+- **Auditorias sistemáticas** de calls de vendas com metodologia padronizada
+- **Detecção de frameworks** utilizados (SPIN, NEPQ, Straight Line, Challenger, etc.)
+- **Scoring objetivo** em 10 dimensões com peso calibrado
+- **Diagnóstico de causa raiz** para calls perdidas ou de baixa performance
+- **Reescrita de momentos-chave** com sugestões baseadas em frameworks de autoridade
+- **Coaching packs** prontos para desenvolvimento de closers
 
 ## Como Funciona
 
-### Fluxo Principal
+### Pipeline de Auditoria
 
-O squad opera em um ciclo contínuo de quatro etapas:
+O fluxo principal segue 9 fases sequenciais:
 
-1. **Captura**: gravação e transcrição das calls
-2. **Análise**: segmentação, detecção de frameworks, scoring
-3. **Diagnóstico**: identificação de padrões, causa raiz, oportunidades
-4. **Ação**: rewrites, coaching packs, treinamento, certificação
+1. **Intake**: receber call, contexto e metadados
+2. **Limpeza de transcrição**: formatar, corrigir, identificar speakers
+3. **Segmentação**: dividir em etapas (rapport, discovery, pitch, pricing, objections, closing)
+4. **Detecção de frameworks**: mapear técnicas usadas em cada segmento
+5. **Scoring**: pontuar cada bloco de avaliação (total = 100 pontos)
+6. **Análise de causa raiz**: identificar o porquê dos gaps
+7. **Rewrites**: reescrever momentos-chave com base em frameworks
+8. **Coaching pack**: compilar plano de ação personalizado
+9. **Registry update**: atualizar histórico do closer
 
-### Arquitetura de Agentes
+### Camada de Autoridade
 
-São 27 agentes especializados organizados em hierarquia. Cada agente tem um papel definido, inputs esperados e outputs padronizados. O routing entre agentes segue regras claras baseadas no tipo de tarefa.
-
-### Base de Conhecimento
-
-O squad se apoia em frameworks de 10 especialistas mundiais em vendas, adaptados para o contexto de high ticket brasileiro. Cada framework tem critérios de detecção, scoring e coaching associados.
+Todos os diagnósticos e sugestões são baseados em frameworks de 10 especialistas mundiais em vendas: Hormozi, Miner, Belfort, Cole Gordon, Eli Wilde, Dan Lok, Rackham, Dixon & Adamson, Sabri Suby e Bradley Lea.
 
 ## Princípios Fundamentais
 
-### 1. Evidência Sobre Opinião
-Toda avaliação deve ser baseada em evidências observáveis na call. Frases específicas, comportamentos mensuráveis, sequências de perguntas. Nunca achismo.
+1. **Evidência sobre opinião**: toda avaliação cita o trecho exato da transcrição
+2. **Framework first**: recomendações sempre referenciam um framework específico
+3. **Coaching, não julgamento**: o objetivo é desenvolvimento, não punição
+4. **Calibração contínua**: scores são recalibrados mensalmente com base em resultados reais
+5. **Contexto importa**: ticket, nicho, tipo de lead e momento da empresa afetam a análise
+6. **Consistência**: dois auditores devem chegar ao mesmo score (variação máxima de 5 pontos)
 
-### 2. Coaching, Não Punição
-O objetivo é desenvolver, não rankear. Scores existem para direcionar o coaching, não para criar competição destrutiva entre closers.
+## Estrutura do Repositório
 
-### 3. Contexto É Rei
-Uma técnica que funciona para um produto de R$ 50k não necessariamente se aplica a um de R$ 5k. O squad considera produto, ticket, perfil do lead e estágio do funil.
+- `docs/` — documentação e guias operacionais
+- `authority/` — resumos de especialistas, cases e workshops
+- `projects/` — playbooks de projetos com fases detalhadas
+- `archive/` — calls icônicas, evolução histórica e lições aprendidas
 
-### 4. Melhoria Contínua
-Frameworks, checklists e scoring são vivos. A cada ciclo de auditoria, o próprio squad evolui com novos padrões e calibrações.
+## Métricas de Sucesso do Squad
 
-### 5. Integração Sistêmica
-O squad não opera isolado. Ele se conecta com Copy, Traffic, Brand e outros squads para garantir alinhamento end-to-end da operação comercial.
-
-## Componentes do Sistema
-
-| Componente | Descrição | Localização |
-|---|---|---|
-| Documentação | Guias, metodologia, referência | `docs/` |
-| Autoridade | Especialistas, cases, workshops | `authority/` |
-| Projetos | Playbooks fase a fase | `projects/` |
-| Arquivo | Exemplos, evolução, lições | `archive/` |
-
-## Quando Usar o Squad
-
-- Operação de vendas com pelo menos 2 closers ativos
-- Ticket médio acima de R$ 2.000
-- Volume mínimo de 20 calls por semana
-- Compromisso com coaching baseado em dados
-- Desejo de padronizar e escalar a operação de vendas
+- Taxa de concordância entre auditores acima de 90%
+- Melhoria média de 15-25 pontos no score após coaching sprint de 30 dias
+- Cobertura mínima de 20 calls auditadas por closer por mês
+- Tempo médio de auditoria completa abaixo de 45 minutos por call

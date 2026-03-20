@@ -1,0 +1,29 @@
+# Sales Acceleration Formula — Vendas Orientadas por Dados
+
+> **Autor**: Mark Roberge | **Ano**: 2015
+
+## Tese Central
+Vendas podem e devem ser tratadas como engenharia: hipótese, experimento, dados, iteração. A fórmula de aceleração combina hiring data-driven, treinamento sistematizado, gestão por métricas e geração de demanda escalável. O VP de Vendas do futuro pensa como um engenheiro, não como um vendedor carismático. O que não pode ser medido não pode ser melhorado.
+
+## Conceitos-Chave para Sales Calls
+1. **Hiring Formula**: Definir 5-10 critérios mensuráveis para contratar closers (coachability, curiosidade, inteligência, ética de trabalho, sucesso anterior). Na call de avaliação, usar esses critérios para analisar se o closer tem perfil para melhorar.
+2. **Training Formula**: Treinar comportamentos específicos, não conhecimento geral. Na call, cada comportamento (abertura, discovery, objeção, close) deve ter métrica e benchmark.
+3. **Management Formula**: Gestão por métricas de atividade (calls, discovery, proposta) e resultado (taxa, ticket, receita). Na call, o closer deve saber exatamente quais métricas estão sendo avaliadas.
+4. **Demand Generation Formula**: Inbound marketing gera leads de maior qualidade que outbound. Na call, leads inbound convertem 2-3x mais. Ajustar expectativa de conversão por canal.
+
+## Frameworks Extraídos
+- **Scorecard de Closer**: Criar score com 5 dimensões: rapport (1-10), discovery (1-10), apresentação (1-10), objeção handling (1-10), close (1-10). Média = score geral. Aplicar para avaliação padronizada.
+- **1:1 Coaching Data-Driven**: Analisar métricas antes do 1:1, identificar gap principal, treinar especificamente aquele gap. Na sessão de coaching, focar no comportamento de maior impacto.
+- **Experimentos de Vendas**: Testar variações de script, abertura, oferta em cohorts de calls. Medir resultados por variação. Aplicar método científico ao processo de vendas.
+
+## Citações Aplicáveis
+- "The best sales leaders are data scientists, not charismatic heroes." — aplicação: decisões sobre script, oferta e processo devem ser baseadas em dados, não em opinião.
+- "Hire for coachability above all else." — aplicação: um closer mediano mas coachable supera um closer talentoso mas resistente a feedback.
+- "Every metric tells a story. Read the story before prescribing the solution." — aplicação: antes de treinar técnica, entender qual métrica está abaixo do benchmark e por quê.
+
+## Quando Consultar
+- Para implementar sistema de métricas e scorecard padronizado para a equipe.
+- Quando precisar tomar decisões sobre processo baseadas em dados, não intuição.
+- Para estruturar programa de treinamento por comportamento específico.
+- Quando a equipe precisa de benchmark de performance para cada métrica.
+- Para diagnosticar gargalos no funil usando dados em vez de suposições.

@@ -65,7 +65,5 @@ Entregar ao gestor um pacote pronto para uso com diagnóstico, prioridades, rees
 - [ ] Resumo executivo de 1 página compilado
 - [ ] 3 prioridades de coaching definidas
 - [ ] Reescritas incluídas e vinculadas às prioridades
-- [ ] Roteiro de sessão preparado com timing
-- [ ] Perguntas de coaching incluídas
-- [ ] Evolução histórica comparada
-- [ ] Pack formatado e pronto para uso
+- [ ] Roteiro de sessão preparado com timing e perguntas de coaching
+- [ ] Evolução histórica comparada e pack formatado

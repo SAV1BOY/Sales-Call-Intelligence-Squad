@@ -1,0 +1,27 @@
+# Taxa de Concessão de Preço
+# Frequência e magnitude das concessões de preço nas calls
+
+metadata:
+  name: "price-concession-rate"
+  description: "Taxa de concessão de preço nas calls, incluindo frequência, magnitude média do desconto e impacto no fechamento."
+  frequency: "weekly"
+  source: "pricing-concessions-registry, calls-registry"
+
+dimensions:
+  - closer
+  - tipo de concessão (desconto, parcelamento, bônus, prazo)
+  - oferta
+  - período
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: "concessão em < 10% das calls, desconto médio < 5%"
+  good: "concessão em < 20% das calls, desconto médio < 10%"
+  needs_improvement: "concessão em < 35% das calls, desconto médio < 15%"
+  critical: "concessão em >= 35% das calls ou desconto médio >= 15%"
+
+calculation:
+  formula: "Taxa de concessão = calls com concessão / total de calls * 100; Desconto médio = soma dos descontos percentuais / total de concessões"
+  inputs: "preço original, preço final, tipo de concessão, outcome da call"

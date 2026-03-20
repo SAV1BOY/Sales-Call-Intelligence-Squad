@@ -1,0 +1,27 @@
+# Taxa de Conversão de Follow-up
+# Taxa de conversão de leads que foram para follow-up após a primeira call
+
+metadata:
+  name: "follow-up-conversion-rate"
+  description: "Taxa de conversão de leads que não fecharam na primeira call e foram para follow-up, medindo eficácia do processo de acompanhamento."
+  frequency: "weekly"
+  source: "calls-registry"
+
+dimensions:
+  - closer
+  - número de follow-ups realizados
+  - tempo entre call e follow-up
+  - motivo do follow-up
+
+current_values: {}
+# Will be populated as data is collected
+
+benchmarks:
+  excellent: ">= 25%"
+  good: ">= 15%"
+  needs_improvement: ">= 8%"
+  critical: "< 8%"
+
+calculation:
+  formula: "Taxa de conversão follow-up = leads convertidos após follow-up / total de leads em follow-up * 100"
+  inputs: "total de leads em follow-up, total de conversões pós follow-up, número de tentativas, intervalo de tempo"
