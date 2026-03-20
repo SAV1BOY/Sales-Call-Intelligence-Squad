@@ -74,7 +74,7 @@ Root cause → Rewrite de momentos críticos → Coaching → Registry → Melho
 | Fechamento / Próximos Passos | 10 |
 | **TOTAL** | **100** |
 
-## Estrutura de Diretórios — 651 arquivos
+## Estrutura de Diretórios — 653 arquivos
 
 ```
 ├── agents/          # 27 agentes (11 especialistas + 16 funcionais)
@@ -82,7 +82,7 @@ Root cause → Rewrite de momentos críticos → Coaching → Registry → Melho
 ├── authority/       # 18 — resumos de especialistas, cases, workshops
 ├── checklists/      # 131 quality gates (macro, por fase, por expert, operacionais)
 ├── data/            # 31 — registries (YAML), métricas, research
-├── docs/            # 18 — documentação completa
+├── docs/            # 20 — documentação + quality gates system + audit report
 ├── frameworks/      # 84 frameworks (universais, proprietários, intelectuais)
 ├── lib/             # 33 — componentes, padrões, utilitários, taxonomias
 ├── phrases/         # 18 — bibliotecas de frases por fase
