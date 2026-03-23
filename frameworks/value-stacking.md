@@ -102,3 +102,9 @@ Exemplo de empilhamento numa call de mentoria de R$12.000:
 3. **Componentes irrelevantes** — Empilhar bônus que o lead não quer. "E ainda ganha um e-book sobre mindset!" quando o lead quer processo comercial.
 4. **Revelar preço cedo** — Lead pergunta "quanto custa?" no minuto 10 e closer responde. Matou a oportunidade de empilhar valor.
 5. **Não conectar ao diagnóstico** — Empilhar valor genérico sem amarrar às dores. O lead não vê relevância pessoal nos componentes.
+
+## Usado Em
+
+- **Tasks**: analyze-pitch, analyze-pricing
+- **Workflows**: per_call (análise de pitch e pricing, sub-tasks de full-call-audit)
+- **Config routing**: `analyze-pitch.frameworks`, `analyze-pricing.frameworks`

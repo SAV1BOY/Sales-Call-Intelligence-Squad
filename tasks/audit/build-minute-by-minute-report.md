@@ -89,3 +89,16 @@ O relatório minuto a minuto é o artefato mais granular da auditoria — permit
 - Agents: `agents/call-auditor.md`, `agents/scorecard-analyst.md`, `agents/framework-detector.md`, `agents/coaching-rewriter.md`
 - Templates: `templates/reports/minute-by-minute-audit-report.md`
 - Registries atualizados: `data/registries/calls-registry`
+
+## Handoff
+- **Output entregue a**: scoring pipeline (scorecard-analyst para vincular momentos a blocos do scorecard) e coaching pipeline (closer-trainer/coaching-rewriter para sessões de coaching baseadas nos momentos críticos)
+- **Formato de entrega**: relatório minuto a minuto em `reports/minute-by-minute/CALL-ID-mxm` usando `templates/reports/minute-by-minute-audit-report.md` + timeline visual com código de cores + lista dos 5 momentos mais críticos
+- **Condição de entrega**: 100% dos minutos da call cobertos sem gaps, cada momento classificado com evidência, 5 momentos mais críticos coerentes com blocos mais fracos do scorecard, timeline visual gerada e legível
+- **Próximo passo no pipeline**: relatório alimenta build-manager-coaching-pack (momentos críticos viram material de coaching); scoring pipeline usa momentos vinculados aos blocos do scorecard; calls-registry atualizado com status "relatório completo"
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

@@ -135,3 +135,11 @@ POR QUE FUNCIONA:
 ## Checklists de Qualidade
 - `coaching-specificity-check.md` — Rewrite específico com contexto da call.
 - `coaching-actionability-check.md` — Closer consegue aplicar na prática.
+
+## Preenchido Por
+
+- **Task(s)**: analyze-objections, rewrite-critical-moments
+- **Agente(s) responsável(is)**: objection-specialist, jordan-belfort, bradley-lea, eli-wilde, coaching-rewriter, closer-trainer
+- **Workflow(s)**: Análise de Objeções (per-call), Coaching — Reescrita de Momentos Críticos (per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/objections-registry, data/registries/deal-risk-registry, data/rewrites, data/registries/lessons-learned-registry

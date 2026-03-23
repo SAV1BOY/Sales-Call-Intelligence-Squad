@@ -90,3 +90,16 @@ Vitórias em vendas raramente são acidentais. Esta task existe para identificar
 - Agents: `agents/win-loss-miner.md`, `agents/revenue-intelligence-analyst.md`, `agents/framework-detector.md`
 - Templates: `templates/reports/win-loss-analysis-report.md`
 - Registries atualizados: `data/registries/win-patterns-registry`, `data/libraries/best-moments-library.yaml`
+
+## Handoff
+- **Output entregue a**: Closer Trainer para disseminação dos padrões vencedores em plano de treinamento + Sales Chief para validação e priorização
+- **Formato de entrega**: `templates/reports/win-loss-analysis-report` (relatório de win patterns com top 5 padrões e frases de impacto catalogadas)
+- **Condição de entrega**: cada padrão com evidência de 3+ calls, correlação com resultado validada, frases representativas (não cherry-picked), contraste com calls perdidas incluído
+- **Próximo passo no pipeline**: atualização da biblioteca de melhores momentos (`tasks/intelligence/update-best-moments-library.md`) + plano de treinamento via coaching sessions
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

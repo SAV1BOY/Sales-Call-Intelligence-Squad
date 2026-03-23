@@ -109,3 +109,11 @@ AÇÃO #1: Treinamento de firmeza de preço → impacto estimado +R$ 45k/mês
 ## Checklists de Qualidade
 - `qa-score-calibration-check.md` — KPIs baseados em scores calibrados.
 - `qa-bias-detection-check.md` — Tendências sem viés de interpretação.
+
+## Preenchido Por
+
+- **Task(s)**: analyze-offer-fit, weekly-sales-quality-review
+- **Agente(s) responsável(is)**: offer-fit-analyst, revenue-intelligence-analyst, sales-chief, scorecard-analyst, closer-trainer
+- **Workflow(s)**: Intelligence — Análise de Fit de Oferta (quarterly), Review Semanal de Qualidade (weekly)
+- **Frequência**: weekly / quarterly
+- **Registro**: data/registries/deal-risk-registry, data/registries/lessons-learned-registry

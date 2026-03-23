@@ -91,3 +91,16 @@ Liderança comercial precisa de visão consolidada e acionável, não dump de da
 - Agents: `agents/revenue-intelligence-analyst.md`, `agents/scorecard-analyst.md`, `agents/win-loss-miner.md`, `agents/sales-chief.md`
 - Templates: `templates/reports/executive-sales-intelligence-report.md`
 - Registries atualizados: `data/registries/intelligence-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Sales Chief (`agents/sales-chief.md`) para validação e apresentação à liderança comercial
+- **Formato de entrega**: `templates/reports/executive-sales-intelligence-report` (dashboard executivo com KPIs, tendências e top 3 ações recomendadas)
+- **Condição de entrega**: KPIs completos do período, tendências com mínimo 4 semanas, top 3 ações específicas e acionáveis, dashboard visual e de fácil leitura
+- **Próximo passo no pipeline**: review semanal/mensal de qualidade via `workflows/11-weekly-sales-quality-review.md` ou retro via `workflows/20-ralphloop-sales-retro.md`
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

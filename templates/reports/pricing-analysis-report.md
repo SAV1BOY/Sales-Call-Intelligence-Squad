@@ -128,3 +128,11 @@ Recomendação 3: Nunca oferecer desconto proativamente
 ## Checklists de Qualidade
 - `qa-evidence-completeness-check.md` — Todos os momentos de pricing documentados.
 - `coaching-actionability-check.md` — Recomendações acionáveis.
+
+## Preenchido Por
+
+- **Task(s)**: analyze-pricing
+- **Agente(s) responsável(is)**: pricing-anchoring-analyst, alex-hormozi, sabri-suby
+- **Workflow(s)**: Análise por Fase da Call — Pricing (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/pricing-concessions-registry

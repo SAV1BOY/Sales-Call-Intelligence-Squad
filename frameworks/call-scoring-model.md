@@ -151,3 +151,9 @@ TOTAL: 81/100 — MUITO BOM
 3. **Não calibrar entre analistas** — Se dois analistas dão scores muito diferentes para a mesma call, os critérios precisam ser calibrados.
 4. **Score sem ação** — Dar nota sem recomendação acionável. O score sozinho não gera melhoria.
 5. **Foco só no score total** — O detalhamento por bloco é mais útil que o número final. Um closer pode ter 75 total mas com score 4/15 no discovery — isso é o que precisa ser trabalhado.
+
+## Usado Em
+
+- **Tasks**: full-call-audit, build-coaching-pack, certify-closer, weekly-sales-quality-review, monthly-closer-certification, extract-win-patterns
+- **Workflows**: per_call (auditoria e coaching), weekly (review semanal de qualidade), monthly (certificação e win patterns), quarterly (certificação de closer)
+- **Config routing**: `full-call-audit.frameworks`, `build-coaching-pack.frameworks`, `certify-closer.frameworks`, `weekly-sales-quality-review.frameworks`, `monthly-closer-certification.frameworks`, `extract-win-patterns.frameworks`

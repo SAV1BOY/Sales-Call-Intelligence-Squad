@@ -99,3 +99,9 @@ Em cada camada, usar variantes de aprofundamento:
 5. **Tom de terapeuta** — voce nao e psicologo. Empatia sim, sessao de terapia nao.
 6. **Perguntas encadeadas demais** — dar espaco entre perguntas. Uma de cada vez.
 7. **Nao anotar** — as palavras exatas do lead nas camadas profundas sao ouro para o pitch.
+
+## Usado Em
+
+- **Tasks**: analyze-discovery
+- **Workflows**: per_call (análise de discovery, sub-task de full-call-audit)
+- **Config routing**: `analyze-discovery.frameworks`

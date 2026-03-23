@@ -119,3 +119,9 @@ Impacto projetado: Se tivesse aprofundado, o closer teria extraído o custo mens
 3. **Rewrite acadêmico** — "Você deveria ter utilizado uma pergunta de implicação para amplificar a percepção de consequência negativa" não é acionável. Uma frase pronta é.
 4. **Não praticar** — Entregar o rewrite sem sessão de role-play. O closer lê, concorda, e faz exatamente a mesma coisa na próxima call.
 5. **Ignorar o que funcionou** — Só reescrever momentos ruins. Rewrites positivos ("isso foi perfeito, continue") reforçam bons hábitos.
+
+## Usado Em
+
+- **Tasks**: rewrite-critical-moments
+- **Workflows**: per_call (rewrite de momentos críticos)
+- **Config routing**: `rewrite-critical-moments.frameworks`

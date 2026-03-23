@@ -145,3 +145,9 @@ Ação: (1) Follow-up com case do nicho do lead, (2) Agendar nova call com frame
 3. **Investir energia em deals críticos** — 7-8 fatores de risco significam que o deal provavelmente está perdido. Melhor investir em novos leads.
 4. **Não rastrear fatores por closer** — Se um closer sempre perde deals com "dor insuficiente", o problema é o discovery dele, não o lead.
 5. **Diagnóstico tardio** — Fazer o diagnóstico 3 dias depois da call. O momentum já foi perdido. Ideal: dentro de 2 horas.
+
+## Usado Em
+
+- **Tasks**: extract-loss-patterns
+- **Workflows**: monthly (extração de padrões de perda)
+- **Config routing**: `extract-loss-patterns.frameworks`

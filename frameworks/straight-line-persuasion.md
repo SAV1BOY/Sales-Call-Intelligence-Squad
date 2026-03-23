@@ -104,3 +104,9 @@ O closer que domina o Straight Line nunca parece agressivo — parece seguro e o
 3. **Ignorar desvios em vez de redirecionar** — O closer finge que o desvio não aconteceu e segue o script. O lead sente que não foi ouvido.
 4. **Linha reta vira monólogo** — Closer confunde "manter na linha" com "falar sem parar". A linha reta inclui as respostas do lead.
 5. **Não variar tonalidade** — Usar o mesmo tom durante a call inteira. A monotonia mata a persuasão.
+
+## Usado Em
+
+- **Tasks**: framework-detection, analyze-closing
+- **Workflows**: per_call (detecção de frameworks e análise de closing)
+- **Config routing**: `framework-detection.frameworks`, `analyze-closing.frameworks`

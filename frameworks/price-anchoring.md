@@ -100,3 +100,9 @@ O ideal é usar pelo menos dois tipos de âncora antes de revelar o preço.
 3. **Ancorar baixo sem querer** — "Ah, tem programas de R$3.000 no mercado, mas o nosso é R$12.000 porque..." — acabou de ancorar em R$3.000.
 4. **Não usar o custo do problema** — A âncora mais poderosa é o dinheiro que o lead JÁ está perdendo. Se não extraiu no discovery, não tem essa ferramenta.
 5. **Transição abrupta** — Passar de âncora para preço sem ponte: "São R$80.000 em valor. O preço é R$12.000." Precisa do "mas você não vai pagar isso" para criar o contraste dramático.
+
+## Usado Em
+
+- **Tasks**: analyze-pricing
+- **Workflows**: per_call (análise de pricing, sub-task de full-call-audit)
+- **Config routing**: `analyze-pricing.frameworks`

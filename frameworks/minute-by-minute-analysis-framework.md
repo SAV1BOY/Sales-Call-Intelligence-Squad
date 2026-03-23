@@ -112,3 +112,9 @@ O analista (IA ou humano) recebe a transcrição e/ou áudio e executa a anális
 3. **Recomendações vagas** — "Melhorar o discovery" não é acionável. "No minuto 5, após identificar a dor, fazer 2 perguntas de implicação antes de avançar" é acionável.
 4. **Não comparar com padrões** — Analisar uma call isolada perde o poder de identificar tendências. A análise deve comparar com calls anteriores.
 5. **Excesso de detalhes** — Analisar cada segundo de uma call de 45 minutos gera relatório de 20 páginas que ninguém lê. Focar nos 3-5 momentos mais impactantes.
+
+## Usado Em
+
+- **Tasks**: normalize-and-segment, full-call-audit
+- **Workflows**: per_call (ingestão e auditoria completa)
+- **Config routing**: `normalize-and-segment.frameworks`, `full-call-audit.frameworks`

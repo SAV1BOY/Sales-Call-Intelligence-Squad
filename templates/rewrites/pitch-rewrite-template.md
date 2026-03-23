@@ -109,3 +109,11 @@ DEPOIS: "Carla, você falou uma coisa que me chamou atenção — 3 horas por di
 ## Checklists de Qualidade
 - `coaching-specificity-check.md` — Rewrite usa dados reais da call.
 - `coaching-actionability-check.md` — Closer consegue replicar a estrutura.
+
+## Preenchido Por
+
+- **Task(s)**: rewrite-critical-moments
+- **Agente(s) responsável(is)**: coaching-rewriter, closer-trainer, objection-specialist
+- **Workflow(s)**: Coaching — Reescrita de Momentos Críticos (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/rewrites, data/registries/lessons-learned-registry

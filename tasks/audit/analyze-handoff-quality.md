@@ -89,3 +89,16 @@ Handoff fraco do SDR obriga o closer a refazer discovery básico, desperdiça os
 - Agents: `agents/sdr-handoff-analyst.md`, `agents/call-auditor.md`, `agents/transcript-analyst.md`
 - Templates: `templates/reports/sdr-handoff-audit-report.md`
 - Registries atualizados: `data/registries/handoff-registry`
+
+## Handoff
+- **Output entregue a**: coaching pipeline (closer-trainer para coaching do closer) e SDR squad (feedback estruturado para melhoria do handoff)
+- **Formato de entrega**: análise de handoff em `reports/analysis/CALL-ID-handoff` usando `templates/reports/sdr-handoff-audit-report.md` + checklist de informações transmitidas vs. ausentes
+- **Condição de entrega**: informações transmitidas pelo SDR mapeadas com evidência textual, qualificação do lead avaliada contra ICP, feedback para SDR validado como construtivo e acionável pelo qa-guardian
+- **Próximo passo no pipeline**: feedback entregue ao SDR squad via workflow `13-sdr-to-closer-feedback-loop`; handoff_score alimenta scoring pipeline (update-scorecards) e sdr-performance-registry
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

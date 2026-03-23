@@ -108,3 +108,9 @@ Essa disposição para recusar é o que cria a maior atração. Quando o lead pe
 3. **Medo de dizer não** — Closer aceita qualquer lead mesmo quando claramente não é fit. Médico que prescreve pra todo mundo perde credibilidade.
 4. **Usar linguagem de vendedor** — "Nosso produto incrível vai transformar sua vida" é linguagem de vendedor. Médico diz "o tratamento indicado é..."
 5. **Não construir autoridade antes** — Tentar operar como médico sem ter demonstrado competência. A autoridade precisa ser conquistada nas primeiras perguntas.
+
+## Usado Em
+
+- **Tasks**: analyze-rapport-and-frame
+- **Workflows**: per_call (análise de rapport e frame, sub-task de full-call-audit)
+- **Config routing**: `analyze-rapport-and-frame.frameworks`

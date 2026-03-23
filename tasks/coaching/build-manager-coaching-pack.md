@@ -94,3 +94,16 @@ Gestores comerciais não têm tempo para auditar calls individualmente. Esta tas
 - Agents: `agents/closer-trainer.md`, `agents/scorecard-analyst.md`, `agents/sales-chief.md`
 - Templates: `templates/reports/manager-coaching-report.md`, `templates/scorecards/closer-performance-scorecard.md`
 - Registries atualizados: `data/registries/lessons-learned-registry`
+
+## Handoff
+- **Output entregue a**: gestor comercial (manager) para condução da sessão de coaching com o closer
+- **Formato de entrega**: pack de coaching em `reports/coaching/CALL-ID-coaching-pack` usando `templates/reports/manager-coaching-report.md`
+- **Condição de entrega**: resumo executivo de 1 página, 3 prioridades baseadas em causa raiz, roteiro de sessão com timing, perguntas reflexivas incluídas, evolução histórica comparada
+- **Próximo passo no pipeline**: gestor conduz sessão de coaching de 30 min com o closer usando o pack; resultados da sessão registrados em coaching-registry; impacto medido nas calls seguintes
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

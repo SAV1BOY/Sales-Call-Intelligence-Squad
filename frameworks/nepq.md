@@ -125,3 +125,9 @@ A chave é o tom de voz. Miner enfatiza que a mesma pergunta pode soar curiosa o
 3. **Consequence Questions sem base** — Amplificar dor de um problema que o lead não verbalizou como importante. Parece forçado.
 4. **Tom interrogativo** — "E o que acontece se nada mudar?" dito com tom agressivo vira ameaça. O tom precisa ser de curiosidade empática.
 5. **Qualificar cedo demais** — Perguntar "você tá comprometido?" antes de construir a dor não gera resposta genuína.
+
+## Usado Em
+
+- **Tasks**: framework-detection, analyze-discovery
+- **Workflows**: per_call (detecção de frameworks e análise de discovery)
+- **Config routing**: `framework-detection.frameworks`, `analyze-discovery.frameworks`

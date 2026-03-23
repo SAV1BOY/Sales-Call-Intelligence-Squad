@@ -115,3 +115,11 @@ Impacto: Se Rafael soubesse que Carla já tinha budget definido e era decisora, 
 
 ## Checklists de Qualidade
 - `qa-evidence-completeness-check.md` — Análise baseada em evidência das duas interações.
+
+## Preenchido Por
+
+- **Task(s)**: analyze-sdr-handoff
+- **Agente(s) responsável(is)**: sdr-handoff-analyst, call-auditor
+- **Workflow(s)**: Análise por Fase da Call — Handoff SDR (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/handoff-registry

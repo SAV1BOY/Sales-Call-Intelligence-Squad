@@ -134,3 +134,9 @@ Silêncios estratégicos: 4 pausas de 3-5 segundos após perguntas de consequên
 3. **Pitch como monólogo** — Mesmo no pitch (onde o closer fala mais), pausas e confirmações são necessárias a cada componente.
 4. **Ignorar interrupções** — O padrão de interrupções revela dinâmica de poder. Se o closer interrompe sempre, está sinalizando que não escuta.
 5. **Otimizar ratio sem qualidade** — 30% closer com perguntas ruins é pior que 40% closer com perguntas excelentes. A qualidade das perguntas importa mais que a quantidade.
+
+## Usado Em
+
+- **Tasks**: analyze-talk-ratio
+- **Workflows**: per_call (análise de talk ratio, sub-task de full-call-audit)
+- **Config routing**: `analyze-talk-ratio.frameworks`

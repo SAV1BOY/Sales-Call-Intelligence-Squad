@@ -90,3 +90,9 @@ Objetivo: transicionar naturalmente para o fechamento.
 4. **Closer vendendo em vez do lead defendendo** — o NEPQ so funciona quando o lead se convence.
 5. **Perguntas fechadas demais** — "Voce tem problemas?" vs "Me conta sobre seus desafios."
 6. **Transicao abrupta** — pular de discovery para pitch sem Commitment Questions.
+
+## Usado Em
+
+- **Tasks**: analyze-discovery
+- **Workflows**: per_call (análise de discovery, sub-task de full-call-audit)
+- **Config routing**: `analyze-discovery.frameworks`

@@ -87,3 +87,16 @@ Transcrições brutas de ferramentas automáticas contêm artefatos, speakers mi
 - Agents: `agents/transcript-analyst.md`, `agents/qa-guardian.md`
 - Templates: `templates/reports/minute-by-minute-audit-report.md`
 - Registries atualizados: `data/transcripts/cleaned/`, `data/registries/calls-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Transcript Analyst / Call Auditor para segmentação da call por etapa (`tasks/intake/segment-call-by-stage.md`)
+- **Formato de entrega**: Transcrição normalizada em `data/transcripts/cleaned/CALL-ID.md` (formato `templates/reports/minute-by-minute-audit-report`)
+- **Condição de entrega**: speaker tags 100% consistentes, timestamps em ordem crescente, zero artefatos remanescentes, QA Guardian validou qualidade
+- **Próximo passo no pipeline**: segmentação da call por etapa via `workflows/01-transcript-cleaning-and-segmentation.md`
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

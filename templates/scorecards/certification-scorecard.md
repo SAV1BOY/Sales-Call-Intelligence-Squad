@@ -143,3 +143,11 @@ RESULTADO: REPROVADO — Score total abaixo do mínimo (65.7 < 70) + 2 blocos ab
 
 ## Checklists de Qualidade
 - `qa-score-calibration-check.md` — Critérios calibrados e consistentes.
+
+## Preenchido Por
+
+- **Task(s)**: certify-closer
+- **Agente(s) responsável(is)**: closer-trainer, qa-guardian, sales-chief
+- **Workflow(s)**: Certificação de Closer (quarterly)
+- **Frequência**: quarterly
+- **Registro**: data/registries/closers-registry

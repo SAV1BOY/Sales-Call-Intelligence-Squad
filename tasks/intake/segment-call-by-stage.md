@@ -88,3 +88,16 @@ O princípio `phase_first` da arquitetura exige que cada agente especialista ana
 - Agents: `agents/transcript-analyst.md`, `agents/call-auditor.md`, `agents/framework-detector.md`
 - Templates: `templates/reports/minute-by-minute-audit-report.md`
 - Registries atualizados: `data/transcripts/segmented/`, `data/registries/calls-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Call Auditor (`agents/call-auditor.md`) para auditoria por etapa + classify-call-type para classificação
+- **Formato de entrega**: Transcrição segmentada em `data/transcripts/segmented/CALL-ID.md` + mapa de etapas com timestamps, durações e percentuais
+- **Condição de entrega**: 6 etapas delimitadas ou marcadas como ausentes, timestamps sem sobreposição, soma = 100%, anomalias documentadas
+- **Próximo passo no pipeline**: classificação de tipo de call (`tasks/intake/classify-call-type.md`) e auditoria completa via `workflows/06-full-funnel-call-audit.md`
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

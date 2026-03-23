@@ -98,3 +98,9 @@ O tom deve ser firme, amigável e direto. Não é agressivo, mas também não é
 2. **Fazer o pacto de forma decorada demais** — o lead percebe que é roteiro e perde confiança. O pacto precisa soar como conversa natural de profissional, não como telemarketing.
 3. **Não pedir confirmação** — declarar as intenções sem obter o "sim" do lead transforma um acordo bilateral em um monólogo unilateral que não tem peso na hora do fechamento.
 4. **Usar tom submisso** — "Se tiver tudo bem pra você, eu queria tentar entender..." elimina toda a autoridade. O frame exige firmeza.
+
+## Usado Em
+
+- **Tasks**: analyze-rapport-and-frame
+- **Workflows**: per_call (análise de rapport e frame, sub-task de full-call-audit)
+- **Config routing**: `analyze-rapport-and-frame.frameworks`

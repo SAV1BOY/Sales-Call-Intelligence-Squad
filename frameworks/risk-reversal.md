@@ -108,3 +108,9 @@ O tom deve ser de confiança absoluta, não de desespero. A garantia é apresent
 3. **Usar garantia como primeiro argumento** — Começar com "tem garantia" antes de construir valor. Parece que o produto precisa de garantia porque é ruim.
 4. **Não justificar** — Garantia sem explicação gera desconfiança ("se é tão bom, por que precisa de garantia?"). A justificativa resolve isso.
 5. **Não inverter o risco** — Parar na garantia sem mostrar que o custo de NÃO agir é maior. A inversão é o que fecha o ciclo.
+
+## Usado Em
+
+- **Tasks**: analyze-pricing
+- **Workflows**: per_call (análise de pricing, sub-task de full-call-audit)
+- **Config routing**: `analyze-pricing.frameworks`

@@ -92,3 +92,16 @@ Quando a oferta não resolve a dor real do ICP, nenhuma melhoria de execução d
 - Agents: `agents/offer-fit-analyst.md`, `agents/revenue-intelligence-analyst.md`, `agents/alex-hormozi.md`
 - Templates: `templates/reports/executive-sales-intelligence-report.md`
 - Registries atualizados: `data/registries/deal-risk-registry`
+
+## Handoff
+- **Output entregue a**: Sales Chief (`agents/sales-chief.md`) para review e handoff cross-squad ao time de produto/oferta
+- **Formato de entrega**: `templates/reports/executive-sales-intelligence-report` (relatório de fit oferta-dor-ICP) + mapa dor × oferta com gaps
+- **Condição de entrega**: dores mapeadas com evidência de 3+ calls, gaps documentados, Value Equation avaliada por segmento, recomendações específicas e implementáveis
+- **Próximo passo no pipeline**: feedback para time de oferta via `workflows/16-closer-to-offer-feedback.md` e handoff cross-squad via `templates/operational/cross-squad-handoff-template`
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

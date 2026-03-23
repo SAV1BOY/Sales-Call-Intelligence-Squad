@@ -93,3 +93,16 @@ Esta task existe para estabelecer um baseline confiável de performance desde o 
 - Agents: `agents/closer-trainer.md`, `agents/call-auditor.md`, `agents/scorecard-analyst.md`, `agents/sales-chief.md`
 - Templates: `templates/scorecards/closer-performance-scorecard.md`, `templates/reports/manager-coaching-report.md`
 - Registries atualizados: `data/registries/closer-performance-registry.yaml`, `data/registries/closer-certification-registry.yaml`, `data/registries/coaching-registry.yaml`
+
+## Handoff
+- **Output entregue a**: closer-trainer para execução do plano de desenvolvimento e sales-chief para aprovação de metas iniciais
+- **Formato de entrega**: perfil do closer em `data/registries/closer-performance-registry.yaml` + baseline de performance (scores das 3 primeiras calls) + plano de desenvolvimento inicial
+- **Condição de entrega**: 3 primeiras calls auditadas, baseline documentado com scores por bloco, plano de desenvolvimento com top 3 prioridades, cadência de acompanhamento semanal definida
+- **Próximo passo no pipeline**: closer-trainer inicia acompanhamento semanal nas primeiras 4 semanas; primeira sessão de coaching agendada após 5a call auditada; closer entra no ciclo de certificação mensal
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

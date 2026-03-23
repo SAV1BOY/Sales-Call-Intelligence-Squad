@@ -125,3 +125,9 @@ Variável #3: TALK RATIO (discovery)
 3. **Ignorar variáveis de lead** — O perfil do lead importa. Comparar calls com leads qualificados vs. desqualificados distorce a análise.
 4. **Não atualizar** — Padrões mudam. O mining deve ser refeito mensalmente ou trimestralmente.
 5. **Correlação como verdade absoluta** — "First Pact correlaciona com vitória" não prova causalidade. Pode haver variável confundidora (closers melhores fazem First Pact E fecham mais).
+
+## Usado Em
+
+- **Tasks**: extract-win-patterns, extract-loss-patterns
+- **Workflows**: monthly (extração de padrões de vitória e perda)
+- **Config routing**: `extract-win-patterns.frameworks`, `extract-loss-patterns.frameworks`

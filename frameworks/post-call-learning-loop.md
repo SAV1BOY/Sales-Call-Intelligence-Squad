@@ -143,3 +143,9 @@ SWIPE FILE:
 3. **Fazer tarde demais** — Loop feito no final do dia ou no dia seguinte. A memória degrada rapidamente — detalhes importantes se perdem.
 4. **Não consultar os repositórios** — Alimentar sem usar. Os repositórios precisam ser consultados ativamente antes de calls e em treinamentos.
 5. **Repositórios desorganizados** — Informação jogada sem estrutura. Os repositórios precisam de formato padronizado para serem úteis.
+
+## Usado Em
+
+- **Tasks**: build-coaching-pack, weekly-sales-quality-review
+- **Workflows**: per_call (coaching pack), weekly (review semanal de qualidade)
+- **Config routing**: `build-coaching-pack.frameworks`, `weekly-sales-quality-review.frameworks`

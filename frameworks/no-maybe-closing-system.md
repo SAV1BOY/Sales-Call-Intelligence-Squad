@@ -111,3 +111,9 @@ O tom é crucial: firmeza com empatia. Não é ultimato. É convite para decisã
 3. **Não preparar com pactos** — Tentar forçar decisão sem ter feito First e Second Pact. O lead não se comprometeu antes — agora se sente preso.
 4. **Não dar permissão para o não** — Parecer que só aceita "sim". Quando o lead sente que pode dizer "não" livremente, paradoxalmente fica mais propenso ao "sim".
 5. **Desistir cedo demais** — Fazer uma tentativa e aceitar o "talvez". O sistema prevê 2-3 técnicas em sequência antes de aceitar a não-decisão.
+
+## Usado Em
+
+- **Tasks**: analyze-closing
+- **Workflows**: per_call (análise de closing, sub-task de full-call-audit)
+- **Config routing**: `analyze-closing.frameworks`

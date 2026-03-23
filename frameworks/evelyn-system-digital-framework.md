@@ -137,3 +137,9 @@ Bloco 7 — Fechamento:      35:00–37:45 ✓ FECHOU
 3. **Não dominar os frameworks individuais** — O Evelyn orquestra frameworks. Se o closer não domina SPIN, o Bloco 2 falha.
 4. **Inversão de camadas no pitch** — Falar de produto antes de empresa/método. A ordem empresa→método→produto constrói autoridade antes de detalhes.
 5. **Esquecer que o 2o Pacto é um bloco** — Muitos closers pulam do discovery pro pitch sem renovar o compromisso. O 2o Pacto é o portão de entrada do pitch.
+
+## Usado Em
+
+- **Tasks**: full-call-audit
+- **Workflows**: per_call (auditoria completa)
+- **Config routing**: `full-call-audit.frameworks`

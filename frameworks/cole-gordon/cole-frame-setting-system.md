@@ -78,3 +78,9 @@ O frame nao e so nos primeiros 3 minutos. Reforcar em transicoes:
 5. **Perder o frame no meio da call** — o lead comeca a fazer perguntas e o closer so responde.
 6. **Frame decorado** — soar robotico. O frame deve ser natural e adaptado a cada lead.
 7. **Pular as expectativas** — sem expectativa de honestidade, o lead esconde objecoes.
+
+## Usado Em
+
+- **Tasks**: analyze-rapport-and-frame
+- **Workflows**: per_call (análise de rapport e frame, sub-task de full-call-audit)
+- **Config routing**: `analyze-rapport-and-frame.frameworks`

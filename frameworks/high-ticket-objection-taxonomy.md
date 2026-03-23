@@ -155,3 +155,9 @@ O analista pós-call deve:
 3. **Não classificar** — Closer responde instintivamente sem categorizar. Resultado: tratamento aleatório.
 4. **Ignorar Tipo 3** — "Preciso falar com meu sócio" é uma das objeções mais difíceis. Exige call a três ou material específico.
 5. **Não rastrear padrões** — Se 70% das objeções de um closer são Tipo 4 (confiança), o problema é o rapport/autoridade dele, não os leads.
+
+## Usado Em
+
+- **Tasks**: update-objections-library
+- **Workflows**: weekly (atualização da biblioteca de objeções)
+- **Config routing**: `update-objections-library.frameworks`

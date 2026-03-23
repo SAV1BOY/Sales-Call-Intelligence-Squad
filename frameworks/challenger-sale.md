@@ -100,3 +100,9 @@ A chave é o equilíbrio: desafiar sem alienar. O lead precisa se sentir respeit
 3. **Teach sem Tailor** — Compartilhar insight genérico que não se aplica ao contexto do lead. "A maioria das empresas..." sem conectar ao caso específico.
 4. **Ceder ao primeiro sinal de resistência** — O Challenger mantém posição. Ceder no primeiro "tá caro" destrói a autoridade construída.
 5. **Confundir Challenger com confronto** — O Challenger desafia ideias, não pessoas. Atacar a pessoa destrói a venda.
+
+## Usado Em
+
+- **Tasks**: framework-detection
+- **Workflows**: per_call (detecção de frameworks)
+- **Config routing**: `framework-detection.frameworks`

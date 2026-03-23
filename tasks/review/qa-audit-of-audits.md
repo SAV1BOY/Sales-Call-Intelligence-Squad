@@ -91,3 +91,16 @@ Esta task existe para garantir que as próprias auditorias do squad são precisa
 - Agents: `agents/qa-guardian.md`, `agents/sales-chief.md`, `agents/scorecard-analyst.md`
 - Templates: `templates/scorecards/call-scorecard-template.md`, `templates/reports/full-call-audit-report.md`
 - Registries atualizados: `data/registries/qa-registry.yaml`, `data/registries/review-registry.yaml`
+
+## Handoff
+- **Output entregue a**: sales-chief para validação de resultados e definição de ações corretivas de calibração
+- **Formato de entrega**: relatório de QA em `reports/reviews/qa-audit-PERIODO` com taxa de concordância inter-auditor e discrepâncias por bloco
+- **Condição de entrega**: amostra representativa revisada, re-auditoria independente realizada, discrepâncias quantificadas, ações corretivas específicas definidas
+- **Próximo passo no pipeline**: sales-chief convoca sessão de calibração se variância > 5 pontos; qa-guardian implementa ações corretivas nos auditores
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

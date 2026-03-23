@@ -87,3 +87,9 @@ Dar prova de que a nova crenca e verdadeira. Cases, dados, logica.
 5. **Ser condescendente** — "Voce so pensa assim porque..." parece arrogante.
 6. **Nao verificar o shift** — perguntar "faz sentido?" para confirmar que a perspectiva mudou.
 7. **Ignorar crencas sutis** — as mais perigosas nao sao ditas diretamente. Estao nas entrelinhas.
+
+## Usado Em
+
+- **Tasks**: analyze-objections
+- **Workflows**: per_call (análise de objeções, sub-task de full-call-audit)
+- **Config routing**: `analyze-objections.frameworks`

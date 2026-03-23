@@ -112,3 +112,9 @@ No tratamento de objeções, o closer pode diagnosticar qual variável está fra
 3. **Não criar marcos intermediários** — Falar "em 6 meses você vai..." sem dizer o que acontece na semana 1, mês 1. O Time Delay percebido fica enorme.
 4. **Ignorar o esforço percebido** — Não comunicar que o processo é guiado. O lead imagina que vai ter que descobrir tudo sozinho.
 5. **Não usar a equação para diagnosticar objeções** — Objeção é sempre uma variável fraca. Tratar "tá caro" com desconto quando o problema é Likelihood é desperdiçar margem.
+
+## Usado Em
+
+- **Tasks**: framework-detection, analyze-pitch, analyze-pricing, analyze-offer-fit
+- **Workflows**: per_call (detecção de frameworks, análise de pitch e pricing), quarterly (análise de offer-fit)
+- **Config routing**: `framework-detection.frameworks`, `analyze-pitch.frameworks`, `analyze-pricing.frameworks`, `analyze-offer-fit.frameworks`

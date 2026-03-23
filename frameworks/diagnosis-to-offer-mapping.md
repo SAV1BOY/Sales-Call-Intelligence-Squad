@@ -110,3 +110,9 @@ Dica prática: criar uma matriz de mapeamento antes de qualquer call:
 3. **Ignorar dores que não mapeiam** — Fingir que uma dor não existe porque a oferta não resolve. Melhor ser honesto.
 4. **Ordem errada** — Começar pelo componente menos relevante. A dor mais urgente deve ser o primeiro componente apresentado.
 5. **Mapeamento forçado** — Conectar uma dor a um componente que não resolve diretamente. O lead percebe a forçação e perde confiança.
+
+## Usado Em
+
+- **Tasks**: analyze-pitch, rewrite-critical-moments, analyze-offer-fit
+- **Workflows**: per_call (análise de pitch e rewrite de momentos críticos), quarterly (análise de offer-fit)
+- **Config routing**: `analyze-pitch.frameworks`, `rewrite-critical-moments.frameworks`, `analyze-offer-fit.frameworks`

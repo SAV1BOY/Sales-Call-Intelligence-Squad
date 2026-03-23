@@ -83,3 +83,9 @@ Belfort defende que voce tem 4 segundos para demonstrar 3 coisas:
 4. **Abertura fraca** — primeiros 4 segundos sem energia, sem clareza, sem autoridade.
 5. **Pular a discovery** — ir direto pro pitch sem entender o lead. A linha reta inclui discovery.
 6. **Ser rigido demais** — controlar a direcao, nao a pessoa. Flexibilidade dentro da estrutura.
+
+## Usado Em
+
+- **Tasks**: analyze-closing
+- **Workflows**: per_call (análise de closing, sub-task de full-call-audit)
+- **Config routing**: `analyze-closing.frameworks`

@@ -90,3 +90,16 @@ Esta task existe para manter scorecards individuais e de equipe sempre atualizad
 - Agents: `agents/scorecard-analyst.md`, `agents/qa-guardian.md`, `agents/revenue-intelligence-analyst.md`
 - Templates: `templates/scorecards/call-scorecard-template.md`, `templates/scorecards/closer-performance-scorecard.md`, `templates/scorecards/team-quality-scorecard.md`
 - Registries atualizados: `data/registries/scorecards-registry.yaml`, `data/registries/closer-performance-registry.yaml`
+
+## Handoff
+- **Output entregue a**: closer-trainer para coaching (quando tendência de piora detectada) e revenue-intelligence-analyst para consolidação em reviews semanais/mensais
+- **Formato de entrega**: scorecards atualizados em `data/registries/scorecards-registry.yaml` + ranking atualizado + alertas de mudança significativa
+- **Condição de entrega**: média móvel e desvio padrão recalculados, ranking sem empates não resolvidos, tendência coerente, benchmarks da equipe atualizados
+- **Próximo passo no pipeline**: se closer cruzou limiar de certificação para baixo, closer-trainer inicia plano de ação; scorecards alimentam weekly-sales-quality-review e monthly-certification-review
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

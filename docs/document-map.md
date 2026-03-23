@@ -2,7 +2,7 @@
 
 Índice navegável de todos os arquivos do repositório, organizados por categoria.
 
-**Total**: ~1.850 arquivos | **Branch**: `claude/map-sales-squad-rI45N`
+**Total**: 667 arquivos | **Branch**: `claude/map-sales-squad-rI45N`
 
 ---
 
@@ -426,7 +426,7 @@ Bibliotecas de frases por fase da call (rapport, discovery, pitch, pricing, obje
 
 Resumos, cases e workshops dos 11 especialistas.
 
-### swipe-sources/ (4 arquivos) — Fontes de Swipe
+### swipe-sources/ (12 arquivos) — Fontes de Swipe
 
 | Arquivo | Conteúdo |
 |---------|----------|
@@ -434,6 +434,14 @@ Resumos, cases e workshops dos 11 especialistas.
 | `swipe-sources/books-and-courses.md` | Livros, cursos e workshops que fundamentam o squad |
 | `swipe-sources/call-recordings-index.md` | Índice de gravações de referência (icônicas + falhas) |
 | `swipe-sources/industry-benchmarks.md` | Fontes de benchmarks de mercado (Gong, Chorus, HubSpot) |
+| `swipe-sources/belfort-content-index.md` | Fontes Jordan Belfort (Way of the Wolf, Straight Line, Tonality) |
+| `swipe-sources/cole-gordon-content-index.md` | Fontes Cole Gordon (Remote Closing Academy, Frame Setting) |
+| `swipe-sources/hormozi-content-index.md` | Fontes Alex Hormozi ($100M Offers, Value Stack, Pricing) |
+| `swipe-sources/miner-content-index.md` | Fontes Jeremy Miner (7.5 Pillars NEPQ, Consequence Questioning) |
+| `swipe-sources/sabri-suby-content-index.md` | Fontes Sabri Suby (Risk Reversal, Value Stacking, Godfather Offer) |
+| `swipe-sources/evelyn-framework-transcriptions.md` | Transcrições do framework Evelyn System Digital |
+| `swipe-sources/linkedin-sales-leaders-index.md` | Índice de líderes de vendas no LinkedIn |
+| `swipe-sources/sales-podcast-index.md` | Índice de podcasts de vendas relevantes |
 
 ### swipe/ (16 arquivos) — Swipe Files
 

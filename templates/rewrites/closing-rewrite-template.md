@@ -130,3 +130,11 @@ Closer: "Perfeito. Vou te mandar o link agora. Qual email você prefere?"
 ## Checklists de Qualidade
 - `coaching-specificity-check.md` — Rewrite baseado no contexto real da call.
 - `coaching-actionability-check.md` — Scripts praticáveis.
+
+## Preenchido Por
+
+- **Task(s)**: rewrite-critical-moments
+- **Agente(s) responsável(is)**: coaching-rewriter, closer-trainer, objection-specialist
+- **Workflow(s)**: Coaching — Reescrita de Momentos Críticos (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/rewrites, data/registries/lessons-learned-registry

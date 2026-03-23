@@ -95,3 +95,16 @@ Sem certificação formal, closers operam sem padrão mínimo de qualidade, impa
 - Agents: `agents/closer-trainer.md`, `agents/qa-guardian.md`, `agents/sales-chief.md`
 - Templates: `templates/scorecards/certification-scorecard.md`, `templates/reports/closer-certification-report.md`
 - Registries atualizados: `data/registries/closers-registry`
+
+## Handoff
+- **Output entregue a**: sales-chief para decisão final de aprovação/reprovação e atualização do `data/registries/closers-registry.yaml`
+- **Formato de entrega**: certificado em `reports/certification/CLOSER-NAME-certification` usando `templates/scorecards/certification-scorecard.md` e `templates/reports/closer-certification-report.md`
+- **Condição de entrega**: mínimo 5 calls avaliadas, score médio calculado, evolução temporal analisada, consistência avaliada, decisão justificada com dados
+- **Próximo passo no pipeline**: closers-registry atualizado com nível de maturidade; se reprovado (score < 50), closer-trainer inicia plano intensivo; próxima reavaliação agendada
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

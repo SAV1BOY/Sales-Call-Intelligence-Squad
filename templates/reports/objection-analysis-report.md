@@ -98,3 +98,11 @@ Framework: Isolamento + Prova Social Específica
 ## Checklists de Qualidade
 - `qa-evidence-completeness-check.md` — Toda objeção com trecho e timestamp.
 - `coaching-specificity-check.md` — Rewrites são específicos e contextualizados.
+
+## Preenchido Por
+
+- **Task(s)**: analyze-objections
+- **Agente(s) responsável(is)**: objection-specialist, jordan-belfort, bradley-lea, eli-wilde
+- **Workflow(s)**: Análise por Fase da Call — Objeções (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/objections-registry, data/registries/deal-risk-registry

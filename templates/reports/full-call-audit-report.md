@@ -129,3 +129,11 @@ Momento Decisivo: 32:15 — Lead disse "tá caro" sem ter sentido urgência
 - `qa-evidence-completeness-check.md`
 - `qa-score-calibration-check.md`
 - `qa-bias-detection-check.md`
+
+## Preenchido Por
+
+- **Task(s)**: full-call-audit, analyze-rapport-and-frame, analyze-discovery, analyze-pitch, analyze-closing, analyze-talk-ratio
+- **Agente(s) responsável(is)**: call-auditor, framework-detector, scorecard-analyst, objection-specialist, pricing-anchoring-analyst, talk-ratio-analyst, cole-gordon, dan-lok, neil-rackham, jeremy-miner, alex-hormozi, sabri-suby, jordan-belfort
+- **Workflow(s)**: Auditoria Completa + Análise por Fase da Call (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/scorecards-registry, data/registries/framework-detection-registry, data/registries/deal-risk-registry

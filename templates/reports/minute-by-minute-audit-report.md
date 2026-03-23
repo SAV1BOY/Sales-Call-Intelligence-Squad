@@ -110,3 +110,11 @@ O closer encerrou discovery prematuramente e partiu para apresentação sem ter 
 ## Checklists de Qualidade
 - `qa-evidence-completeness-check.md` — Todo momento analisado tem trecho e timestamp.
 - `qa-bias-detection-check.md` — Cobertura equilibrada de toda a call, sem viés de recência.
+
+## Preenchido Por
+
+- **Task(s)**: normalize-and-segment
+- **Agente(s) responsável(is)**: transcript-analyst
+- **Workflow(s)**: Ingestão (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/transcripts/cleaned, data/transcripts/segmented

@@ -95,3 +95,9 @@ O lead so paga se tiver resultado mensuravel.
 5. **Nao adequar ao produto** — performance guarantee para algo subjetivo nao funciona.
 6. **Medo de oferecer** — "e se todo mundo pedir reembolso?" Se seu produto e bom, poucos pedem.
 7. **Depois do preco** — a garantia deve ser escudo CONTRA o choque do preco, nao remendo DEPOIS.
+
+## Usado Em
+
+- **Tasks**: analyze-pricing
+- **Workflows**: per_call (análise de pricing, sub-task de full-call-audit)
+- **Config routing**: `analyze-pricing.frameworks`

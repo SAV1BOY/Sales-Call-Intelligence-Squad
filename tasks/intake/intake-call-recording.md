@@ -86,3 +86,16 @@ Sem intake padronizado, calls entram no sistema com metadata incompleta, gerando
 - Agents: `agents/transcript-analyst.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
 - Templates: `templates/briefs/call-audit-brief.md`
 - Registries atualizados: `data/registries/calls-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Transcript Analyst (`agents/transcript-analyst.md`) para normalização da transcrição
+- **Formato de entrega**: Entrada em `data/registries/calls-registry.yaml` + brief em `data/briefs/` + transcrição bruta em `data/transcripts/raw/`
+- **Condição de entrega**: metadata completa (closer, lead, oferta, data, resultado, origem), ID único atribuído, áudio validado como audível, brief de auditoria criado
+- **Próximo passo no pipeline**: normalização de transcrição via task `normalize-transcript`
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

@@ -92,3 +92,16 @@ Esta task existe para garantir que insights extraídos das calls cheguem aos tim
 - Agents: `agents/revenue-intelligence-analyst.md`, `agents/sales-chief.md`, `agents/offer-fit-analyst.md`, `agents/sdr-handoff-analyst.md`
 - Templates: `templates/operational/cross-squad-handoff-template.md`, `templates/briefs/cross-squad-insight-brief.md`
 - Registries atualizados: `data/registries/intelligence-registry.yaml`, `data/registries/cross-squad-feedback-registry.yaml`
+
+## Handoff
+- **Output entregue a**: sales-chief para priorização e direcionamento aos squads destino (copy, tráfego, produto, operações, SDR)
+- **Formato de entrega**: briefings por squad em `reports/intelligence/cross-squad-sync-PERIODO` usando `templates/operational/cross-squad-handoff-template.md`
+- **Condição de entrega**: cada insight tem evidência de múltiplas calls, ações sugeridas são específicas e implementáveis, tom construtivo validado
+- **Próximo passo no pipeline**: sales-chief distribui briefings aos squads destino e monitora implementação via cross-squad-feedback-registry
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

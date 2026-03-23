@@ -112,3 +112,11 @@ Foco Especial da Auditoria: Análise geral com atenção a pricing
 ## Checklists de Qualidade
 - Nenhum checklist específico — este é o documento de entrada.
 - Completude dos campos é validada pelo orchestrator antes de prosseguir.
+
+## Preenchido Por
+
+- **Task(s)**: intake-call-recording
+- **Agente(s) responsável(is)**: transcript-analyst, call-auditor
+- **Workflow(s)**: Ingestão (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/calls-registry

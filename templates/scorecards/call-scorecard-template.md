@@ -191,3 +191,11 @@ Fracos: Discovery (5), Pricing (4), Objeções (6)
 ## Checklists de Qualidade
 - `qa-score-calibration-check.md` — Score calibrado e consistente.
 - `qa-evidence-completeness-check.md` — Evidência em todos os blocos.
+
+## Preenchido Por
+
+- **Task(s)**: full-call-audit, calibrate-scoring
+- **Agente(s) responsável(is)**: call-auditor, framework-detector, scorecard-analyst, objection-specialist, pricing-anchoring-analyst, talk-ratio-analyst, qa-guardian, sales-chief
+- **Workflow(s)**: Auditoria Completa (per-call), Calibração de Scoring (weekly)
+- **Frequência**: per-call / weekly
+- **Registro**: data/registries/scorecards-registry, data/registries/framework-detection-registry

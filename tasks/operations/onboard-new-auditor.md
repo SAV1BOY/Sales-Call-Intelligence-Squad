@@ -90,3 +90,16 @@ Esta task existe para garantir que novos auditores produzam auditorias com quali
 - Agents: `agents/qa-guardian.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
 - Templates: `templates/scorecards/call-scorecard-template.md`, `templates/reports/full-call-audit-report.md`
 - Registries atualizados: `data/registries/qa-registry.yaml`
+
+## Handoff
+- **Output entregue a**: qa-guardian para validação final e sales-chief para aprovação de operação independente
+- **Formato de entrega**: perfil do auditor em `data/registries/qa-registry.yaml` com resultado da calibração (variação por bloco) e status de aprovação
+- **Condição de entrega**: treinamento em todos os frameworks concluído, variação < 5 pontos vs. auditoria de referência, 3 calls auditadas com supervisão aprovadas
+- **Próximo passo no pipeline**: auditor aprovado entra na escala de auditoria do squad; qa-guardian agenda primeira meta-auditoria do novo auditor após 10 auditorias independentes
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

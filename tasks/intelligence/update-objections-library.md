@@ -91,3 +91,16 @@ Esta task existe para manter a biblioteca de objeções como arma competitiva cu
 - Agents: `agents/objection-specialist.md`, `agents/win-loss-miner.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
 - Templates: `templates/briefs/objection-library-update-brief.md`, `templates/reports/objection-analysis-report.md`
 - Registries atualizados: `data/libraries/objections-library.yaml`, `data/registries/objections-registry.yaml`, `data/registries/intelligence-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Objection Specialist (`agents/objection-specialist.md`) e Closer Trainer para uso em treinamento de manejo de objeções + Sales Chief para aprovação de respostas recomendadas
+- **Formato de entrega**: `data/libraries/objections-library.yaml` (biblioteca atualizada e versionada com novas objeções, taxas de resolução e respostas recomendadas)
+- **Condição de entrega**: novas objeções com tipo, causa raiz e contexto documentados, taxas de resolução atualizadas com dados reais, duplicatas eliminadas, respostas recomendadas baseadas em evidência
+- **Próximo passo no pipeline**: referência em auditorias futuras via `workflows/07-objection-root-cause-analysis.md` e sessões de coaching
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

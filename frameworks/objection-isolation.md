@@ -108,3 +108,9 @@ Sequência completa:
 3. **Aceitar objeções vagas** — "Não sei..." não é objeção. O closer precisa aprofundar: "Não sabe sobre o quê especificamente?"
 4. **Tratar todas as objeções ao mesmo tempo** — Quando o lead lista várias, o closer tenta resolver todas de uma vez. Deve priorizar a principal.
 5. **Tom de interrogação policial** — "Tem mais alguma coisa? Mais? Mais?" vira pressão. Uma pergunta de isolamento, feita com empatia, basta.
+
+## Usado Em
+
+- **Tasks**: analyze-objections
+- **Workflows**: per_call (análise de objeções, sub-task de full-call-audit)
+- **Config routing**: `analyze-objections.frameworks`

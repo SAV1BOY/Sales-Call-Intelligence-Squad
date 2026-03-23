@@ -91,3 +91,9 @@ O preco real parece absurdamente baixo em comparacao com o valor empilhado.
 4. **Mecanismo generico** — "consultoria" nao e unico. Diferenciar.
 5. **Nao somar valor** — o lead precisa VER o numero total antes do preco.
 6. **Preco antes do valor** — inverte a ancoragem e tudo desmorona.
+
+## Usado Em
+
+- **Tasks**: analyze-pitch
+- **Workflows**: per_call (análise de pitch, sub-task de full-call-audit)
+- **Config routing**: `analyze-pitch.frameworks`

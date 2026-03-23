@@ -90,3 +90,16 @@ Auditar uma follow-up com os mesmos critérios de uma first call gera scores inj
 - Agents: `agents/transcript-analyst.md`, `agents/call-auditor.md`, `agents/sdr-handoff-analyst.md`
 - Templates: `templates/briefs/call-audit-brief.md`
 - Registries atualizados: `data/registries/calls-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Call Auditor (`agents/call-auditor.md`) para execução da auditoria com critérios ajustados
+- **Formato de entrega**: Campo `call_type` em `data/registries/calls-registry.yaml` + ajustes de peso no `templates/briefs/call-audit-brief`
+- **Condição de entrega**: classificação baseada em evidência textual (2-3 trechos), pesos do scorecard ajustados conforme tipo, registry atualizado
+- **Próximo passo no pipeline**: auditoria completa da call via `workflows/06-full-funnel-call-audit.md`
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

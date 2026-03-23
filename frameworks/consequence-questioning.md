@@ -118,3 +118,9 @@ Sequência recomendada:
 3. **Não conectar ao pitch** — Amplificar dor sem depois oferecer a solução é crueldade. As consequências precisam ser usadas como ponte para o pitch.
 4. **Perguntas superficiais** — "Isso é ruim pra você?" não amplifica nada. Perguntas precisam ser específicas e provocativas.
 5. **Fazer muitas perguntas de consequência** — 2-3 perguntas profundas são suficientes. Mais que isso vira tortura emocional e destrói rapport.
+
+## Usado Em
+
+- **Tasks**: analyze-discovery
+- **Workflows**: per_call (análise de discovery, sub-task de full-call-audit)
+- **Config routing**: `analyze-discovery.frameworks`

@@ -90,3 +90,16 @@ Calls perdidas isoladas escondem causas sistêmicas. Esta task existe para miner
 - Agents: `agents/win-loss-miner.md`, `agents/deal-risk-doctor.md`, `agents/sdr-handoff-analyst.md`, `agents/offer-fit-analyst.md`
 - Templates: `templates/reports/win-loss-analysis-report.md`
 - Registries atualizados: `data/registries/loss-patterns-registry`, `data/registries/deal-risk-registry`
+
+## Handoff
+- **Output entregue a**: Sales Chief (`agents/sales-chief.md`) para priorização de ações corretivas + Closer Trainer para treinamento direcionado sobre causas evitáveis
+- **Formato de entrega**: `templates/reports/win-loss-analysis-report` (relatório de loss patterns com top 5 padrões e ações corretivas priorizadas)
+- **Condição de entrega**: mínimo 5 calls por padrão, distinção clara evitável vs. estrutural, correlações testadas, ações corretivas sugeridas por padrão
+- **Próximo passo no pipeline**: ações corretivas via coaching (`workflows/12-closer-coaching-session.md`) para causas evitáveis ou handoff cross-squad para causas estruturais
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

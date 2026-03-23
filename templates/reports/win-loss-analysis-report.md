@@ -115,3 +115,11 @@ INSIGHT: Se eliminarmos revelação prematura de preço, estimamos +8 deals/mês
 - `qa-evidence-completeness-check.md` — Padrões com evidência.
 - `qa-bias-detection-check.md` — Sem viés de resultado.
 - `qa-score-calibration-check.md` — Scores confiáveis para comparação.
+
+## Preenchido Por
+
+- **Task(s)**: extract-win-patterns, extract-loss-patterns
+- **Agente(s) responsável(is)**: win-loss-miner, revenue-intelligence-analyst, framework-detector, deal-risk-doctor, sdr-handoff-analyst, offer-fit-analyst
+- **Workflow(s)**: Intelligence — Mineração de Padrões de Vitória e Derrota (monthly)
+- **Frequência**: monthly
+- **Registro**: data/registries/win-patterns-registry, data/registries/loss-patterns-registry, data/registries/deal-risk-registry

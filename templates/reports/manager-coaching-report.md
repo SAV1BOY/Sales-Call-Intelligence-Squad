@@ -91,3 +91,11 @@ Forte #2: Prova social (8/10) — usa cases de forma convincente
 - `coaching-priority-check.md` — Prioridades corretas e focadas.
 - `coaching-specificity-check.md` — Feedback específico com evidência.
 - `coaching-actionability-check.md` — Ações concretas e mensuráveis.
+
+## Preenchido Por
+
+- **Task(s)**: build-coaching-pack
+- **Agente(s) responsável(is)**: closer-trainer, scorecard-analyst, sales-chief
+- **Workflow(s)**: Coaching — Construção do Pacote de Coaching (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/lessons-learned-registry

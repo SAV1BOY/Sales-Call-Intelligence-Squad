@@ -89,3 +89,16 @@ Esta task existe para construir e manter um acervo curado de momentos de excelê
 - Agents: `agents/win-loss-miner.md`, `agents/coaching-rewriter.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
 - Templates: `templates/operational/call-clip-library-template.md`
 - Registries atualizados: `data/libraries/best-moments-library.yaml`, `data/registries/intelligence-registry.yaml`
+
+## Handoff
+- **Output entregue a**: Coaching Rewriter (`agents/coaching-rewriter.md`) e Closer Trainer para uso em sessões de treinamento e coaching
+- **Formato de entrega**: `data/libraries/best-moments-library.yaml` (biblioteca atualizada e versionada com novos momentos classificados por categoria e framework)
+- **Condição de entrega**: cada momento tem trecho real, contexto, framework identificado, nota explicativa, replicabilidade confirmada, duplicatas eliminadas
+- **Próximo passo no pipeline**: utilização em coaching sessions via `workflows/12-closer-coaching-session.md` e referência para reescritas exemplares
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

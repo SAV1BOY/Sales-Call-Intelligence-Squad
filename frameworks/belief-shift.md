@@ -110,3 +110,9 @@ A sequência ideal: identificar crença → empatizar → desafiar suavemente �
 3. **Reframe genérico** — "Todo mundo consegue!" não é convincente. O reframe precisa usar evidências específicas da história do lead.
 4. **Forçar mudança em uma call** — Algumas crenças são profundas demais. O closer precisa reconhecer quando o Belief Shift não é possível naquela conversa.
 5. **Não ancorar** — Fazer o reframe mas não confirmar com o lead. Sem a confirmação verbal, a nova crença não se fixa.
+
+## Usado Em
+
+- **Tasks**: analyze-objections
+- **Workflows**: per_call (análise de objeções, sub-task de full-call-audit)
+- **Config routing**: `analyze-objections.frameworks`

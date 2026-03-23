@@ -91,3 +91,16 @@ Esta task existe para identificar tendências e padrões estruturais que só apa
 - Agents: `agents/revenue-intelligence-analyst.md`, `agents/offer-fit-analyst.md`, `agents/win-loss-miner.md`, `agents/sales-chief.md`
 - Templates: `templates/reports/executive-sales-intelligence-report.md`, `templates/reports/win-loss-analysis-report.md`
 - Registries atualizados: `data/registries/intelligence-registry.yaml`, `data/registries/review-registry.yaml`
+
+## Handoff
+- **Output entregue a**: sales-chief para decisões estratégicas e handoff ao c_level_squad quando aplicável (oferta, pricing, ICP)
+- **Formato de entrega**: relatório trimestral em `reports/reviews/quarterly-intelligence-YYYY-QN` usando `templates/reports/executive-sales-intelligence-report.md`
+- **Condição de entrega**: mínimo 50 calls analisadas, recomendações estratégicas diferenciadas de táticas, ROI de coaching calculado, OKRs mensuráveis definidos
+- **Próximo passo no pipeline**: sales-chief define OKRs do próximo trimestre; recomendações estratégicas encaminhadas ao c_level_squad; padrões estruturais alimentam ajustes de processo
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

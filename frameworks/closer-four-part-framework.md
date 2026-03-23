@@ -119,3 +119,9 @@ Transição típica entre blocos:
 3. **Frame fraco que não sustenta** — Closer faz o pacto mas com tom submisso. O frame cai no minuto 5 e o lead toma controle.
 4. **Diagnóstico superficial** — Closer faz 3 perguntas rápidas e já quer ir pro pitch. Não tem material suficiente para amarrar.
 5. **Transições bruscas** — "Ok, agora vou te apresentar o produto" soa como roteiro. A transição precisa ser orgânica.
+
+## Usado Em
+
+- **Tasks**: framework-detection
+- **Workflows**: per_call (detecção de frameworks)
+- **Config routing**: `framework-detection.frameworks`

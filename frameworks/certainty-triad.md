@@ -121,3 +121,9 @@ A técnica da escala pode ser usada diretamente: "De 0 a 10, quanto você acredi
 3. **Não diagnosticar qual certeza está fraca** — Tratar todas as objeções com mais detalhes do produto quando o problema é confiança.
 4. **Construir certezas na ordem errada** — Tentar fechar com Certeza 1 alta mas 2 e 3 baixas. A venda exige as três acima de 8.
 5. **Não usar a escala** — A pergunta "de 0 a 10" é uma ferramenta direta para medir certeza. Closers que não usam ficam no escuro sobre o nível real.
+
+## Usado Em
+
+- **Tasks**: analyze-closing
+- **Workflows**: per_call (análise de closing, sub-task de full-call-audit)
+- **Config routing**: `analyze-closing.frameworks`

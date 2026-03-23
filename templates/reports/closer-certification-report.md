@@ -135,3 +135,11 @@ Pós-Certificação: Foco em pricing nas próximas 4 semanas. Recertificação p
 - `qa-bias-detection-check.md` — Sem viés na avaliação.
 - `qa-evidence-completeness-check.md` — Toda nota justificada com evidência.
 - `coaching-progression-check.md` — Evolução documentada com métricas.
+
+## Preenchido Por
+
+- **Task(s)**: certify-closer, monthly-closer-certification
+- **Agente(s) responsável(is)**: closer-trainer, qa-guardian, sales-chief
+- **Workflow(s)**: Certificação de Closer (quarterly), Certificação Mensal de Closers (monthly)
+- **Frequência**: monthly / quarterly
+- **Registro**: data/registries/closers-registry

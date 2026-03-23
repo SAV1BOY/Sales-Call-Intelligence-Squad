@@ -105,3 +105,11 @@ Alavanca: Discovery — se subir de 6 para 10, estimativa de +15pp em conversão
 ## Checklists de Qualidade
 - `coaching-progression-check.md` — Evolução medida com rigor.
 - `qa-score-calibration-check.md` — Scores base são confiáveis.
+
+## Preenchido Por
+
+- **Task(s)**: build-coaching-pack, monthly-closer-certification
+- **Agente(s) responsável(is)**: closer-trainer, scorecard-analyst, sales-chief, qa-guardian
+- **Workflow(s)**: Coaching (per-call), Certificação Mensal de Closers (monthly)
+- **Frequência**: per-call / monthly
+- **Registro**: data/registries/lessons-learned-registry, data/registries/closers-registry

@@ -124,3 +124,9 @@ O closer deve anotar as exatas palavras do lead — elas serão usadas no pitch 
 3. **Closer diz o benefício em vez do lead** — "Imagina como seria bom ter previsibilidade!" tira a força. O lead precisa dizer com as próprias palavras.
 4. **Perguntas fechadas** — "Você tem problema com conversão?" gera "sim" ou "não". A versão aberta é "Qual sua maior dificuldade com conversão?"
 5. **Não anotar as palavras exatas** — O lead diz "tô sangrando dinheiro" e o closer resume como "perda financeira". A força está nas palavras originais.
+
+## Usado Em
+
+- **Tasks**: framework-detection, analyze-discovery
+- **Workflows**: per_call (detecção de frameworks e análise de discovery)
+- **Config routing**: `framework-detection.frameworks`, `analyze-discovery.frameworks`

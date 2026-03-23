@@ -115,3 +115,9 @@ Cada loop deve trazer informação ou perspectiva NOVA. Se o closer repete o mes
 3. **Insistir além de 3-4 loops** — Depois de 4 tentativas sem avanço, continuar é contra-produtivo. Melhor recuar com elegância.
 4. **Loopear sem ter isolado** — Se o closer não isolou a objeção, cada loop pode estar mirando no alvo errado.
 5. **Tom desesperado** — "Mas você precisa começar!" não é looping — é pressão. O tom precisa ser de genuíno interesse em ajudar.
+
+## Usado Em
+
+- **Tasks**: analyze-objections
+- **Workflows**: per_call (análise de objeções, sub-task de full-call-audit)
+- **Config routing**: `analyze-objections.frameworks`

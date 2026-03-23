@@ -80,3 +80,9 @@ Motivo temporal para decidir agora. Bonus que expira, preco que muda, janela de 
 4. **Garantia fraca ou ausente** — o risco permanece com o lead.
 5. **Dream Outcome generico** — "melhorar resultados" nao emociona ninguem.
 6. **Nao somar o valor total** — o lead precisa ver o numero agregado antes do preco.
+
+## Usado Em
+
+- **Tasks**: analyze-pitch
+- **Workflows**: per_call (análise de pitch, sub-task de full-call-audit)
+- **Config routing**: `analyze-pitch.frameworks`

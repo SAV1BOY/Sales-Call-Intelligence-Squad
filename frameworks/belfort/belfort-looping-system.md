@@ -85,3 +85,9 @@ Voltar para a oferta com a nova perspectiva estabelecida.
 5. **Reframe agressivo** — "Voce nao pode se dar ao luxo de nao comprar" em tom de pressao.
 6. **Nao relancar** — fazer o reframe mas nao pedir o fechamento novamente.
 7. **Tratar objecao de cortesia como real** — "preciso pensar" muitas vezes esconde outra objecao.
+
+## Usado Em
+
+- **Tasks**: analyze-objections
+- **Workflows**: per_call (análise de objeções, sub-task de full-call-audit)
+- **Config routing**: `analyze-objections.frameworks`

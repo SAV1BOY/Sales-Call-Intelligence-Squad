@@ -126,3 +126,9 @@ Para cada componente do pitch, a regra é: PROMETA → PROVE → CONFIRME.
 3. **Excesso de prova para uma promessa, zero para outra** — Distribuir provas igualmente entre as promessas.
 4. **Prova que não corresponde à promessa** — Prometer "resultados rápidos" e provar com case de 12 meses. A prova precisa corresponder ao claim.
 5. **Não preparar arsenal de provas** — Closer entra na call sem cases específicos preparados. Improvisa e esquece detalhes que dariam credibilidade.
+
+## Usado Em
+
+- **Tasks**: extract-loss-patterns
+- **Workflows**: monthly (extração de padrões de perda)
+- **Config routing**: `extract-loss-patterns.frameworks`

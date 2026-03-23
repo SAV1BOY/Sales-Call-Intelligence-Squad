@@ -149,3 +149,11 @@ AÇÃO SUGERIDA:
 - `cross-squad-traffic-handoff-quality.md` (se para Traffic)
 - `cross-squad-offer-handoff-quality.md` (se para Offer/C-Level)
 - `cross-squad-ops-handoff-quality.md` (se para Ops)
+
+## Preenchido Por
+
+- **Task(s)**: cross-squad-intelligence-sync
+- **Agente(s) responsável(is)**: sales-chief, revenue-intelligence-analyst
+- **Workflow(s)**: Operations — Sincronização de Inteligência Cross-Squad (weekly)
+- **Frequência**: weekly
+- **Registro**: data/registries/lessons-learned-registry

@@ -93,3 +93,16 @@ Esta task existe para manter os registries como fonte única de verdade (single 
 - Agents: `agents/call-auditor.md`, `agents/scorecard-analyst.md`, `agents/qa-guardian.md`
 - Templates: `templates/operational/lessons-learned-template.md`
 - Registries atualizados: `data/registries/calls-registry.yaml`, `data/registries/scorecards-registry.yaml`, `data/registries/closer-performance-registry.yaml`, `data/registries/framework-detection-registry.yaml`, `data/registries/root-cause-patterns-registry.yaml`, `data/registries/coaching-registry.yaml`
+
+## Handoff
+- **Output entregue a**: qa-guardian para validação de integridade e consistência dos dados atualizados
+- **Formato de entrega**: registries atualizados em `data/registries/` + log de atualizações + confirmação de integridade
+- **Condição de entrega**: todos os registries relevantes atualizados, sem campos obrigatórios vazios, IDs consistentes entre registries, backup realizado
+- **Próximo passo no pipeline**: registries alimentam scorecard-analyst (update-scorecards), revenue-intelligence-analyst (reviews), closer-trainer (coaching) e demais tasks que consomem dados
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

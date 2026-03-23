@@ -135,3 +135,9 @@ Fase 9 — Next Steps:  39:00–41:15 (2min15s) ✓ Onboarding orientado
 3. **Preço antes do pitch** — Lead pergunta "quanto custa?" e closer responde no minuto 5. Toda a oportunidade de construir valor foi perdida.
 4. **Sem next steps** — Call termina sem orientações claras. O lead fica confuso sobre o que acontece depois.
 5. **Fases fora de ordem** — Pitch antes de discovery, ou objeções antes do preço. A progressão lógica é fundamental para construir as certezas na sequência certa.
+
+## Usado Em
+
+- **Tasks**: intake-call-recording, normalize-and-segment, analyze-sdr-handoff
+- **Workflows**: per_call (ingestão e auditoria)
+- **Config routing**: `intake-call-recording.frameworks`, `normalize-and-segment.frameworks`, `analyze-sdr-handoff.frameworks`

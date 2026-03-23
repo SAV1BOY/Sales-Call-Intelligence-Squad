@@ -93,3 +93,9 @@ Prevencao durante o pitch:
 4. **Prevenir demais** — levantar objecoes que o lead nao teria e criar problemas.
 5. **Prevencao sem evidencia** — "vai funcionar pra voce" sem prova nao previne nada.
 6. **Nao perguntar sobre decisores** — a objecao de conjuge/socio e a mais evitavel e a mais ignorada.
+
+## Usado Em
+
+- **Tasks**: analyze-objections
+- **Workflows**: per_call (análise de objeções, sub-task de full-call-audit)
+- **Config routing**: `analyze-objections.frameworks`

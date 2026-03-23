@@ -96,3 +96,9 @@ A força real do Second Pact aparece no fechamento. Quando o lead diz "vou pensa
 3. **Tom de desculpa** — "Desculpa pedir isso, mas será que..." anula toda a força. O tom deve ser de profissional seguro.
 4. **Não obter confirmação** — Closer fala o pacto e segue para o pitch sem esperar o "combinado". Sem confirmação, não é pacto.
 5. **Aceitar "vou tentar"** — Lead diz "vou tentar decidir" em vez de "combinado". Isso não é compromisso — o closer precisa insistir gentilmente.
+
+## Usado Em
+
+- **Tasks**: analyze-pitch
+- **Workflows**: per_call (análise de pitch, sub-task de full-call-audit)
+- **Config routing**: `analyze-pitch.frameworks`

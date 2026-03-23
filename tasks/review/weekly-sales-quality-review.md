@@ -91,3 +91,16 @@ Esta task existe para criar um ritual semanal de análise que identifica tendên
 - Agents: `agents/sales-chief.md`, `agents/revenue-intelligence-analyst.md`, `agents/scorecard-analyst.md`, `agents/win-loss-miner.md`
 - Templates: `templates/reports/executive-sales-intelligence-report.md`, `templates/briefs/weekly-sales-review-brief.md`
 - Registries atualizados: `data/registries/intelligence-registry.yaml`, `data/registries/review-registry.yaml`
+
+## Handoff
+- **Output entregue a**: sales-chief para condução da review e definição de ações corretivas semanais
+- **Formato de entrega**: ata da review em `reports/reviews/weekly-review-YYYY-WNN` usando `templates/reports/executive-sales-intelligence-report.md`
+- **Condição de entrega**: todas as calls da semana consolidadas, comparação semanal presente, ações anteriores verificadas, novas ações com responsável e prazo
+- **Próximo passo no pipeline**: sales-chief distribui ações semanais aos responsáveis; closer-trainer executa intervenções para closers em queda; ações alimentam próxima review semanal
+
+## Rework Loop
+- **Definição de ciclo**: re-execução completa dos steps que falharam no quality gate
+- **Max ciclos**: 2
+- **Trigger de rework**: checklist obrigatório < 80% OU rejeição pelo QA Guardian
+- **Após max ciclos**: escalar para sales-chief com evidência de tentativas
+- **Registro**: toda rework registrada em data/registries/lessons-learned-registry.yaml

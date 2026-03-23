@@ -81,3 +81,9 @@ Antes de revelar o preco, ancorar o valor total:
 5. **Gap insuficiente** — proporcao 2:1 nao e suficiente para decisao imediata.
 6. **Nao usar a linguagem do lead** — o valor precisa estar nos termos dele, nao nos seus.
 7. **Comparar com concorrentes** — comparar com o custo de nao resolver, nao com outros produtos.
+
+## Usado Em
+
+- **Tasks**: analyze-pricing
+- **Workflows**: per_call (análise de pricing, sub-task de full-call-audit)
+- **Config routing**: `analyze-pricing.frameworks`

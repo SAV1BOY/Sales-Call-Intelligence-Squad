@@ -99,3 +99,11 @@ Impacto: Sem implicação, o lead não percebeu o custo de não resolver
 ## Checklists de Qualidade
 - `qa-methodology-consistency-check.md` — Garante coerência entre frameworks analisados.
 - `qa-evidence-completeness-check.md` — Todo framework detectado/ausente tem evidência.
+
+## Preenchido Por
+
+- **Task(s)**: framework-detection
+- **Agente(s) responsável(is)**: framework-detector, alex-hormozi, jeremy-miner, jordan-belfort, cole-gordon, neil-rackham, matthew-dixon
+- **Workflow(s)**: Auditoria Completa — Detecção de Frameworks (pipeline per-call)
+- **Frequência**: per-call
+- **Registro**: data/registries/framework-detection-registry
