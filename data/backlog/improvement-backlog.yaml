@@ -1,0 +1,65 @@
+# ============================================================
+# IMPROVEMENT BACKLOG — Sales Call Intelligence Squad
+# Backlog de melhorias identificadas: gaps, débitos, upgrades
+# ============================================================
+
+_schema:
+  description: "Backlog de melhorias identificadas pelo squad — gaps operacionais, débitos técnicos, upgrades pendentes"
+  fields:
+    id:
+      type: string
+      required: true
+      description: "Identificador único (BKL-YYYY-MM-NNN)"
+    date_identified:
+      type: date
+      required: true
+      description: "Data em que o item foi identificado"
+    source:
+      type: string
+      required: true
+      description: "Qual processo identificou — ex: weekly-review, qa-audit, escalation, ralphloop"
+    category:
+      type: string
+      required: true
+      enum: [process, framework, checklist, template, registry, workflow, agent, cross-squad, infrastructure]
+      description: "Categoria da melhoria"
+    description:
+      type: string
+      required: true
+      description: "Descrição detalhada do gap ou melhoria proposta"
+    priority:
+      type: string
+      required: true
+      enum: [critical, high, medium, low]
+      description: "Prioridade de implementação"
+    impact:
+      type: string
+      required: true
+      description: "Impacto esperado se implementado"
+    status:
+      type: string
+      required: true
+      enum: [open, in_progress, done, deferred, cancelled]
+      description: "Status atual"
+    assigned_to:
+      type: string
+      required: false
+      description: "Agente responsável pela implementação"
+    resolved_date:
+      type: date
+      required: false
+      description: "Data de resolução"
+    resolution_notes:
+      type: string
+      required: false
+      description: "Como foi resolvido"
+  updated_by:
+    - qa-guardian
+    - sales-chief
+  update_frequency: weekly
+  owner: sales-chief
+  cross_references:
+    - data/registries/lessons-learned-registry.yaml
+    - data/decisions/decisions-registry.yaml
+
+entries: []

@@ -88,6 +88,19 @@ A forma como o preço é apresentado determina se o lead percebe investimento ou
 - Taxa de concessão de preço por closer rastreada e comparada com benchmark do time
 - Correlação entre nota de ancoragem e ausência de objeção de preço > 0.5
 
+## Handoff
+- Output entregue a: call-auditor (consolidação do full-call-audit na Etapa 3 do workflow 06)
+- Formato de entrega: `templates/reports/pricing-analysis-report.md`
+- Condição de entrega: checklist de qualidade aprovado com ancoragem verificada, value stack documentado, concessões classificadas, e qa-guardian valida coerência entre nota de pricing e objeções de preço registradas
+- Próximo passo no pipeline: Etapa 3 — Consolidação do Relatório Executivo (workflow 06-full-funnel-call-audit)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-10 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/08-price-anchoring-audit.md`, `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/pricing-anchoring-analyst.md`, `agents/experts/alex-hormozi.md`, `agents/experts/sabri-suby.md`

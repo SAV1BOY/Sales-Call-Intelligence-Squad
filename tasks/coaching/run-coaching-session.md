@@ -90,6 +90,19 @@ Dados sem prática deliberada não geram mudança de comportamento. Esta task ex
 - `coaching_impact_score`: delta de score entre call auditada e calls pós-sessão
 - `rewrite_adoption_rate`: % de técnicas praticadas na sessão que aparecem nas calls seguintes
 
+## Handoff
+- Output entregue a: `closer-trainer` e `sales-chief` para revisão de certificação (workflow `12-monthly-closer-certification`, Etapa 2 e Etapa 4)
+- Formato de entrega: Registro de sessão em `reports/coaching/CALL-ID-session-log` + compromissos documentados com prazos
+- Condição de entrega: checklist `coaching-plan-quality` aprovado (role-play realizado, ações específicas e mensuráveis definidas, compromisso verbalizado pelo closer)
+- Próximo passo no pipeline: Etapa 2 do workflow `12-monthly-closer-certification` (Avaliação de Competências Técnicas — closer-trainer avalia evolução e aderência ao coaching)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 3
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 3 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/05-coaching-rewrite-loop.md`
 - Agents: `agents/closer-trainer.md`, `agents/coaching-rewriter.md`, `agents/sales-chief.md`

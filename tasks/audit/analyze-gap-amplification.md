@@ -84,6 +84,19 @@ Sem amplificação de dor, o lead não sente urgência para decidir e posterga a
 - 100% das análises com avaliação ética explícita (pressão genuína vs. manipulação)
 - Correlação entre nota de amplificação e ausência de objeção de preço > 0.5
 
+## Handoff
+- Output entregue a: `call-auditor` e `sales-chief` para consolidação no relatório executivo do full-call-audit
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seção "Ampliação de Dor e Implicação" + nota do bloco amplificação (0-10)
+- Condição de entrega: qa-guardian valida classificação ética da amplificação; nota coerente com urgência demonstrada pelo lead no momento de pricing
+- Próximo passo no pipeline: Etapa 3 do workflow `06-full-funnel-call-audit` (Consolidação do Relatório Executivo pelo sales-chief)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-8 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/call-auditor.md`, `agents/experts/jeremy-miner.md`, `agents/experts/alex-hormozi.md`, `agents/experts/dan-lok.md`

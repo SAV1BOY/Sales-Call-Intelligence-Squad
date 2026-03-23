@@ -86,6 +86,19 @@ Saber quais frameworks o closer aplicou (consciente ou inconscientemente) e quai
 - Taxa de falsos positivos na detecção < 5% (validação por especialistas)
 - Score de cobertura de frameworks (% de frameworks aplicáveis utilizados) rastreado por closer
 
+## Handoff
+- Output entregue a: scorecard-analyst (workflow 04 Etapa 1 — coleta de evidências para scoring) + coaching-rewriter (workflow 05 — seleção de momentos para rewrite com base em gaps de framework)
+- Formato de entrega: `templates/reports/framework-detection-report.md` + lista de frameworks detectados/ausentes com evidência textual
+- Condição de entrega: checklist obrigatório de Critérios de Conclusão 100% aprovado + qa-guardian valida que frameworks ausentes estão alinhados com blocos fracos do scorecard
+- Próximo passo no pipeline: workflow 04-scoring-and-root-cause (scoring dos 10 blocos) e workflow 05-coaching-rewrite-loop (reescrita de momentos críticos)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-8 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/03-framework-detection-loop.md`, `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/framework-detector.md`, `agents/experts/alex-hormozi.md`, `agents/experts/jeremy-miner.md`, `agents/experts/jordan-belfort.md`, `agents/experts/cole-gordon.md`, `agents/experts/neil-rackham.md`, `agents/experts/matthew-dixon.md`, `agents/call-auditor.md`

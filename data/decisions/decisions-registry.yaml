@@ -1,0 +1,57 @@
+# ============================================================
+# DECISIONS REGISTRY — Sales Call Intelligence Squad
+# Log de decisões operacionais: escalations, aprovações, reworks
+# ============================================================
+
+_schema:
+  description: "Log de decisões operacionais do squad — escalations, aprovações, reworks, calibrações"
+  fields:
+    id:
+      type: string
+      required: true
+      description: "Identificador único da decisão (DEC-YYYY-MM-NNN)"
+    date:
+      type: date
+      required: true
+      description: "Data da decisão"
+    type:
+      type: string
+      required: true
+      enum: [escalation, approval, rework, calibration, delegation, override]
+      description: "Tipo de decisão tomada"
+    context:
+      type: string
+      required: true
+      description: "Contexto completo — o que gerou a necessidade de decisão"
+    decision:
+      type: string
+      required: true
+      description: "Decisão tomada e justificativa"
+    decided_by:
+      type: string
+      required: true
+      description: "Agente que tomou a decisão"
+    related_call:
+      type: string
+      required: false
+      description: "ID da call relacionada (se aplicável)"
+    evidence:
+      type: string
+      required: false
+      description: "Evidências que suportam a decisão"
+    outcome:
+      type: string
+      required: false
+      description: "Resultado observado após a decisão"
+    lessons:
+      type: string
+      required: false
+      description: "Lições aprendidas (preenchido retrospectivamente)"
+  updated_by: sales-chief
+  update_frequency: per-event
+  owner: sales-chief
+  cross_references:
+    - data/registries/lessons-learned-registry.yaml
+    - data/backlog/improvement-backlog.yaml
+
+entries: []

@@ -85,6 +85,19 @@ Pitch genérico é sinal de discovery fraco ou falta de técnica — e é o mome
 - Taxa de pitches classificados como "personalizado" vs. "genérico" por closer (tracking de evolução)
 - Correlação entre nota de pitch e taxa de conversão > 0.5
 
+## Handoff
+- Output entregue a: call-auditor (consolidação do full-call-audit na Etapa 3 do workflow 06)
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seções "Empresa/Método/Produto" e "Pitch Amarrado à Fala do Lead"
+- Condição de entrega: checklist de qualidade aprovado com ponte diagnóstico-solução verificada, Value Equation avaliada componente por componente, e qa-guardian valida coerência entre nota de pitch e nota de discovery
+- Próximo passo no pipeline: Etapa 3 — Consolidação do Relatório Executivo (workflow 06-full-funnel-call-audit)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/call-auditor.md`, `agents/experts/alex-hormozi.md`, `agents/experts/cole-gordon.md`, `agents/experts/sabri-suby.md`

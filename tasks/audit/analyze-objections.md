@@ -87,6 +87,19 @@ Objeções mal tratadas são a causa direta de deals perdidos. Esta task existe 
 - 100% das objeções com causa raiz classificada (não apenas tipo superficial)
 - Taxa de novas objeções identificadas e adicionadas à biblioteca por ciclo
 
+## Handoff
+- Output entregue a: call-auditor (consolidação no full-call-audit, workflow 06) + objection-specialist (análise profunda no workflow 07-objection-root-cause-analysis)
+- Formato de entrega: `templates/reports/objection-analysis-report.md` + `templates/rewrites/objection-rewrite-template.md`
+- Condição de entrega: checklist obrigatório de Critérios de Conclusão 100% aprovado + qa-guardian valida coerência entre causa raiz das objeções e notas de discovery/pitch
+- Próximo passo no pipeline: workflow 07 Etapa 3 (análise de causa raiz por objeção) e workflow 06 Etapa 2 (consolidação no pipeline de análise completa)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/07-objection-root-cause-analysis.md`, `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/objection-specialist.md`, `agents/call-auditor.md`, `agents/experts/jordan-belfort.md`, `agents/experts/jeremy-miner.md`, `agents/experts/bradley-lea.md`, `agents/experts/eli-wilde.md`

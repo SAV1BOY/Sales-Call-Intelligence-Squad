@@ -88,6 +88,19 @@ Sem diagnóstico de causa raiz, coaching e ações corretivas são genéricos e 
 - Taxa de causas raiz classificadas corretamente (validação pelo sales-chief) > 90%
 - Recorrência de causa raiz: mesma causa raiz não deve aparecer 3+ vezes para o mesmo closer sem intervenção
 
+## Handoff
+- Output entregue a: coaching-rewriter (workflow 05-coaching-rewrite-loop — seleção de momentos críticos para rewrite baseado no diagnóstico de causa raiz)
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seção "Causa Raiz" + árvore de causalidade (causa → consequência → impacto) + ações corretivas priorizadas
+- Condição de entrega: checklist obrigatório de Critérios de Conclusão 100% aprovado + qa-guardian valida coerência entre causa raiz e blocos mais fracos do scorecard
+- Próximo passo no pipeline: workflow 05-coaching-rewrite-loop (reescrita de momentos críticos com before/after)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/04-scoring-and-root-cause.md`, `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/deal-risk-doctor.md`, `agents/call-auditor.md`, `agents/offer-fit-analyst.md`, `agents/sdr-handoff-analyst.md`, `agents/sales-chief.md`

@@ -1,0 +1,71 @@
+# ============================================================
+# HANDOFFS REGISTRY — Sales Call Intelligence Squad
+# Registro de handoffs cross-squad: o que saiu, para quem, status
+# ============================================================
+
+_schema:
+  description: "Registro de todos os handoffs cross-squad — assets enviados, recebidos, status e SLA"
+  fields:
+    id:
+      type: string
+      required: true
+      description: "Identificador único do handoff (HO-YYYY-MM-NNN)"
+    date:
+      type: date
+      required: true
+      description: "Data de envio do handoff"
+    direction:
+      type: string
+      required: true
+      enum: [outbound, inbound]
+      description: "Direção do handoff"
+    from_squad:
+      type: string
+      required: true
+      description: "Squad de origem"
+    to_squad:
+      type: string
+      required: true
+      description: "Squad de destino"
+    asset_type:
+      type: string
+      required: true
+      description: "Tipo de asset transferido (insight, report, data, request)"
+    brief_path:
+      type: string
+      required: true
+      description: "Caminho do handoff brief preenchido"
+    summary:
+      type: string
+      required: true
+      description: "Resumo do que foi enviado"
+    status:
+      type: string
+      required: true
+      enum: [sent, acknowledged, in_progress, returned, completed, rejected]
+      description: "Status atual do handoff"
+    sla_deadline:
+      type: date
+      required: false
+      description: "Prazo de SLA para resposta"
+    sla_met:
+      type: boolean
+      required: false
+      description: "SLA foi cumprido?"
+    return_notes:
+      type: string
+      required: false
+      description: "Notas de retorno do squad receptor"
+    quality_score:
+      type: string
+      required: false
+      enum: [weak, fair, good, gold]
+      description: "Qualidade do handoff avaliada pelo receptor"
+  updated_by: sales-chief
+  update_frequency: per-event
+  owner: sales-chief
+  cross_references:
+    - data/registries/lessons-learned-registry.yaml
+    - data/decisions/decisions-registry.yaml
+
+entries: []

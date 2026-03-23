@@ -85,6 +85,19 @@ Discovery raso é a causa raiz #1 de calls perdidas em high ticket. Esta task ex
 - Precisão da classificação de perguntas: concordância entre experts > 90%
 - Correlação entre nota de discovery e taxa de conversão da call > 0.6
 
+## Handoff
+- Output entregue a: call-auditor (consolidação do full-call-audit na Etapa 3 do workflow 06)
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seção "Diagnóstico e Descoberta"
+- Condição de entrega: checklist de qualidade aprovado com 100% das perguntas mapeadas e classificadas, camadas de profundidade contadas, e qa-guardian valida coerência entre nota de discovery e nota de pitch
+- Próximo passo no pipeline: Etapa 3 — Consolidação do Relatório Executivo (workflow 06-full-funnel-call-audit)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/call-auditor.md`, `agents/experts/neil-rackham.md`, `agents/experts/jeremy-miner.md`, `agents/experts/cole-gordon.md`

@@ -82,7 +82,7 @@ Root cause → Rewrite de momentos críticos → Coaching → Registry → Melho
 ├── authority/       # 18 — resumos de especialistas, cases, workshops
 ├── checklists/      # 131 quality gates (macro, por fase, por expert, operacionais)
 ├── data/            # 31 — registries (YAML), métricas, research
-├── docs/            # 20 — documentação + quality gates system + audit report
+├── docs/            # 21 — documentação + quality gates + audit report + SLA matrix
 ├── frameworks/      # 84 frameworks (universais, proprietários, intelectuais)
 ├── lib/             # 33 — componentes, padrões, utilitários, taxonomias
 ├── phrases/         # 18 — bibliotecas de frases por fase
@@ -90,7 +90,7 @@ Root cause → Rewrite de momentos críticos → Coaching → Registry → Melho
 ├── reference/       # 80 — livros, vendas, psicologia, negociação, objeções, pricing
 ├── scripts/         # 14 — automação
 ├── swipe/           # 16 — best/worst calls, rewrites, scorecards
-├── swipe-sources/   # 8 — fontes curadas
+├── swipe-sources/   # 4 — fontes primárias (livros, gravações, benchmarks)
 ├── tasks/           # 38 — tarefas executáveis
 ├── templates/       # 32 — entregáveis padronizados
 ├── voice/           # 21 — tom, linguagem, calibração
@@ -104,7 +104,7 @@ Root cause → Rewrite de momentos críticos → Coaching → Registry → Melho
 
 Conecta-se bidirecionalmente com: **Copy**, **Traffic**, **Brand**, **Storytelling**, **C-Level**, **Data**, **Movement**, **Advisory**.
 
-Ver `config.yaml` para detalhes dos handoffs.
+Ver `config.yaml` (seção `cross_squad_contracts`) e `docs/cross-squad-integration-guide.md` para contratos formais de handoff com SLA.
 
 ## Quick Start
 

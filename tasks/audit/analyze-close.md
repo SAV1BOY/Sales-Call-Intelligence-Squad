@@ -85,6 +85,19 @@ Esta task existe para garantir que o momento mais decisivo da call — o fechame
 - Taxa de concordância entre nota de closing e resultado real da call > 85%
 - 100% das análises de close com next steps documentados (presentes ou ausentes)
 
+## Handoff
+- Output entregue a: call-auditor / sales-chief (consolidação no full-call-audit, workflow 06 Etapa 3 — relatório executivo)
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seção "Fechamento e Próximos Passos" + nota do bloco closing no scorecard
+- Condição de entrega: checklist obrigatório de Critérios de Conclusão 100% aprovado + qa-guardian valida coerência entre nota de closing e notas de pricing/objeções
+- Próximo passo no pipeline: workflow 06 Etapa 3 (consolidação do relatório executivo pelo sales-chief)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/call-auditor.md`, `agents/experts/jordan-belfort.md`, `agents/experts/cole-gordon.md`, `agents/experts/eli-wilde.md`

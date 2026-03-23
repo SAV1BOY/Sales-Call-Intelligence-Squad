@@ -2,7 +2,7 @@
 
 Índice navegável de todos os arquivos do repositório, organizados por categoria.
 
-**Total**: ~1.838 arquivos | **Branch**: `claude/map-sales-squad-rI45N`
+**Total**: ~1.850 arquivos | **Branch**: `claude/map-sales-squad-rI45N`
 
 ---
 
@@ -331,7 +331,17 @@
 
 ---
 
-## Registries (14)
+## Registries (17)
+
+### Novos Registries (Auditoria SOTA)
+
+| Arquivo | Descrição | Owner | Frequência |
+|---------|-----------|-------|------------|
+| `data/decisions/decisions-registry.yaml` | Log de decisões operacionais (escalations, aprovações, reworks) | sales-chief | per-event |
+| `data/handoffs/handoffs-registry.yaml` | Registro de handoffs cross-squad com SLA tracking | sales-chief | per-event |
+| `data/backlog/improvement-backlog.yaml` | Backlog de melhorias e débitos identificados | sales-chief | weekly |
+
+### Registries Originais (14)
 
 | Arquivo | Descrição | Owner | Frequência |
 |---------|-----------|-------|------------|
@@ -352,7 +362,7 @@
 
 ---
 
-## Docs (20)
+## Docs (21)
 
 | Arquivo | Descrição |
 |---------|-----------|
@@ -375,6 +385,7 @@
 | `docs/quality-gates-system.md` | Sistema de Quality Gates (4 níveis) |
 | `docs/rewrite-methodology.md` | Metodologia de reescrita de momentos-chave |
 | `docs/scoring-methodology.md` | Metodologia de scoring — 100 pontos |
+| `docs/sla-matrix.md` | Matriz completa de SLAs do squad |
 | `docs/workflow-guide.md` | Guia de execução de workflows |
 
 ---
@@ -414,6 +425,15 @@ Bibliotecas de frases por fase da call (rapport, discovery, pitch, pricing, obje
 ### authority/ (18 arquivos) — Autoridade dos Especialistas
 
 Resumos, cases e workshops dos 11 especialistas.
+
+### swipe-sources/ (4 arquivos) — Fontes de Swipe
+
+| Arquivo | Conteúdo |
+|---------|----------|
+| `swipe-sources/README.md` | Visão geral do diretório e relação com outros diretórios |
+| `swipe-sources/books-and-courses.md` | Livros, cursos e workshops que fundamentam o squad |
+| `swipe-sources/call-recordings-index.md` | Índice de gravações de referência (icônicas + falhas) |
+| `swipe-sources/industry-benchmarks.md` | Fontes de benchmarks de mercado (Gong, Chorus, HubSpot) |
 
 ### swipe/ (16 arquivos) — Swipe Files
 

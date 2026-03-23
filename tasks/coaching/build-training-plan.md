@@ -89,6 +89,19 @@ Coaching pontual por call não resolve gaps recorrentes. Esta task existe para t
 - `time_to_competence`: tempo para closer atingir score mínimo nos blocos treinados
 - `coaching_impact_score`: delta de score antes e depois do plano de treino
 
+## Handoff
+- Output entregue a: `closer-trainer` para execução de sessões de coaching (task `run-coaching-session`)
+- Formato de entrega: `reports/training/CLOSER-NAME-training-plan` (formato definido por `templates/reports/manager-coaching-report`)
+- Condição de entrega: checklist `coaching-plan-quality` aprovado (cada gap baseado em dados, exercícios específicos e mensuráveis com prazo) E QA Guardian validou especificidade
+- Próximo passo no pipeline: Etapa 2 do workflow `12-monthly-closer-certification` (Avaliação de Competências Técnicas pelo closer-trainer)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-8 com revalidação do checklist obrigatório
+- Max ciclos: 3
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 3 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/12-monthly-closer-certification.md`
 - Agents: `agents/closer-trainer.md`, `agents/scorecard-analyst.md`, `agents/sales-chief.md`, `agents/qa-guardian.md`

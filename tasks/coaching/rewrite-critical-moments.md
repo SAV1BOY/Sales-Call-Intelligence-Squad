@@ -85,6 +85,19 @@ Feedback genérico ("melhore seu discovery") não muda comportamento. Esta task 
 - `rewrite_adoption_rate`: % de reescritas que o closer implementou nas calls seguintes
 - `coaching_impact_score`: melhoria no score do bloco correspondente à reescrita
 
+## Handoff
+- Output entregue a: `closer-trainer` (task `build-coaching-pack`) para construção do pacote de coaching
+- Formato de entrega: `templates/rewrites/objection-rewrite-template`, `templates/rewrites/pitch-rewrite-template`, `templates/rewrites/closing-rewrite-template`, `templates/rewrites/discovery-rewrite-template` (conforme fase do momento)
+- Condição de entrega: checklist `rewrite-quality` aprovado (cada reescrita tem ANTES exato, DEPOIS com framework, POR QUÊ educativo) E checklist `coaching-plan-quality` aprovado (reescritas naturais, priorizadas por impacto)
+- Próximo passo no pipeline: Etapa 4 do workflow `05-coaching-rewrite-loop` (Construção do Pacote de Coaching)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 3
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 3 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/05-coaching-rewrite-loop.md`, `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/coaching-rewriter.md`, `agents/closer-trainer.md`, `agents/objection-specialist.md`

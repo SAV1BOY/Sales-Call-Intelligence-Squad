@@ -562,3 +562,229 @@ output_formats:
   rewrite_closing: templates/rewrites/closing-rewrite-template
   rewrite_discovery: templates/rewrites/discovery-rewrite-template
   cross_squad_handoff: templates/operational/cross-squad-handoff-template
+
+# ============================================================
+# APPROVAL MATRIX
+# ============================================================
+
+approval_matrix:
+  full_audit:
+    reviewer: qa-guardian
+    approver: sales-chief
+    escalation: "Se reviewer e approver divergem → calibration session"
+  scorecard:
+    reviewer: qa-guardian
+    approver: sales-chief
+    escalation: "Se variância > 15% → scoring_calibration_rework"
+  coaching_pack:
+    reviewer: qa-guardian
+    approver: sales-chief
+    escalation: "Se closer score < 40 → sales-chief + c_level_squad"
+  rewrite:
+    reviewer: coaching-rewriter
+    approver: qa-guardian
+    escalation: "Se framework contestado → specialist authority consultado"
+  intelligence_report:
+    reviewer: revenue-intelligence-analyst
+    approver: sales-chief
+    escalation: "Se dados insuficientes → adiar até sample size ≥ 10"
+  cross_squad_handoff:
+    approver: sales-chief
+    quality_gate: "handoff brief completo + evidências"
+    registry: data/handoffs/handoffs-registry
+  certification:
+    reviewer: [closer-trainer, qa-guardian]
+    approver: sales-chief
+    escalation: "Se closer falha 2x → plano de desenvolvimento intensivo"
+
+# ============================================================
+# TASK KPIs — Métricas de sucesso por task
+# ============================================================
+
+task_kpis:
+  intake-call-recording:
+    - metric: intake_completion_rate
+      target: ">= 95%"
+      measured_by: transcript-analyst
+    - metric: avg_intake_time
+      target: "< 30 min"
+      measured_by: transcript-analyst
+
+  full-call-audit:
+    - metric: audit_accuracy
+      target: ">= 90% inter-rater reliability"
+      measured_by: qa-guardian
+    - metric: audit_turnaround
+      target: "< 24h após intake"
+      measured_by: sales-chief
+
+  framework-detection:
+    - metric: detection_precision
+      target: ">= 85% (validado por specialist)"
+      measured_by: framework-detector
+    - metric: false_positive_rate
+      target: "< 10%"
+      measured_by: qa-guardian
+
+  score-call:
+    - metric: scoring_consistency
+      target: "variância < 15% entre auditores"
+      measured_by: qa-guardian
+    - metric: evidence_coverage
+      target: "100% dos blocos com evidência"
+      measured_by: scorecard-analyst
+
+  rewrite-critical-moments:
+    - metric: rewrite_quality_score
+      target: ">= 3.5/5.0 no rubric"
+      measured_by: qa-guardian
+    - metric: score_improvement_potential
+      target: ">= 10 pontos por rewrite"
+      measured_by: coaching-rewriter
+
+  build-coaching-pack:
+    - metric: coaching_actionability
+      target: "100% das prioridades com plano de ação"
+      measured_by: closer-trainer
+    - metric: closer_adoption_rate
+      target: ">= 70% das recomendações implementadas"
+      measured_by: closer-trainer
+
+  weekly-sales-quality-review:
+    - metric: review_coverage
+      target: "100% das calls da semana revisadas"
+      measured_by: sales-chief
+    - metric: pattern_identification
+      target: ">= 3 padrões por semana"
+      measured_by: revenue-intelligence-analyst
+
+  monthly-closer-certification:
+    - metric: certification_pass_rate
+      target: ">= 80% dos closers ativos"
+      measured_by: closer-trainer
+    - metric: score_progression
+      target: ">= 5 pontos de melhoria mês-a-mês"
+      measured_by: scorecard-analyst
+
+  extract-win-patterns:
+    - metric: pattern_statistical_significance
+      target: "sample ≥ 10 calls por padrão"
+      measured_by: win-loss-miner
+    - metric: pattern_adoption_rate
+      target: ">= 50% dos closers usando padrão em 30 dias"
+      measured_by: closer-trainer
+
+  cross-squad-intelligence-sync:
+    - metric: handoff_completion_rate
+      target: ">= 90% dos handoffs acknowledged em 72h"
+      measured_by: sales-chief
+    - metric: insight_actionability
+      target: ">= 80% dos insights gerando ação no squad receptor"
+      measured_by: sales-chief
+
+# ============================================================
+# CROSS-SQUAD CONTRACTS — Contratos formais de integração
+# ============================================================
+
+cross_squad_contracts:
+  copy_squad:
+    we_send:
+      - "Objeções mais frequentes (top 10 semanal)"
+      - "Linguagem exata do prospect (frases literais)"
+      - "Dores verbalizadas com frequência"
+    we_receive:
+      - "Promessas feitas no copy/landing page"
+      - "Ângulos de campanha ativos"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "72h para acknowledgment"
+    quality_gate: "handoff brief completo + evidências de 5+ calls"
+    registry: data/handoffs/handoffs-registry
+
+  traffic_squad:
+    we_send:
+      - "Qualidade dos leads por canal (score médio)"
+      - "Taxa de no-show por origem"
+      - "Tempo médio de call por fonte de tráfego"
+    we_receive:
+      - "Volume e origem dos leads (próximas 2 semanas)"
+      - "Mudanças de campanha com antecedência"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "1 semana"
+    quality_gate: "dados de 10+ calls por canal"
+    registry: data/handoffs/handoffs-registry
+
+  brand_squad:
+    we_send:
+      - "Percepção de marca nas calls (como prospects descrevem)"
+      - "Nível de awareness pré-call"
+      - "Objeções de credibilidade"
+    we_receive:
+      - "Guidelines de posicionamento atualizados"
+      - "Diferenciadores-chave para mencionar"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "1 semana"
+    quality_gate: "evidências de 5+ calls"
+    registry: data/handoffs/handoffs-registry
+
+  storytelling_squad:
+    we_send:
+      - "Momentos de conexão emocional que funcionaram"
+      - "Cases que mais ressoaram com prospects"
+      - "Narrativas de transformação eficazes"
+    we_receive:
+      - "Banco de histórias aprovadas"
+      - "Estruturas narrativas para pitch"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "1 semana"
+    quality_gate: "3+ exemplos com evidência"
+    registry: data/handoffs/handoffs-registry
+
+  c_level_squad:
+    we_send:
+      - "Tendências de mercado detectadas nas calls"
+      - "Análise de competidores mencionados"
+      - "Dashboard executivo de performance"
+    we_receive:
+      - "Decisões de pricing/oferta"
+      - "Mudanças estratégicas de modelo de vendas"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "24h para critical, 72h para standard"
+    quality_gate: "relatório executivo completo"
+    registry: data/handoffs/handoffs-registry
+
+  data_squad:
+    we_send:
+      - "Scorecards consolidados por closer/time"
+      - "Close rates por segmento"
+      - "Pedidos de análise cohort/pipeline"
+    we_receive:
+      - "Análises cohort com insights"
+      - "Dashboards de pipeline"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "1 semana"
+    quality_gate: "dados estruturados + perguntas específicas"
+    registry: data/handoffs/handoffs-registry
+
+  movement_squad:
+    we_send:
+      - "Linguagem e valores do lead (cultural insights)"
+      - "Objeções culturais/regionais"
+    we_receive:
+      - "Insights de comunidade e engajamento"
+      - "Contexto cultural do público-alvo"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "1 semana"
+    quality_gate: "evidências de 5+ calls"
+    registry: data/handoffs/handoffs-registry
+
+  advisory_squad:
+    we_send:
+      - "Perguntas estratégicas sobre modelo de vendas"
+      - "Conflitos metodológicos não resolvidos"
+    we_receive:
+      - "Orientação estratégica"
+      - "Priorização de melhorias"
+    format: templates/operational/cross-squad-handoff-template
+    sla: "72h"
+    quality_gate: "pergunta clara + contexto + tentativas anteriores"
+    registry: data/handoffs/handoffs-registry

@@ -84,6 +84,19 @@ Rapport e frame setting nos primeiros minutos condicionam todo o resto da call. 
 - Taxa de closers com First Pact completo (3 intenções presentes) rastreada por período
 - Correlação entre nota de rapport e nota global da call > 0.4
 
+## Handoff
+- Output entregue a: call-auditor (consolidação do full-call-audit na Etapa 3 do workflow 06)
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seções "Rapport e Abertura" e "Primeiro Pacto e Frame"
+- Condição de entrega: checklist de qualidade aprovado com quebra de gelo avaliada, frame setting classificado, 3 intenções verificadas individualmente, e qa-guardian valida coerência entre nota de rapport e engajamento nas fases seguintes
+- Próximo passo no pipeline: Etapa 3 — Consolidação do Relatório Executivo (workflow 06-full-funnel-call-audit)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-8 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/call-auditor.md`, `agents/experts/cole-gordon.md`, `agents/experts/dan-lok.md`, `agents/framework-detector.md`

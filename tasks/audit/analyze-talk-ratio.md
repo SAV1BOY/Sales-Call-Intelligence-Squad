@@ -83,6 +83,19 @@ Talk ratio e um indicador quantitativo direto de qualidade de vendas consultivas
 - Precisao do calculo de talk ratio: margem de erro < 5% vs. contagem manual
 - Talk ratio medio do time rastreado semanalmente com tendencia de melhoria
 
+## Handoff
+- Output entregue a: call-auditor / sales-chief (consolidação no full-call-audit, workflow 06 Etapa 3 — relatório executivo)
+- Formato de entrega: `templates/reports/full-call-audit-report.md`, seção "Talk Ratio" + métricas quantitativas (ratio global, ratio por etapa, contagem de perguntas, interrupções, monólogos)
+- Condição de entrega: checklist obrigatório de Critérios de Conclusão 100% aprovado + qa-guardian valida coerência entre métricas de talk ratio e notas de discovery/rapport
+- Próximo passo no pipeline: workflow 06 Etapa 2 (pipeline de análise completa) → Etapa 3 (consolidação do relatório executivo)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-10 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referencias Cruzadas
 - Workflow: `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/talk-ratio-analyst.md`, `agents/call-auditor.md`

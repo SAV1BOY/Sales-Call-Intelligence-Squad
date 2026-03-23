@@ -85,6 +85,19 @@ O score é o artefato central do pipeline de auditoria — sem pontuação objet
 - Precisão do score: variância < 10% entre auditores diferentes na mesma call (calibração)
 - 100% dos blocos com evidência textual (zero notas sem justificativa)
 
+## Handoff
+- Output entregue a: coaching-rewriter (reescrita de momentos críticos) e closer-trainer (construção do coaching pack)
+- Formato de entrega: `templates/scorecards/call-scorecard-template.md`
+- Condição de entrega: scoring-consistency-checklist aprovado com 10 blocos pontuados, evidência textual em todos, e qa-guardian valida consistência com calibração vigente
+- Próximo passo no pipeline: workflow 05-coaching-rewrite-loop (reescrita de momentos críticos com before/after) e build-coaching-pack
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-9 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/04-scoring-and-root-cause.md`, `workflows/06-full-funnel-call-audit.md`
 - Agents: `agents/scorecard-analyst.md`, `agents/call-auditor.md`, `agents/qa-guardian.md`

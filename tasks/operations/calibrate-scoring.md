@@ -90,6 +90,19 @@ Esta task existe para garantir que scores de diferentes auditores sejam compará
 - Variância inter-auditor por bloco (target: < 3 pontos)
 - audit_min_confidence mantida ≥ 0.7 em todas as auditorias pós-calibração
 
+## Handoff
+- Output entregue a: `qa-guardian` para atualização dos padrões de scoring aplicados em auditorias futuras
+- Formato de entrega: Relatório de calibração em `reports/operations/calibration-PERIODO` + critérios de scoring atualizados + exemplos âncora (formato `templates/scorecards/call-scorecard-template`)
+- Condição de entrega: checklist `qa/qa-score-calibration-check` aprovado (variação final < 3 pontos por bloco, exemplos âncora criados, consenso documentado)
+- Próximo passo no pipeline: Workflow `11-weekly-sales-quality-review` (padrões calibrados alimentam scoring semanal) e workflow `12-monthly-closer-certification` (scoring consistente para certificação)
+
+## Rework Loop
+- Definição de ciclo: re-execução completa dos steps 1-10 com revalidação do checklist obrigatório
+- Max ciclos: 2
+- Trigger de rework: checklist obrigatório < 80% OU qa-guardian rejeita output
+- Após max ciclos: escalar para sales-chief com evidência das 2 tentativas anteriores
+- Registro: toda rework registrada em data/registries/lessons-learned-registry.yaml
+
 ## Referências Cruzadas
 - Workflow: `workflows/12-monthly-closer-certification.md`, `workflows/04-scoring-and-root-cause.md`
 - Agents: `agents/qa-guardian.md`, `agents/scorecard-analyst.md`, `agents/call-auditor.md`, `agents/sales-chief.md`
