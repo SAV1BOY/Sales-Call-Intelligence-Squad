@@ -142,7 +142,7 @@ AÇÃO SUGERIDA:
 ```
 
 ## Agente Responsável
-`cross-squad-agent` — Prepara e envia handoffs. `orchestrator-agent` — Valida e roteia.
+`sales-chief` — Prepara e envia handoffs. `qa-guardian` — Valida e roteia.
 
 ## Checklists de Qualidade
 - `cross-squad-copy-handoff-quality.md` (se para Copy)

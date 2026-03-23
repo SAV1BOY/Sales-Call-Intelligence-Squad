@@ -72,7 +72,7 @@
 ---
 
 ## Agente Responsável
-`cross-squad-agent` — Valida antes de enviar insights ao Traffic Squad.
+`sales-chief` — Valida antes de enviar insights ao Traffic Squad.
 
 ## Frequência
 Aplicar em **100% dos handoffs para Traffic Squad** (tipicamente semanal).

@@ -89,7 +89,7 @@ Próximo Check-in: 28/03/2026
 ```
 
 ## Agente Responsável
-`cross-squad-agent` — Consolida insights e prepara o handoff.
+`sales-chief` — Consolida insights e prepara o handoff.
 
 ## Checklists de Qualidade
 - `cross-squad-copy-handoff-quality.md` (se para Copy)

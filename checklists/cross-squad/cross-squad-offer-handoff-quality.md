@@ -74,7 +74,7 @@
 ---
 
 ## Agente Responsável
-`cross-squad-agent` — Valida antes de enviar insights ao Offer Squad ou C-Level.
+`sales-chief` — Valida antes de enviar insights ao Offer Squad ou C-Level.
 
 ## Frequência
 Aplicar em **100% dos handoffs para Offer/C-Level** (tipicamente mensal ou sob demanda).

@@ -76,7 +76,7 @@
 ---
 
 ## Agente Responsável
-`cross-squad-agent` — Valida antes de enviar handoff ao Ops Squad.
+`sales-chief` — Valida antes de enviar handoff ao Ops Squad.
 
 ## Frequência
 Aplicar em **100% dos deals fechados** antes de transferir para Ops/Onboarding.

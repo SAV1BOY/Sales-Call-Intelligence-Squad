@@ -73,7 +73,7 @@
 ---
 
 ## Agente Responsável
-`cross-squad-agent` — Valida antes de enviar insights ao Copy Squad.
+`sales-chief` — Valida antes de enviar insights ao Copy Squad.
 
 ## Frequência
 Aplicar em **100% dos handoffs para Copy Squad** (tipicamente semanal ou quinzenal).
